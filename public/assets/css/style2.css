@@ -1,0 +1,591 @@
+:root{
+    --negro: #1D1D1B;
+    --amarillo: #E08709;
+    --verde: #009640;
+    --verdeSuave: #C5EBAA;
+    --verdeIntermedio: #A5DD9B;
+    --verdeHover: #96ce8c;
+    --blanco: #FFFFFF;
+    --gris: #e1e1e1c4;
+    --grisHover: #c4c3c3c4;
+    --grisOscuro: #333333;
+
+    --separacion: 5rem;
+
+    --fuentePrincipal: 'Rubik', normal;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 1.6rem; 
+    line-height: 1.4;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3, p{
+    font-family: var(--fuentePrincipal);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.bordes{
+    border-bottom: 1px solid var(--grisOscuro);
+}
+
+.margin-bottom{
+    margin-bottom: 2rem;
+}
+
+/* ------------------------------------------- HEADER ---------------------------------------------------*/
+
+.navegacion{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 0.5rem;
+    background-color: var(--verde);
+    padding:  0;
+}
+
+@media (min-width: 550px){
+    .navegacion{
+        display: flex;
+        justify-content: left;
+        gap: 2.5rem;
+    } 
+}
+
+.navegacion__titulo{
+    margin-top: 1rem;
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 22px; 
+    min-width: 20rem;
+    margin-right: auto;
+    text-align: center;
+}
+
+.navegacion__enlace{
+    font-family: var(--fuentePrincipal);
+    color: var(--negro);
+    font-size: 3rem;
+}
+
+.navegacion a, .logo{
+    margin: 1rem auto;
+    width: 12rem;
+    background-size: cover;
+}
+
+@media (min-width: 550px){
+    .navegacion a, .logo{
+        margin: auto 1rem;
+    }
+}
+
+.menu-horizontal{
+    min-width: 15rem;
+	list-style: none;
+	display: flex;
+	justify-content: right;
+    margin: 0;    
+}
+
+.icono-usuario{
+    width: 3rem;
+    background-size: cover;
+}
+
+.menu-horizontal > li > a{
+    font-family: var(--fuentePrincipal);
+    font-size: 20px;
+    text-align: end;
+    font-weight: 500;
+	display: block;
+    width: 100%;
+	padding: 1.5rem 3rem;
+	color: white;
+	text-decoration: none;
+}
+.menu-horizontal > li:hover{
+	background-color: var(--verdeHover);
+}
+.menu-vertical{
+	position: absolute;
+	display: none;
+	list-style: none;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .5);
+    padding-left: 0;
+}
+.menu-horizontal li:hover .menu-vertical{
+	display: block;
+}
+.menu-vertical li:hover{
+	background-color: black;
+}
+
+.menu-vertical li a{
+    font-family: var(--fuentePrincipal);
+    font-size: 13px;
+    font-weight: bold;
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 1rem;
+}
+
+.menu-vertical h5{
+    font-family: var(--fuentePrincipal);
+    font-size: 12px;
+	display: block;
+	color: white;
+	padding: 1rem;
+}
+
+/* ------------------------------------- ADMINISTRADOR --------------------------------------------------------- */
+
+/* ------ Navegacion Panel de Administración -------*/
+
+.navegacion__admin{
+    background-color: var(--gris);
+    display: flex;
+    width: 50%;
+    margin: 1rem auto;
+    justify-content: space-evenly;
+    border-bottom: 2px solid var(--grisOscuro);
+    border-radius: 1rem;
+}
+
+.navegacion__admin-enlace{
+    background-color: var(--gris);
+    border-radius: 1rem;
+    font-family: var(--fuentePrincipal);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--verde);
+    width: 100%;
+    padding: 1rem;
+}
+
+.navegacion__admin-enlace:hover{
+    background-color: var(--grisHover);
+}
+
+.seleccionado{
+    background-color: var(--grisHover);
+}
+
+
+.contenido__panel{
+    background-color: var(--gris);
+    width: 50%;
+    margin: 1rem auto;
+    padding: 1rem 3rem;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+}
+
+.contenido__panel h3{
+    background-color: var(--verde);
+    color: var(--blanco);
+    text-align: center;
+    min-width: 30rem;
+    margin: 0.5rem auto 2rem auto;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.formulario__admin__crear{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.formulario__admin__crear input{
+    font-family: var(--fuentePrincipal);
+    color: var(--negro);
+    text-align: center;
+    border: 1px solid var(--grisHover);
+    padding: 0.5rem 0;
+}
+
+.formulario__admin__crear select{
+    background-color: var(--blanco);
+    font-family: var(--fuentePrincipal);
+    color: var(--negro);
+    text-align: center;
+    border: 1px solid var(--grisHover);
+    padding: 0.5rem 0;
+}
+
+#btnGuardarAdmin{
+    margin: 1rem 0;
+    background-color: var(--verde);
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    text-align: center;
+    border: 1px solid var(--grisHover);
+    padding: 0.5rem 0;
+    border-radius: 2rem;
+    font-weight: bold;
+}
+
+#btnGuardarAdmin:hover{
+    background-color: var(--grisHover);
+    color: var(--verde);
+}
+
+/* ------------ Crear Usuario ---------- */
+
+#usuario{
+    width: 100%;
+}
+
+.grid__admin-usuario{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.imagen__admin-usuario{
+    width: 22px;
+    height: 22px;
+    background-size: cover;
+    margin-left: 1rem;
+}
+
+/* ------- Crear DTF ------- */
+
+.grid__fechas__nuevo-Dtf{
+    display: grid;
+    grid-template-columns: 47% 6% 47%;
+}
+
+.grid__fechas__nuevo-Dtf p{
+    color: var(--negro);
+    font-family: var(--fuentePrincipal);
+    font-size: 20px;
+    text-align: center;
+}
+
+/* -------- Crear IPC -------- */
+
+/* ------------------------------------- LIQUIDACIONES ----------------------------------------------------- */
+ 
+/* ------- MENÚ LIQUIDADOR ------- */
+
+.menu{
+    display: grid;
+    grid-template-rows: 30% 70%;
+    background-color: var(--verdeSuave);
+    margin: 3rem auto;
+    max-width: 90rem;
+    height: 45rem;
+    border-radius: 2rem;
+}
+
+
+
+.contenedor__menu-informacion{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.contenedor__menu-informacion h1,h2,h3{
+    text-align: center;
+}
+
+.contenedor__menu-botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+@media (max-width: 768px){
+    .contenedor__menu-botones{
+        flex-direction: column;
+        align-items: center; 
+        margin-bottom: 2rem;  
+    }
+}
+
+.contenedor__menu-botones a{
+    background-color: var(--verdeIntermedio);
+    font-family: var(--fuentePrincipal);
+    color: var(--grisOscuro);
+    text-align: center;
+    border: 3px solid var(--grisOscuro);
+    border-radius: 3rem;
+    font-size: 24px;
+    margin: 1rem;
+    width: 35rem;
+    height: 15rem;
+}
+
+.btn-dtf{
+    padding: 5rem;
+}
+
+.btn-dtf:hover{
+    font-size: 28px;
+    background-color: var(--verdeHover);
+}
+
+.btn-indexada{
+    padding: 5rem 2rem;
+}
+
+.btn-indexada:hover{
+    font-size: 26 px;
+    background-color: var(--verdeHover);
+}
+
+
+/* FORMULARIO LIQ DTF  */
+
+.contenido{
+    max-width: 120rem;
+    margin: 2rem auto 7rem auto;
+    padding: 1rem 6vw;
+    border-radius: 1rem; 
+    background-color: var(--verdeSuave);
+}
+
+.formulario__liq-dtf{
+    display: flex;
+    margin: 1rem 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.formulario__liq-dtf label{
+    color: var(--grisOscuro);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
+}
+
+.formulario__liq-dtf input{
+    padding: 0.5rem 0;
+    font-family: var(--fuentePrincipal);
+    font-size: 15px;
+    border-radius: 1rem;
+    border: 2px solid var(--grisOscuro);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.btn__calcular{
+    background-color: var(--gris);
+    font-family: var(--fuentePrincipal);
+    font-weight: 600;
+    margin: 2rem auto;
+    width: 25rem;
+}
+
+.btn__calcular:hover{
+    background-color: var(--grisHover);
+}
+
+.formulario__liq-dtf{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+
+.formularioDtf__datos-demandante{
+    margin: auto 0;
+}
+
+.formularioDtf__datos-demandante__grid{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+
+.formularioDtf__datos-demandante__grid input{
+    text-transform: none;
+    width: 10rem;
+    margin: 0.5rem auto;
+}
+
+@media (min-width: 768px){
+    .formularioDtf__datos-demandante__grid{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+}
+
+.formularioDtf__datos-demandante__grid input{
+    width: 30rem;
+}
+
+.formularioDtf__datos-liquidacion{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 5rem;
+}
+
+@media (max-width: 768px){
+    .formularioDtf__datos-liquidacion{
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2,1fr); 
+        row-gap: 2rem;
+    }  
+    
+    #labelValorInicial{
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+
+    #labelFechaDesde{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    #labelFechaHasta{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }   
+}
+
+.contenido h3, .contenedor__menu-informacion h3{
+    background-color: var(--verdeIntermedio);
+    color: var(--grisOscuro);
+    text-align: center;
+    min-width: 30rem;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+@media (min-width: 1200px){
+    .contenido h3{
+        margin: 0.5rem 20rem;
+    }
+}
+
+.titulo{
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    color: var(--grisOscuro);
+}
+
+.formulario__liq-dtf{
+    display: grid;
+}
+
+.contenedor__tabla-fechas{
+    display: flex;
+    margin: 0 auto 2rem auto;
+    border: 2px solid var(--grisOscuro);
+    background-color: var(--blanco);
+    max-height: 40rem;
+    min-height: 5rem; 
+    overflow-y: auto;
+ }
+
+.tabla-fechas, .tabla-totales{
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 13px;   
+    width: 100%;
+}
+
+.tabla-fechas th, .tabla-totales th {
+    position: sticky;
+    top: 0; 
+    background-color: var(--gris); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.tabla-fechas td, .tabla-totales td {
+    border: 2px solid var(--gris);
+}
+
+.tabla-fechas tr:hover {
+    background-color: var(--gris);
+}
+
+.contenedor__tabla-totales{
+    display: flex;
+    border: 2px solid var(--grisOscuro);
+    border-bottom: none;
+    background-color: var(--blanco);
+}
+
+.tabla-totales{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.contenedor__btn-descargar-tablas{
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 400px){
+    .contenedor__btn-descargar-tablas{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.btn-descargar{
+    font-family: var(--fuentePrincipal);
+    font-size: 12px;
+    padding: 0.5rem 2rem 0.5rem 8rem; /* 40px a la derecha para el texto y 20px a la izquierda para el icono */
+    background-color: var(--gris);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;   
+    width: 20rem; 
+}
+
+.btn-descargar:hover{
+    background-color: var(--grisHover);
+}
+
+.pdf{
+    background-image: url('../img/pdf.png');
+    background-size: 20px 20px; /* Ajustar el tamaño de la imagen */
+    background-repeat: no-repeat; /* Evitar la repetición de la imagen */
+    background-position: 95% center; /* Posición de la imagen en el botón */
+    padding-left: 0.5rem; /* Espacio a la izquierda de la imagen */
+}
+
+footer{
+    margin-top: 2rem;
+    padding: 0.5rem;
+    background-color: var(--gris);
+    font-weight: 600;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+

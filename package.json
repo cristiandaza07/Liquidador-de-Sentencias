@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "html2pdf": "^0.0.11",
+    "js-html2pdf": "^1.1.4",
+    "table2excel": "^1.0.4"
+  }
+}
