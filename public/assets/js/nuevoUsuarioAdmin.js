@@ -12,7 +12,7 @@ var formularioCrearUsuario = document.getElementById('formularioCrearUsuario');
 formularioCrearUsuario.addEventListener('submit', (event)=>{
     event.preventDefault();
 
-    if(usuarioInput.value != "" && usuarioInput.value != "" && usuarioInput.value != "" && usuarioInput.value != "" && usuarioInput.value != "" && usuarioInput.value != ""){
+    if(usuarioInput.value != "" && dependeciaInput.value != "Seleccionar Mes" && tipoUsuarioInput.value != "Tipo de Usuario" && nombreCompletoInput.value != "" && correoInput.value != "" && contraseñaInput.value != ""){
         //let valorUsuarioInput = usuarioInput.value;
         if(usuarioInput.value.length < 6){
             return;
@@ -45,13 +45,14 @@ formularioCrearUsuario.addEventListener('submit', (event)=>{
     }
 });
 
-//Valida si el usuario ingresado ya existe 
+//Valida si el usuario ingresado ya existe y si no está el campo vacio
 usuarioInput.addEventListener('change', function(){
     var urlBase = window.location.protocol + '//' + window.location.hostname;
+
     if(usuarioInput.value == ""){
-        usuarioInputImg.src = urlBase + "/liq2/public/assets/img/invalid.png"
+        usuarioInputImg.src = urlBase + "/liquidador/public/assets/img/invalid.png"
     }else if(usuarioInput.value.length < 6){
-        usuarioInputImg.src = urlBase + "/liq2/public/assets/img/invalid.png"
+        usuarioInputImg.src = urlBase + "/liquidador/public/assets/img/invalid.png"
     } else{
         fetch('crearUsuario/usuarioExiste', {
             method: 'POST',
@@ -62,9 +63,9 @@ usuarioInput.addEventListener('change', function(){
             //Se guarda la respuesta del servidor
             const data = await response.json()
             if (data.usuarioExiste) {
-                usuarioInputImg.src = urlBase + "/liq2/public/assets/img/invalid.png"
+                usuarioInputImg.src = urlBase + "/liquidador/public/assets/img/invalid.png"
             } else {
-                usuarioInputImg.src = urlBase + "/liq2/public/assets/img/check.png"
+                usuarioInputImg.src = urlBase + "/liquidador/public/assets/img/check.png"
             }
         })
         .catch(error => {

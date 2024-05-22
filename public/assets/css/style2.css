@@ -196,6 +196,8 @@ p{
 
 
 .contenido__panel{
+    display: flex;
+    flex-direction: column;
     background-color: var(--gris);
     width: 50%;
     margin: 1rem auto;
@@ -208,10 +210,10 @@ p{
     background-color: var(--verde);
     color: var(--blanco);
     text-align: center;
-    min-width: 30rem;
     margin: 0.5rem auto 2rem auto;
     padding: 0.5rem;
     border-radius: 1rem;
+    width: 100%;
 }
 
 .formulario__admin__crear{
@@ -227,6 +229,7 @@ p{
     text-align: center;
     border: 1px solid var(--grisHover);
     padding: 0.5rem 0;
+    width: 100%;
 }
 
 .formulario__admin__crear select{
@@ -236,6 +239,7 @@ p{
     text-align: center;
     border: 1px solid var(--grisHover);
     padding: 0.5rem 0;
+    width: 100%;
 }
 
 #btnGuardarAdmin{
@@ -289,6 +293,12 @@ p{
 }
 
 /* -------- Crear IPC -------- */
+
+.grid__admin-fecha{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+}
 
 /* ------------------------------------- LIQUIDACIONES ----------------------------------------------------- */
  

@@ -35,6 +35,7 @@ $routes->group('admin', ['namespace'=>'App\Controllers\Admin','filter' => 'Sessi
     $routes->post('crearDtf/agregarDtf', 'AdminController::agregarDtf'); 
 
     $routes->get('crearIpc', 'AdminController::crearNuevoIpc'); 
+    $routes->post('crearIpc/agregarIpc', 'AdminController::agregarIpc'); 
 
     $routes->post('crearUsuario/usuarioExiste', 'AdminController::usuarioExiste'); 
 });

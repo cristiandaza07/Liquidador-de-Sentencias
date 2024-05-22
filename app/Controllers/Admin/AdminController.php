@@ -2,13 +2,12 @@
 
 namespace App\Controllers\Admin;
 
-use App\Models\UsuarioModelModel;
 use App\Controllers\BaseController;
+use App\Models\DtfModel;
 use App\Models\UsuarioModel;
-use CodeIgniter\CLI\Console;
+use App\Models\IpcModel;
 use Exception;
-use PharIo\Manifest\Library;
-use PhpParser\Node\Expr\FuncCall;
+
 
 class AdminController extends BaseController{
 
@@ -81,9 +80,11 @@ class AdminController extends BaseController{
             'contrasena' => $password
         ];
 
+        //Inserción del nuevo registro a la BD
         $usuario = new UsuarioModel();
         $usuario->insert($dataUsuario);
 
+        //Mostramos mensaje al usuario por medio de SweetAlert
         $mensaje = "<script>
                         Swal.fire({
                             title: 'Usuario creado',
@@ -101,7 +102,76 @@ class AdminController extends BaseController{
     }
 
     public function agregarDtf(){
+        //Conexion a la base de datos
+        $db = \Config\Database::connect();
+        helper('Operaciones_helper');
+
+        $fechaDesde = $_POST['fechaDesde'];
+        $fechaHasta = $_POST['fechaHasta'];
+        $porcentaje = substr($_POST['porcentaje'], 0, -1); //Eliminamos el simbolo '%' para ingresar correctamente el dato en la BD
         
+        $dataDtf= [
+            'fechaDesde' => $fechaDesde,
+            'fechaHasta' => $fechaHasta,
+            'porcentaje' => $porcentaje
+        ];
+
+        //Inserción del nuevo registro a la BD
+        $usuario = new DtfModel();
+        $usuario->insert($dataDtf);
+
+        //Mostramos mensaje al usuario por medio de SweetAlert
+        $mensaje = "<script>
+                        Swal.fire({
+                            title: 'DTF semanal registrado',
+                            icon: 'success'
+                        });
+                    </script>";
+
+        $data = [
+            'titulo' => "Panel de Administración",
+            'header' => mostrarHeader(),
+            'mensaje' => $mensaje
+        ];
+
+        return view('admin/crearNuevoDtf', $data);
+    }
+
+    public function agregarIpc(){
+        //Conexion a la base de datos
+        $db = \Config\Database::connect();
+        helper('Operaciones_helper');
+
+
+        $mes = $_POST['mes'];
+        $año = $_POST['año'];
+        $indice = $_POST['indice'];
+        
+        $dataIpc= [
+            'mes' => $mes,
+            'año' => $año,
+            'indice' => $indice
+        ];
+
+        //Inserción del nuevo registro a la BD
+        $usuario = new IpcModel();
+        $usuario->insert($dataIpc);
+
+        //Mostramos mensaje al usuario por medio de SweetAlert
+        $mensaje = "<script>
+                        Swal.fire({
+                            title: 'IPC mensual registrado',
+                            icon: 'success'
+                        });
+                    </script>";
+
+        $data = [
+            'titulo' => "Panel de Administración",
+            'header' => mostrarHeader(),
+            'mensaje' => $mensaje
+        ];
+
+        return view('admin/crearNuevoIpc', $data);
     }
 
     //Verifica si el usuario ingresado al intertar crear un nuevo usuario ya existe

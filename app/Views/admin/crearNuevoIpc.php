@@ -13,22 +13,26 @@
         <div class="contenido__panel">
         <h3>DATOS DEL NUEVO IPC</h3>
 
-            <form id="formularioCrearIpc" class="formulario__admin__crear" action="<?php echo base_url('/admin/usuarioExiste2') ?>" method="post">
-                <select name="mes" id="mes">
-                    <option selected disabled>Seleccionar Mes</option>
-                    <option class="i" value="Enero">Enero</option>
-                    <option value="Febrero">Febrero</option>
-                    <option value="Marzo">Marzo</option>
-                    <option value="Abril">Abril</option>
-                    <option value="Mayo">Mayo</option>
-                    <option value="Junio">Junio</option>
-                    <option value="Julio">Julio</option>
-                    <option value="Agosto">Agosto</option>
-                    <option value="Septiembre">Septiembre</option>
-                    <option value="Octubre">Octubre</option>
-                    <option value="Noviembre">Noviembre</option>
-                    <option value="Diciembre">Diciembre</option>
-                </select>
+            <form id="formularioCrearIpc" class="formulario__admin__crear" action="<?php echo base_url('/admin/crearIpc/agregarIpc') ?>" method="post">
+                <div class="grid__admin-fecha">
+                    <select name="mes" id="mes">
+                        <option selected disabled>Seleccionar Mes</option>
+                        <option value="Enero">Enero</option>
+                        <option value="Febrero">Febrero</option>
+                        <option value="Marzo">Marzo</option>
+                        <option value="Abril">Abril</option>
+                        <option value="Mayo">Mayo</option>
+                        <option value="Junio">Junio</option>
+                        <option value="Julio">Julio</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Septiembre">Septiembre</option>
+                        <option value="Octubre">Octubre</option>
+                        <option value="Noviembre">Noviembre</option>
+                        <option value="Diciembre">Diciembre</option>
+                    </select>  
+                    <input id="año" name="año" type="number" value="<?php echo obtenerAño(obtenerFechaActual())?>">                  
+                </div>
+
                 <input id="indice" name="indice" type="text" placeholder="Indice">
 
                 <input id="btnGuardarAdmin" class="btn-crear" name="btnCrearIpc" type="submit" value="Guardar">

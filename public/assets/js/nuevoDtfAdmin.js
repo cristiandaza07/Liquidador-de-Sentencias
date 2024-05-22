@@ -15,7 +15,7 @@ formatoPorcentaje();
 formularioCrearDTf.addEventListener('submit', (event)=>{
     event.preventDefault();
 
-    if(porcentajeDtf.value != "" && fechaDesde.value != "" && fechaHasta.value != "" ){
+    if(porcentajeDtf.value != "" && !isNaN(porcentajeDtf.value.slice(0,-1)) && fechaDesde.value != "" && fechaHasta.value != "" ){
             Swal.fire({
                 icon: "warning",
                 title: "¿Confirmas que la información es correcta?",
@@ -25,10 +25,8 @@ formularioCrearDTf.addEventListener('submit', (event)=>{
             })
             .then((result) => {
                 if (result.isConfirmed) {
-                Swal.fire("Usuario guardado!", "", "success");
-                formularioCrearUsuario.submit();
+                formularioCrearDTf.submit();
                 } else if (result.isDenied) {
-                Swal.fire("El usuario no fue creado", "", "info");
                 return;
                 }      
             });
