@@ -6,10 +6,8 @@
     <title><?php echo $titulo; ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-
-  </head>
-  <body>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
     <style>
         :root{
             --negro: #1D1D1B;
@@ -61,6 +59,10 @@
             background-color: #e1e1e1c4;
         }
     </style>
+  </head>
+  <body>
+
+
 
     <div class="encabezado">
         <img src="<?php echo base_url();?>/assets/img/logo.png" alt="logo"> 

@@ -4,11 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Liquidaciones</title>
-
-        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/recursos/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/css/style.css">
     </head>
@@ -36,23 +32,7 @@
                     </div>
         </main>
 
-        <!--<script>
-            window.addEventListener('load', function() {
-                const mensajeJson = <?php echo $mensaje; ?>;
-                const mensaje = JSON.parse(mensajeJson);
-
-                if(mensaje){
-                    Swal.fire({
-                        icon: "warning",
-                        title: "Usuario o contraseña incorrecta",
-                        padding: '30px',
-                        width: '350px',
-                        heightAuto: true
-                    });
-                }
-            });
-        </script>-->
-
+        <script src="<?php echo base_url();?>assets/recursos/sweetalert2.all.min.js"></script>
         <script src="<?php echo base_url();?>/assets/js/validacionesLogin.js"></script>
 
     </body>
