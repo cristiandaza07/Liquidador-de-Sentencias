@@ -1,0 +1,29 @@
+\doxysection{production.\+php}
+\hypertarget{_config_2_boot_2production_8php_source}{}\label{_config_2_boot_2production_8php_source}\index{C:/xampp/htdocs/liquidador/app/Config/Boot/production.php@{C:/xampp/htdocs/liquidador/app/Config/Boot/production.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00003}00003\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00004}00004\ \textcolor{comment}{\ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00005}00005\ \textcolor{comment}{\ |\ ERROR\ DISPLAY}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00006}00006\ \textcolor{comment}{\ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00007}00007\ \textcolor{comment}{\ |\ Don't\ show\ ANY\ in\ production\ environments.\ Instead,\ let\ the\ system\ catch}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00008}00008\ \textcolor{comment}{\ |\ it\ and\ display\ a\ generic\ error\ message.}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00009}00009\ \textcolor{comment}{\ |}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00010}00010\ \textcolor{comment}{\ |\ If\ you\ set\ 'display\_errors'\ to\ '1',\ CI4's\ detailed\ error\ report\ will\ show.}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00011}00011\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00012}00012\ ini\_set(\textcolor{stringliteral}{'display\_errors'},\ \textcolor{charliteral}{'0'});}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00013}00013\ error\_reporting(E\_ALL\ \&\ \string~E\_NOTICE\ \&\ \string~E\_DEPRECATED\ \&\ \string~E\_STRICT\ \&\ \string~E\_USER\_NOTICE\ \&\ \string~E\_USER\_DEPRECATED);}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00015}00015\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00016}00016\ \textcolor{comment}{\ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00017}00017\ \textcolor{comment}{\ |\ DEBUG\ MODE}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00018}00018\ \textcolor{comment}{\ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00019}00019\ \textcolor{comment}{\ |\ Debug\ mode\ is\ an\ experimental\ flag\ that\ can\ allow\ changes\ throughout}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00020}00020\ \textcolor{comment}{\ |\ the\ system.\ It's\ not\ widely\ used\ currently,\ and\ may\ not\ survive}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00021}00021\ \textcolor{comment}{\ |\ release\ of\ the\ framework.}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00022}00022\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_config_2_boot_2production_8php_source_l00023}00023\ defined(\textcolor{stringliteral}{'CI\_DEBUG'})\ ||\ define(\textcolor{stringliteral}{'CI\_DEBUG'},\ \textcolor{keyword}{false});}
+
+\end{DoxyCode}

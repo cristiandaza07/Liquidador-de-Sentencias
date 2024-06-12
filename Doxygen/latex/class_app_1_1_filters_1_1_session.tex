@@ -1,0 +1,72 @@
+\doxysection{Referencia de la clase Session}
+\hypertarget{class_app_1_1_filters_1_1_session}{}\label{class_app_1_1_filters_1_1_session}\index{Session@{Session}}
+Diagrama de herencia de Session\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_filters_1_1_session}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_filters_1_1_session_af169c9ced2ab9df0e2aca1e807407f0a}{before}} (Request\+Interface \$request, \$arguments=null)
+\item 
+\mbox{\hyperlink{class_app_1_1_filters_1_1_session_afbe62435a8372731fe0a1a895cf7c3b8}{after}} (Request\+Interface \$request, Response\+Interface \$response, \$arguments=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_filters_2_session_8php_source_l00009}{9}} del archivo \mbox{\hyperlink{_filters_2_session_8php_source}{Session.\+php}}.
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_app_1_1_filters_1_1_session_afbe62435a8372731fe0a1a895cf7c3b8}\index{Session@{Session}!after@{after}}
+\index{after@{after}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{after()}{after()}}
+{\footnotesize\ttfamily \label{class_app_1_1_filters_1_1_session_afbe62435a8372731fe0a1a895cf7c3b8} 
+after (\begin{DoxyParamCaption}\item[{Request\+Interface}]{\$request}{, }\item[{Response\+Interface}]{\$response}{, }\item[{}]{\$arguments}{ = {\ttfamily null}}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_filters_2_session_8php_source_l00024}{24}} del archivo \mbox{\hyperlink{_filters_2_session_8php_source}{Session.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Do\ something\ here}}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_filters_1_1_session_af169c9ced2ab9df0e2aca1e807407f0a}\index{Session@{Session}!before@{before}}
+\index{before@{before}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{before()}{before()}}
+{\footnotesize\ttfamily \label{class_app_1_1_filters_1_1_session_af169c9ced2ab9df0e2aca1e807407f0a} 
+before (\begin{DoxyParamCaption}\item[{Request\+Interface}]{\$request}{, }\item[{}]{\$arguments}{ = {\ttfamily null}}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_filters_2_session_8php_source_l00011}{11}} del archivo \mbox{\hyperlink{_filters_2_session_8php_source}{Session.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtener\ el\ tipo\ de\ usuario\ actual}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \$tipoUsuario\ =\ session()-\/>get(\textcolor{stringliteral}{'tipoUsuario'});}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificar\ si\ el\ tipo\ de\ usuario\ es\ 'liquidador'}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$tipoUsuario\ !==\ \textcolor{stringliteral}{'Liquidador'}\ \&\&\ \$tipoUsuario\ !==\ \textcolor{stringliteral}{'Administrador'})\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Denegar\ acceso\ y\ redirigir\ a\ la\ página\ de\ inicio}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ redirect()-\/>to(\textcolor{charliteral}{'/'});}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Filters/Session.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,126 @@
+\doxysection{Referencia de la clase Mimes}
+\hypertarget{class_config_1_1_mimes}{}\label{class_config_1_1_mimes}\index{Mimes@{Mimes}}
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_config_1_1_mimes_a12ec95279ad25a91af82cd164677e7c7}{guess\+Type\+From\+Extension}} (string \$extension)
+\item 
+static \mbox{\hyperlink{class_config_1_1_mimes_a8ca74463dfb74847376ef533883c46a0}{guess\+Extension\+From\+Type}} (string \$type, ?string \$proposed\+Extension=null)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static array \mbox{\hyperlink{class_config_1_1_mimes_ad0d0a2ca59443f101ffcaa0feb6811ed}{\$mimes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Mimes
+
+This file contains an array of mime types. It is used by the Upload class to help identify allowed file types.
+
+When more than one variation for an extension exist (like jpg, jpeg, etc) the most common one should be first in the array to aid the guess\texorpdfstring{$\ast$}{*} methods. The same applies when more than one mime-\/type exists for a single extension.
+
+When working with mime types, please make sure you have the ´fileinfo´ extension enabled to reliably detect the media types.
+
+@immutable 
+
+Definición en la línea \mbox{\hyperlink{_mimes_8php_source_l00021}{21}} del archivo \mbox{\hyperlink{_mimes_8php_source}{Mimes.\+php}}.
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_config_1_1_mimes_a8ca74463dfb74847376ef533883c46a0}\index{Mimes@{Mimes}!guessExtensionFromType@{guessExtensionFromType}}
+\index{guessExtensionFromType@{guessExtensionFromType}!Mimes@{Mimes}}
+\doxysubsubsection{\texorpdfstring{guessExtensionFromType()}{guessExtensionFromType()}}
+{\footnotesize\ttfamily \label{class_config_1_1_mimes_a8ca74463dfb74847376ef533883c46a0} 
+static guess\+Extension\+From\+Type (\begin{DoxyParamCaption}\item[{string}]{\$type}{, }\item[{?string}]{\$proposed\+Extension}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Attempts to determine the best file extension for a given mime type.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+string | null & {\em \$proposed\+Extension} & -\/ default extension (in case there is more than one with the same mime type)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+string\texorpdfstring{$\vert$}{|}null The extension determined, or null if unable to match. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_mimes_8php_source_l00511}{511}} del archivo \mbox{\hyperlink{_mimes_8php_source}{Mimes.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00512\ \ \ \ \ \{}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \$type\ =\ trim(strtolower(\$type),\ \textcolor{stringliteral}{'.\ '});}
+\DoxyCodeLine{00514\ }
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \$proposedExtension\ =\ trim(strtolower(\$proposedExtension\ ??\ \textcolor{stringliteral}{''}));}
+\DoxyCodeLine{00516\ }
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \$proposedExtension\ !==\ \textcolor{stringliteral}{''}}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ array\_key\_exists(\$proposedExtension,\ static::\$mimes)}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ in\_array(\$type,\ (array)\ static::\$mimes[\$proposedExtension],\ \textcolor{keyword}{true})}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ )\ \{}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ detected\ mime\ type\ matches\ with\ the\ proposed\ extension.}}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$proposedExtension;}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00525\ }
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reverse\ check\ the\ mime\ type\ list\ if\ no\ extension\ was\ proposed.}}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ search\ is\ order\ sensitive!}}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (static::\$mimes\ as\ \$ext\ =>\ \$types)\ \{}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (in\_array(\$type,\ (array)\ \$types,\ \textcolor{keyword}{true}))\ \{}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ext;}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00533\ }
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00535\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_config_1_1_mimes_a12ec95279ad25a91af82cd164677e7c7}\index{Mimes@{Mimes}!guessTypeFromExtension@{guessTypeFromExtension}}
+\index{guessTypeFromExtension@{guessTypeFromExtension}!Mimes@{Mimes}}
+\doxysubsubsection{\texorpdfstring{guessTypeFromExtension()}{guessTypeFromExtension()}}
+{\footnotesize\ttfamily \label{class_config_1_1_mimes_a12ec95279ad25a91af82cd164677e7c7} 
+static guess\+Type\+From\+Extension (\begin{DoxyParamCaption}\item[{string}]{\$extension}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Attempts to determine the best mime type for the given file extension.
+
+\begin{DoxyReturn}{Devuelve}
+string\texorpdfstring{$\vert$}{|}null The mime type found, or none if unable to determine. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_mimes_8php_source_l00493}{493}} del archivo \mbox{\hyperlink{_mimes_8php_source}{Mimes.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00494\ \ \ \ \ \{}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \$extension\ =\ trim(strtolower(\$extension),\ \textcolor{stringliteral}{'.\ '});}
+\DoxyCodeLine{00496\ }
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\ array\_key\_exists(\$extension,\ static::\$mimes))\ \{}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00500\ }
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ is\_array(static::\$mimes[\$extension])\ ?\ static::\$mimes[\$extension][0]\ :\ static::\$mimes[\$extension];}
+\DoxyCodeLine{00502\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_config_1_1_mimes_ad0d0a2ca59443f101ffcaa0feb6811ed}\index{Mimes@{Mimes}!\$mimes@{\$mimes}}
+\index{\$mimes@{\$mimes}!Mimes@{Mimes}}
+\doxysubsubsection{\texorpdfstring{\$mimes}{\$mimes}}
+{\footnotesize\ttfamily \label{class_config_1_1_mimes_ad0d0a2ca59443f101ffcaa0feb6811ed} 
+array \$mimes\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_mimes_8php_source_l00028}{28}} del archivo \mbox{\hyperlink{_mimes_8php_source}{Mimes.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Config/Mimes.\+php\end{DoxyCompactItemize}

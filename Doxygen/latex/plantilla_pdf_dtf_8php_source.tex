@@ -1,0 +1,101 @@
+\doxysection{plantilla\+Pdf\+Dtf.\+php}
+\hypertarget{plantilla_pdf_dtf_8php_source}{}\label{plantilla_pdf_dtf_8php_source}\index{C:/xampp/htdocs/liquidador/app/Views/pdf/plantillaPdfDtf.php@{C:/xampp/htdocs/liquidador/app/Views/pdf/plantillaPdfDtf.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00001}00001\ <!doctype\ html>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00002}00002\ <html\ lang=\textcolor{stringliteral}{"{}en"{}}>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00003}00003\ \ \ <head>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00004}00004\ \ \ \ \ <meta\ charset=\textcolor{stringliteral}{"{}utf-\/8"{}}>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00005}00005\ \ \ \ \ <meta\ name=\textcolor{stringliteral}{"{}viewport"{}}\ content=\textcolor{stringliteral}{"{}width=device-\/width,\ initial-\/scale=1"{}}>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00006}00006\ \ \ \ \ <title><?php\ echo\ \$titulo;\ ?></title>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00007}00007\ \ \ \ \ <style>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ body\{}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ font-\/family:\ \textcolor{stringliteral}{'Segoe\ UI'},\ Tahoma,\ Geneva,\ Verdana,\ sans-\/serif;}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ .encabezado\{}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ display:\ block;\ width:\ 100\%;}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ background-\/color:\ \#e1e1e1c4;}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ border-\/radius:\ 5px;}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ h1\{}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ font-\/weight:\ 400;\ text-\/align:\ center;\ font-\/size:\ 18px;\ text-\/decoration:\ underline;}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ .encabezado\_\_fecha\{}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ font-\/weight:\ 400;\ text-\/align:\ center;\ text-\/decoration:\ none;\ font-\/size:\ 12px;\ margin-\/top:\ -\/1px;\ margin-\/bottom:\ 10px;\ color:\ \#333333;}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ img\{}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ width:\ 10rem;}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ margin:\ 10px\ 270px\ 0\ 270px;}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ .tabla\{}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ text-\/align:\ center;\ font-\/size:\ 13px;\ width:\ 100\%;}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ .tabla\ th\{}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ background-\/color:\ \#e1e1e1c4;}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00038}00038\ \ \ \ \ </style>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00039}00039\ \ \ </head>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00040}00040\ \ \ <body>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00042}00042\ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}encabezado"{}}>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ <img\ src=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url();?>/assets/img/logo.png"{}}\ alt=\textcolor{stringliteral}{"{}logo"{}}>\ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ <h1\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}encabezado\_\_fecha"{}}><?php\ echo\ date(\textcolor{stringliteral}{'d-\/m-\/Y'});\ ?></h1>\ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00045}00045\ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00047}00047\ \ \ \ \ <div>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ <h1>DATOS\ DE\ LA\ LIQUIDACIÓN</h1>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ <p>En\ el\ presente\ documento\ se\ informa\ que\ el\ demandante\ <?php\ echo\ \$nombreDemandante;?>\ con\ CC.\ <?php\ echo\ \$numDocumento;?>\ se\ le\ debe\ depositar\ un\ valor\ de\ \$<?php\ echo\ \$valorFinal;?>\ COP</p>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00051}00051\ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}contenedorTablaFechas"{}}>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}tablaTotales"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}tabla"{}}>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <thead>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Total\ Días</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Valor\ Inicial\ [k]</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Total\ Intereses\ [i]</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Valor\ Total\ [k\ +\ i]</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </thead>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ echo\ \$datosGenerales;\ ?>\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}tablaFechas"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}tabla"{}}>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <thead>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Fecha\ Desde</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Fecha\ Hasta</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>No.\ Días</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>DTF</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>DTF\ Nominal</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>DTF\ Día</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Interes\ [i]</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </thead>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ echo\ \$datosFechas;\ ?>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}tablaTotales"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}tabla"{}}>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <thead>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Total\ Días</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Valor\ Inicial\ [k]</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Total\ Intereses\ [i]</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Valor\ Total\ [k\ +\ i]</th>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </thead>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ echo\ \$datosGenerales;\ ?>\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00092}00092\ \ \ \ \ </body>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00093}00093\ </html>}
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{plantilla_pdf_dtf_8php_source_l00095}00095\ }
+
+\end{DoxyCode}

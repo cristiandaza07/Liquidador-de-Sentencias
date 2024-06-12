@@ -29,6 +29,7 @@ class LiquidacionesController extends BaseController{
     //Muestra el modulo de liquidacion DTF
     public function liquidacionDtf(){
         helper('Operaciones_helper');
+
         $data = [
             'titulo' => 'LIQUIDACIÓN DTF',
             'header' => mostrarHeader()
@@ -39,6 +40,7 @@ class LiquidacionesController extends BaseController{
     //Muestra el modulo de liquidacion indexada
     public function liquidacionIndexada(){
         helper('Operaciones_helper');
+
         $data = [
             'titulo' => 'LIQUIDACIÓN INDEXADA',
             'header' => mostrarHeader()
@@ -46,7 +48,11 @@ class LiquidacionesController extends BaseController{
         return view('liquidaciones/liq_indexada', $data);
     }
 
-    //Muestra el resultado del calculo de la liquidación de tipo indexada
+    /**
+     * Muestra el resultado del calculo de la liquidación de tipo indexada
+     *
+     * @return void 
+     */
     public function resultadoIndexada(){
         //Conexion a la base de datos
         $db = \Config\Database::connect();
@@ -91,7 +97,11 @@ class LiquidacionesController extends BaseController{
         return view('liquidaciones/liq_indexada_resultado', $data);
     }
 
-    //Muestra el resultado del calculo de la liquidación de tipo DTF
+    /**
+     * Muestra el resultado del calculo de la liquidación de tipo DTF
+     *
+     * @return void
+     */
     public function resultadoDtf(){
         //Conexion a la base de datos
         $db = \Config\Database::connect();
@@ -166,6 +176,11 @@ class LiquidacionesController extends BaseController{
         return view('liquidaciones/liq_dtf_resultado', $data);
     }
 
+    /**
+     * Guarda la liquidación en la base de datos y ejecuta la función de exportar PDF
+     *
+     * @return void
+     */
     public function guardarLiquidacionDtf(){
         //Conexion a la base de datos
         $db = \Config\Database::connect();
@@ -210,34 +225,57 @@ class LiquidacionesController extends BaseController{
         $liquidacion = new LiquidacionModel();
         $liquidacion->insert($dataLiquidacion);
 
+        //Generamos el PDF de tipo DTF
         crearPdf('DTF');
     }
 
-    //Guarda los datos de la liquidación de tipo indexada y del demandante
+    /**
+     * Guarda los datos de la liquidación de tipo indexada y del demandante
+     *
+     * @return void
+     */
     public function guardarLiquidacionIndexada(){
+        //Conexion a la base de datos
+        $db = \Config\Database::connect();
+
         helper('Operaciones_helper');
-        crearPdf('Indexada');
-    }
 
-    public function validaciones(){
-        $reglas = [
-            'valorInicial' => 'required',
-            'fechaDesde' => 'required',
-            'fechaHasta' => 'required'
-        ];
+        //Se guarda las fechas ingresadas por el usuario
+        $fechaHasta = $_POST['fechaHasta'];
+        $fechaDesde = $_POST['fechaDesde'];
 
-        if(!$this->validate($reglas)){
-            return redirect()->back()->withInput();
+        $nombreDemandante = $_POST['nombreDemandante'];
+        $numDocumento = $_POST['numDocumento'];
+
+        $idDemandante = "";
+        $query = $db->query("SELECT * FROM demandantes WHERE num_documento = $numDocumento");
+        $demandante = $query->getResultArray();
+        if(count($demandante) == 0){
+           //Guardar registro del demandante
+            $dataDemandante = [
+                'nombre' => $nombreDemandante,
+                'num_documento' => $numDocumento,
+            ];
+            $demandante = new DemandanteModel();
+            $demandante->insert($dataDemandante); 
+            $idDemandante = $demandante->getInsertID();
+        }else{
+            $idDemandante = $demandante[0]['id_demandante'];
         }
-    }
 
-    public function prueba(){
-        helper('Operaciones_helper');     
-        $data = [
-            'titulo' => 'Prueba',
-            'header' => mostrarHeader()
+        //Guardar registro de la liquidación
+        $selectQuery = "SELECT * FROM dtf WHERE fechaDesde BETWEEN '$fechaDesde' AND '$fechaHasta' ORDER BY fechaDesde ASC";
+        $dataLiquidacion = [
+            'tipo_liquidacion' => 'indexación',
+            'query' => $selectQuery,
+            'id_usuario' => intval(session()->get('idUsuario')),
+            'id_demandante' => $idDemandante
         ];
-        return view('liquidaciones/boot', $data);
+        $liquidacion = new LiquidacionModel();
+        $liquidacion->insert($dataLiquidacion);
+
+        //Generamos el PDF de tipo DTF
+        crearPdf('Indexada');
     }
 
 }

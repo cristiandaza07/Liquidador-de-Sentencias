@@ -1,0 +1,44 @@
+\doxysection{testing.\+php}
+\hypertarget{testing_8php_source}{}\label{testing_8php_source}\index{C:/xampp/htdocs/liquidador/app/Config/Boot/testing.php@{C:/xampp/htdocs/liquidador/app/Config/Boot/testing.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00003}00003\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00004}00004\ \textcolor{comment}{\ *\ The\ environment\ testing\ is\ reserved\ for\ PHPUnit\ testing.\ It\ has\ special}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00005}00005\ \textcolor{comment}{\ *\ conditions\ built\ into\ the\ framework\ at\ various\ places\ to\ assist\ with\ that.}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00006}00006\ \textcolor{comment}{\ *\ You\ can’t\ use\ it\ for\ your\ development.}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00007}00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00009}00009\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00010}00010\ \textcolor{comment}{\ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00011}00011\ \textcolor{comment}{\ |\ ERROR\ DISPLAY}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00012}00012\ \textcolor{comment}{\ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00013}00013\ \textcolor{comment}{\ |\ In\ development,\ we\ want\ to\ show\ as\ many\ errors\ as\ possible\ to\ help}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00014}00014\ \textcolor{comment}{\ |\ make\ sure\ they\ don't\ make\ it\ to\ production.\ And\ save\ us\ hours\ of}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00015}00015\ \textcolor{comment}{\ |\ painful\ debugging.}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00016}00016\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00017}00017\ error\_reporting(E\_ALL);}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00018}00018\ ini\_set(\textcolor{stringliteral}{'display\_errors'},\ \textcolor{charliteral}{'1'});}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00020}00020\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00021}00021\ \textcolor{comment}{\ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00022}00022\ \textcolor{comment}{\ |\ DEBUG\ BACKTRACES}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00023}00023\ \textcolor{comment}{\ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00024}00024\ \textcolor{comment}{\ |\ If\ true,\ this\ constant\ will\ tell\ the\ error\ screens\ to\ display\ debug}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00025}00025\ \textcolor{comment}{\ |\ backtraces\ along\ with\ the\ other\ error\ information.\ If\ you\ would}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00026}00026\ \textcolor{comment}{\ |\ prefer\ to\ not\ see\ this,\ set\ this\ value\ to\ false.}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00027}00027\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00028}00028\ defined(\textcolor{stringliteral}{'SHOW\_DEBUG\_BACKTRACE'})\ ||\ define(\textcolor{stringliteral}{'SHOW\_DEBUG\_BACKTRACE'},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00030}00030\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00031}00031\ \textcolor{comment}{\ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00032}00032\ \textcolor{comment}{\ |\ DEBUG\ MODE}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00033}00033\ \textcolor{comment}{\ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00034}00034\ \textcolor{comment}{\ |\ Debug\ mode\ is\ an\ experimental\ flag\ that\ can\ allow\ changes\ throughout}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00035}00035\ \textcolor{comment}{\ |\ the\ system.\ It's\ not\ widely\ used\ currently,\ and\ may\ not\ survive}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00036}00036\ \textcolor{comment}{\ |\ release\ of\ the\ framework.}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00037}00037\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{testing_8php_source_l00038}00038\ defined(\textcolor{stringliteral}{'CI\_DEBUG'})\ ||\ define(\textcolor{stringliteral}{'CI\_DEBUG'},\ \textcolor{keyword}{true});}
+
+\end{DoxyCode}

@@ -6,13 +6,13 @@
     <?php echo validation_list_errors(); ?>
 
         <div class="contenido">
-            <h1 class="titulo"><?php echo $titulo; ?></h1>
-            
+            <h1 class="titulo"><?php echo $titulo; ?></h1>  
             <h3>
                 Ingrese las fechas que fueron expedidas en la orden del juez para que el sistema realice el cálculo del 
                 total que se debe pagar.
-            </h3>
+            </h3>                    
             <hr>
+            
             <form id="formularioDtf" class="formulario__liq-dtf" action="<?php echo base_url('/liquidaciones/dtf/resultado') ?>" method="post">
                     <div class="formularioDtf__datos-demandante">
                         <h2>DATOS DEL DEMANDANTE</h2>

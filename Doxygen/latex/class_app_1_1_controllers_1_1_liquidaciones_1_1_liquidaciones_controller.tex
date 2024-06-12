@@ -1,0 +1,384 @@
+\doxysection{Referencia de la clase Liquidaciones\+Controller}
+\hypertarget{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller}{}\label{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller}\index{LiquidacionesController@{LiquidacionesController}}
+Diagrama de herencia de Liquidaciones\+Controller\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_aca67943ff65c9df6e637e187e41b9958}{menu\+Liquidador}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a727c49edf624f12d3be9d6bc6cddeddd}{liquidacion\+Dtf}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a94ffaa800fdc8c7a602909d8951a0fb9}{liquidacion\+Indexada}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a0eedee5aa4a8003647fb25f4c9aff12a}{resultado\+Indexada}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a857c6f05535f2a7c1d14752131bb8716}{resultado\+Dtf}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a1a46d897abbaf6da012778702e0e8bdb}{guardar\+Liquidacion\+Dtf}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a90167d34db0739bb30ec0697a2a93311}{guardar\+Liquidacion\+Indexada}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos heredados de \mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller}{Base\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_aaa4ae087c2582ea613c7255f73d8a623}{init\+Controller}} (Request\+Interface \$request, Response\+Interface \$response, Logger\+Interface \$logger)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_aeeccfcd4e2765b8469c41f93ec023ee9}{\$helpers}} = \mbox{[}\textquotesingle{}form\textquotesingle{}\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos protegidos heredados de \mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller}{Base\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abb35c8495a232b510389fa6d7b15d38a}{\$request}}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_aeeccfcd4e2765b8469c41f93ec023ee9}{\$helpers}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abefb3c26429d514777313e9a63d7cbac}{\$session}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_liquidaciones_controller_8php_source_l00014}{14}} del archivo \mbox{\hyperlink{_liquidaciones_controller_8php_source}{Liquidaciones\+Controller.\+php}}.
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a1a46d897abbaf6da012778702e0e8bdb}\index{LiquidacionesController@{LiquidacionesController}!guardarLiquidacionDtf@{guardarLiquidacionDtf}}
+\index{guardarLiquidacionDtf@{guardarLiquidacionDtf}!LiquidacionesController@{LiquidacionesController}}
+\doxysubsubsection{\texorpdfstring{guardarLiquidacionDtf()}{guardarLiquidacionDtf()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a1a46d897abbaf6da012778702e0e8bdb} 
+guardar\+Liquidacion\+Dtf (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Guarda la liquidación en la base de datos y ejecuta la función de exportar PDF
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_liquidaciones_controller_8php_source_l00184}{184}} del archivo \mbox{\hyperlink{_liquidaciones_controller_8php_source}{Liquidaciones\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Conexion\ a\ la\ base\ de\ datos}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \$db\ =\ \(\backslash\)Config\(\backslash\)Database::connect();}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ helper(\textcolor{stringliteral}{'Operaciones\_helper'});}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Se\ guarda\ las\ fechas\ ingresadas\ por\ el\ usuario}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \$valorFinal\ =\ \$\_POST[\textcolor{stringliteral}{'valorFinal'}];}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \$fechaHasta\ =\ \$\_POST[\textcolor{stringliteral}{'fechaHasta'}];}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \$fechaDesde\ =\ \$\_POST[\textcolor{stringliteral}{'fechaDesde'}];}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \$nombreDemandante\ =\ \$\_POST[\textcolor{stringliteral}{'nombreDemandante'}];}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \$numDocumento\ =\ \$\_POST[\textcolor{stringliteral}{'numDocumento'}];}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \$dtfs\ =\ \$\_POST[\textcolor{stringliteral}{'dtfs'}];}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \$datosGenerales\ =\ \$\_POST[\textcolor{stringliteral}{'datosGenerales'}];}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \$idDemandante\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \$query\ =\ \$db-\/>query(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ demandantes\ WHERE\ num\_documento\ =\ \$numDocumento"{}});}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \$demandante\ =\ \$query-\/>getResultArray();}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(count(\$demandante)\ ==\ 0)\{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Guardar\ registro\ del\ demandante}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \$dataDemandante\ =\ [}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nombre'}\ =>\ \$nombreDemandante,}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'num\_documento'}\ =>\ \$numDocumento,}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \$demandante\ =\ \textcolor{keyword}{new}\ DemandanteModel();}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \$demandante-\/>insert(\$dataDemandante);\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \$idDemandante\ =\ \$demandante-\/>getInsertID();}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \$idDemandante\ =\ \$demandante[0][\textcolor{stringliteral}{'id\_demandante'}];}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Guardar\ registro\ de\ la\ liquidación}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \$selectQuery\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ dtf\ WHERE\ fechaDesde\ BETWEEN\ '\$fechaDesde'\ AND\ '\$fechaHasta'\ ORDER\ BY\ fechaDesde\ ASC"{}};}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \$dataLiquidacion\ =\ [}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'tipo\_liquidacion'}\ =>\ \textcolor{stringliteral}{'dtf'},}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'query'}\ =>\ \$selectQuery,}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'id\_usuario'}\ =>\ intval(session()-\/>\textcolor{keyword}{get}(\textcolor{stringliteral}{'idUsuario'})),}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'id\_demandante'}\ =>\ \$idDemandante}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \$liquidacion\ =\ \textcolor{keyword}{new}\ LiquidacionModel();}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \$liquidacion-\/>insert(\$dataLiquidacion);}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Generamos\ el\ PDF\ de\ tipo\ DTF}}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ crearPdf(\textcolor{stringliteral}{'DTF'});}
+\DoxyCodeLine{00230\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a90167d34db0739bb30ec0697a2a93311}\index{LiquidacionesController@{LiquidacionesController}!guardarLiquidacionIndexada@{guardarLiquidacionIndexada}}
+\index{guardarLiquidacionIndexada@{guardarLiquidacionIndexada}!LiquidacionesController@{LiquidacionesController}}
+\doxysubsubsection{\texorpdfstring{guardarLiquidacionIndexada()}{guardarLiquidacionIndexada()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a90167d34db0739bb30ec0697a2a93311} 
+guardar\+Liquidacion\+Indexada (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Guarda los datos de la liquidación de tipo indexada y del demandante
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_liquidaciones_controller_8php_source_l00237}{237}} del archivo \mbox{\hyperlink{_liquidaciones_controller_8php_source}{Liquidaciones\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ helper(\textcolor{stringliteral}{'Operaciones\_helper'});}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ crearPdf(\textcolor{stringliteral}{'Indexada'});}
+\DoxyCodeLine{00240\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a727c49edf624f12d3be9d6bc6cddeddd}\index{LiquidacionesController@{LiquidacionesController}!liquidacionDtf@{liquidacionDtf}}
+\index{liquidacionDtf@{liquidacionDtf}!LiquidacionesController@{LiquidacionesController}}
+\doxysubsubsection{\texorpdfstring{liquidacionDtf()}{liquidacionDtf()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a727c49edf624f12d3be9d6bc6cddeddd} 
+liquidacion\+Dtf (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_liquidaciones_controller_8php_source_l00030}{30}} del archivo \mbox{\hyperlink{_liquidaciones_controller_8php_source}{Liquidaciones\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ helper(\textcolor{stringliteral}{'Operaciones\_helper'});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}\ =>\ \textcolor{stringliteral}{'LIQUIDACIÓN\ DTF'},}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'header'}\ =>\ mostrarHeader()}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ view(\textcolor{stringliteral}{'liquidaciones/liq\_dtf'},\ \$data);}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a94ffaa800fdc8c7a602909d8951a0fb9}\index{LiquidacionesController@{LiquidacionesController}!liquidacionIndexada@{liquidacionIndexada}}
+\index{liquidacionIndexada@{liquidacionIndexada}!LiquidacionesController@{LiquidacionesController}}
+\doxysubsubsection{\texorpdfstring{liquidacionIndexada()}{liquidacionIndexada()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a94ffaa800fdc8c7a602909d8951a0fb9} 
+liquidacion\+Indexada (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_liquidaciones_controller_8php_source_l00041}{41}} del archivo \mbox{\hyperlink{_liquidaciones_controller_8php_source}{Liquidaciones\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ helper(\textcolor{stringliteral}{'Operaciones\_helper'});}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}\ =>\ \textcolor{stringliteral}{'LIQUIDACIÓN\ INDEXADA'},}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'header'}\ =>\ mostrarHeader()}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ view(\textcolor{stringliteral}{'liquidaciones/liq\_indexada'},\ \$data);}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_aca67943ff65c9df6e637e187e41b9958}\index{LiquidacionesController@{LiquidacionesController}!menuLiquidador@{menuLiquidador}}
+\index{menuLiquidador@{menuLiquidador}!LiquidacionesController@{LiquidacionesController}}
+\doxysubsubsection{\texorpdfstring{menuLiquidador()}{menuLiquidador()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_aca67943ff65c9df6e637e187e41b9958} 
+menu\+Liquidador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_liquidaciones_controller_8php_source_l00019}{19}} del archivo \mbox{\hyperlink{_liquidaciones_controller_8php_source}{Liquidaciones\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ helper(\textcolor{stringliteral}{'Operaciones\_helper'});\ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}\ =>\ \textcolor{stringliteral}{'Menú'},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'header'}\ =>\ mostrarHeader()}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ view(\textcolor{stringliteral}{'liquidaciones/menu'},\ \$data);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a857c6f05535f2a7c1d14752131bb8716}\index{LiquidacionesController@{LiquidacionesController}!resultadoDtf@{resultadoDtf}}
+\index{resultadoDtf@{resultadoDtf}!LiquidacionesController@{LiquidacionesController}}
+\doxysubsubsection{\texorpdfstring{resultadoDtf()}{resultadoDtf()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a857c6f05535f2a7c1d14752131bb8716} 
+resultado\+Dtf (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra el resultado del calculo de la liquidación de tipo DTF
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_liquidaciones_controller_8php_source_l00105}{105}} del archivo \mbox{\hyperlink{_liquidaciones_controller_8php_source}{Liquidaciones\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Conexion\ a\ la\ base\ de\ datos}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \$db\ =\ \(\backslash\)Config\(\backslash\)Database::connect();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ helper(\textcolor{stringliteral}{'Operaciones\_helper'});}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Se\ guarda\ las\ fechas\ ingresadas\ por\ el\ usuario}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \$valorInicial\ =\ preg\_replace(\textcolor{stringliteral}{'/[\string^0-\/9]/'},\ \textcolor{stringliteral}{''},\ \$\_POST[\textcolor{stringliteral}{'valorInicial'}]);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \$valorInicialFormateado\ =\ \$\_POST[\textcolor{stringliteral}{'valorInicial'}];}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \$fechaHasta\ =\ \$\_POST[\textcolor{stringliteral}{'fechaHasta'}];}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \$fechaDesde\ =\ \$\_POST[\textcolor{stringliteral}{'fechaDesde'}];}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(diaSemana(\$fechaDesde)\ !=\ 1)\{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \$fechaDesde\ =\ obtenerLunesAnteior(\$fechaDesde);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Query\ para\ mostrar\ los\ valores\ desde\ 'fechaDesde'\ hasta\ 'fechaHasta'}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \$selectQuery\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ dtf\ WHERE\ fechaDesde\ BETWEEN\ '\$fechaDesde'\ AND\ '\$fechaHasta'\ ORDER\ BY\ fechaDesde\ ASC"{}};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \$query\ =\ \$db-\/>query(\$selectQuery);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \$dtfs\ =\ \$query-\/>getResultArray();}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ hay\ que\ calcular\ el\ porcentaje\ de\ interes\ para\ una\ fecha\ futura\ se\ realiza\ lo\ siguiente}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \$ultimoDtf\ =\ end(\$dtfs)[\textcolor{stringliteral}{'porcentaje'}];}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$fechaHasta\ >\ end(\$dtfs)[\textcolor{stringliteral}{'fechaHasta'}])\{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \$dtfs\ =\ array\_merge\_recursive(\$dtfs,\ calcularDtfFuturo(\$fechaHasta,end(\$dtfs)[\textcolor{stringliteral}{'fechaHasta'}]));}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \$interesTotal=0;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(\$dtfs\ as\ \$dtf\ =>\ \&\$valorDtf):}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ el\ porcentaje\ de\ DTF\ es\ 0\ (debido\ a\ que\ es\ una\ fecha\ que\ no\ ha\ pasado)\ entonces\ le\ asignamos\ el\ porcentaje\ del\ registro\ más\ reciente\ de\ DTF.}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$valorDtf[\textcolor{stringliteral}{'porcentaje'}]\ ===\ 0)\{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$valorDtf[\textcolor{stringliteral}{'porcentaje'}]\ =\ \$ultimoDtf;}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Calculamos\ el\ numero\ de\ dias\ de\ cada\ semana}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(count(\$dtfs)\ ==\ 1)\{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$valorDtf[\textcolor{stringliteral}{'numDias'}]\ =\ calcularDiasUnicaSemana(\$\_POST[\textcolor{stringliteral}{'fechaDesde'}],\ \$\_POST[\textcolor{stringliteral}{'fechaHasta'}]);}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$dtf\ ===\ 0)\{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$valorDtf[\textcolor{stringliteral}{'numDias'}]\ =\ calcularNumDiasPrimeraSemana(\$\_POST[\textcolor{stringliteral}{'fechaDesde'}]);;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\$valorDtf\ ===\ end(\$dtfs))\{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$valorDtf[\textcolor{stringliteral}{'numDias'}]\ =\ calcularNumDiasUltimaSemana(\$\_POST[\textcolor{stringliteral}{'fechaHasta'}],\ \$valorDtf[\textcolor{stringliteral}{'fechaHasta'}]);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$valorDtf[\textcolor{stringliteral}{'numDias'}]\ =\ 7;\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Guardo\ el\ arreglo\ con\ el\ nuevo\ formato\ de\ las\ fechas\ (Dia-\/Mes-\/Año)\ en\ \ una\ variable}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \$fechasFormateadas=\ formatearFechas(\$valorDtf[\textcolor{stringliteral}{'fechaDesde'}],\ \$valorDtf[\textcolor{stringliteral}{'fechaHasta'}]);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Guardo\ las\ fechas\ formateadas\ en\ el\ arreglo\ que\ se\ le\ va\ entregar\ a\ la\ vista}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \$valorDtf[\textcolor{stringliteral}{'fechaDesde'}]\ =\ \$fechasFormateadas[\textcolor{stringliteral}{'fechaDesdeFormateada'}];}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \$valorDtf[\textcolor{stringliteral}{'fechaHasta'}]\ =\ \$fechasFormateadas[\textcolor{stringliteral}{'fechaHastaFormateada'}];}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Hago\ las\ operaciones\ para\ calcular\ el\ interes\ total}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \$interesTotal\ +=\ ((calcularInteres(\$valorInicial,\ number\_format((tasaNominal(\$valorDtf[\textcolor{stringliteral}{'porcentaje'}],360))/360,\ 4),\ 7))/100);}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ endforeach;}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pasamos\ los\ datos\ a\ un\ arreglo\ que\ se\ le\ va\ entregar\ a\ la\ vista\ para\ ser\ mostrar\ los\ resultados\ de\ la\ consulta}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}\ =>\ \textcolor{stringliteral}{'Liquidacion\ DTF'},}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'header'}\ =>\ mostrarHeader(),}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'dtfs'}\ =>\ \$dtfs,}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fechaDesde'}\ =>\ \$\_POST[\textcolor{stringliteral}{'fechaDesde'}],}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fechaHasta'}\ =>\ \$\_POST[\textcolor{stringliteral}{'fechaHasta'}],}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'valorInicial'}\ =>\ preg\_replace(\textcolor{stringliteral}{'/[\string^0-\/9]/'},\ \textcolor{stringliteral}{''},\ \$\_POST[\textcolor{stringliteral}{'valorInicial'}]),}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'valorInicialFormateado'}\ =>\ \$valorInicialFormateado,}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nombreDemandante'}\ =>\ \$\_POST[\textcolor{stringliteral}{'nombreDemandante'}],}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'numDocumento'}\ =>\ \$\_POST[\textcolor{stringliteral}{'numDocumento'}],}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'interesTotal'}\ =>\ \$interesTotal}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ view(\textcolor{stringliteral}{'liquidaciones/liq\_dtf\_resultado'},\ \$data);}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a0eedee5aa4a8003647fb25f4c9aff12a}\index{LiquidacionesController@{LiquidacionesController}!resultadoIndexada@{resultadoIndexada}}
+\index{resultadoIndexada@{resultadoIndexada}!LiquidacionesController@{LiquidacionesController}}
+\doxysubsubsection{\texorpdfstring{resultadoIndexada()}{resultadoIndexada()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_a0eedee5aa4a8003647fb25f4c9aff12a} 
+resultado\+Indexada (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra el resultado del calculo de la liquidación de tipo indexada
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_liquidaciones_controller_8php_source_l00056}{56}} del archivo \mbox{\hyperlink{_liquidaciones_controller_8php_source}{Liquidaciones\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Conexion\ a\ la\ base\ de\ datos}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \$db\ =\ \(\backslash\)Config\(\backslash\)Database::connect();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ helper(\textcolor{stringliteral}{'Operaciones\_helper'});}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Se\ guarda\ las\ fechas\ ingresadas\ por\ el\ usuario}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \$valorInicial\ =\ preg\_replace(\textcolor{stringliteral}{'/[\string^0-\/9]/'},\ \textcolor{stringliteral}{''},\ \$\_POST[\textcolor{stringliteral}{'valorInicial'}]);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \$valorInicialFormateado\ =\ \$\_POST[\textcolor{stringliteral}{'valorInicial'}];}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \$fechaHasta\ =\ \$\_POST[\textcolor{stringliteral}{'fechaHasta'}];}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \$fechaDesde\ =\ \$\_POST[\textcolor{stringliteral}{'fechaDesde'}];}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Query\ para\ traer\ el\ IPC\ inicial}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \$selectQuery\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ ipc\ WHERE\ año\ =\ '"{}}.obtenerAño(\$fechaDesde).\ \textcolor{stringliteral}{"{}'\ AND\ mes\ =\ '"{}}.obtenerMes(\$fechaDesde).\textcolor{stringliteral}{"{}'"{}};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \$query\ =\ \$db-\/>query(\$selectQuery);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \$ipcInicial\ =\ \$query-\/>getResultArray();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Query\ para\ traer\ el\ IPC\ final\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \$selectQuery\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ ipc\ WHERE\ año\ =\ '"{}}.obtenerAño(\$fechaHasta).\ \textcolor{stringliteral}{"{}'\ AND\ mes\ =\ '"{}}.obtenerMes(\$fechaHasta).\textcolor{stringliteral}{"{}'"{}};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \$query\ =\ \$db-\/>query(\$selectQuery);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \$ipcFinal\ =\ \$query-\/>getResultArray();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \$ipcDivision\ =\ \$ipcFinal[0][\textcolor{stringliteral}{'indice'}]\ /\ \$ipcInicial[0][\textcolor{stringliteral}{'indice'}];}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \$valorTotal\ =\ intval(\$valorInicial)\ *\ \$ipcDivision;\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pasamos\ los\ datos\ a\ un\ arreglo\ que\ se\ le\ va\ entregar\ a\ la\ vista\ para\ ser\ mostrar\ los\ resultados\ de\ la\ consulta}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}\ =>\ \textcolor{stringliteral}{'LIQUIDACIÓN\ INDEXADA'},}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'header'}\ =>\ mostrarHeader(),}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fechaDesde'}\ =>\ \$\_POST[\textcolor{stringliteral}{'fechaDesde'}],}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fechaHasta'}\ =>\ \$\_POST[\textcolor{stringliteral}{'fechaHasta'}],}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'valorInicial'}\ =>\ preg\_replace(\textcolor{stringliteral}{'/[\string^0-\/9]/'},\ \textcolor{stringliteral}{''},\ \$\_POST[\textcolor{stringliteral}{'valorInicial'}]),}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'valorInicialFormateado'}\ =>\ \$valorInicialFormateado,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nombreDemandante'}\ =>\ \$\_POST[\textcolor{stringliteral}{'nombreDemandante'}],}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'numDocumento'}\ =>\ \$\_POST[\textcolor{stringliteral}{'numDocumento'}],}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ipcInicial'}\ =>\ \$ipcInicial[0][\textcolor{stringliteral}{'indice'}],}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ipcFinal'}\ =>\ \$ipcFinal[0][\textcolor{stringliteral}{'indice'}],}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ipcDivision'}\ =>\ \$ipcDivision,}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'valorTotal'}\ =>\ \$valorTotal,}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ view(\textcolor{stringliteral}{'liquidaciones/liq\_indexada\_resultado'},\ \$data);}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_aeeccfcd4e2765b8469c41f93ec023ee9}\index{LiquidacionesController@{LiquidacionesController}!\$helpers@{\$helpers}}
+\index{\$helpers@{\$helpers}!LiquidacionesController@{LiquidacionesController}}
+\doxysubsubsection{\texorpdfstring{\$helpers}{\$helpers}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_liquidaciones_1_1_liquidaciones_controller_aeeccfcd4e2765b8469c41f93ec023ee9} 
+\$helpers = \mbox{[}\textquotesingle{}form\textquotesingle{}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_liquidaciones_controller_8php_source_l00016}{16}} del archivo \mbox{\hyperlink{_liquidaciones_controller_8php_source}{Liquidaciones\+Controller.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Controllers/\+Liquidaciones/Liquidaciones\+Controller.\+php\end{DoxyCompactItemize}

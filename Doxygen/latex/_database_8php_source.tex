@@ -1,0 +1,73 @@
+\doxysection{Database.\+php}
+\hypertarget{_database_8php_source}{}\label{_database_8php_source}\index{C:/xampp/htdocs/liquidador/app/Config/Database.php@{C:/xampp/htdocs/liquidador/app/Config/Database.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_config}{Config}};}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Database\(\backslash\)Config;}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00010}\mbox{\hyperlink{class_config_1_1_database}{00010}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_config_1_1_database}{Database}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{namespace_config}{Config}}}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00016}\mbox{\hyperlink{class_config_1_1_database_a99d97f41a2768fce217cf340e1b5c8b9}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$filesPath\ =\ APPPATH\ .\ \textcolor{stringliteral}{'Database'}\ .\ DIRECTORY\_SEPARATOR;}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00022}\mbox{\hyperlink{class_config_1_1_database_a39b982ec685207b6e231f976994bdc29}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$defaultGroup\ =\ \textcolor{stringliteral}{'default'};}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$default\ =\ [}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DSN'}\ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'hostname'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'localhost'},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'username'}\ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'password'}\ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'database'}\ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBDriver'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'MySQLi'},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBPrefix'}\ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'pConnect'}\ \ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBDebug'}\ \ \ \ \ \ =>\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'charset'}\ \ \ \ \ \ =>\ \textcolor{stringliteral}{'utf8'},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBCollat'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'utf8\_general\_ci'},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'swapPre'}\ \ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'encrypt'}\ \ \ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'compress'}\ \ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'strictOn'}\ \ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'failover'}\ \ \ \ \ =>\ [],}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'port'}\ \ \ \ \ \ \ \ \ =>\ 3306,}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'numberNative'}\ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00048}00048\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00056}00056\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$tests\ =\ [}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DSN'}\ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'hostname'}\ \ \ \ =>\ \textcolor{stringliteral}{'127.0.0.1'},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'username'}\ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'password'}\ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'database'}\ \ \ \ =>\ \textcolor{stringliteral}{':memory:'},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBDriver'}\ \ \ \ =>\ \textcolor{stringliteral}{'SQLite3'},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBPrefix'}\ \ \ \ =>\ \textcolor{stringliteral}{'db\_'},\ \ \textcolor{comment}{//\ Needed\ to\ ensure\ we're\ working\ correctly\ with\ prefixes\ live.\ DO\ NOT\ REMOVE\ FOR\ CI\ DEVS}}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'pConnect'}\ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBDebug'}\ \ \ \ \ =>\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'charset'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'utf8'},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBCollat'}\ \ \ \ =>\ \textcolor{stringliteral}{'utf8\_general\_ci'},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'swapPre'}\ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'encrypt'}\ \ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'compress'}\ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'strictOn'}\ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'failover'}\ \ \ \ =>\ [],}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'port'}\ \ \ \ \ \ \ \ =>\ 3306,}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'foreignKeys'}\ =>\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'busyTimeout'}\ =>\ 1000,}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00076}00076\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00078}00078\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \_\_construct()}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00079}00079\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ensure\ that\ we\ always\ set\ the\ database\ group\ to\ 'tests'\ if}}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ we\ are\ currently\ running\ an\ automated\ test\ suite,\ so\ that}}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ we\ don't\ overwrite\ live\ data\ on\ accident.}}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ENVIRONMENT\ ===\ \textcolor{stringliteral}{'testing'})\ \{}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>defaultGroup\ =\ \textcolor{stringliteral}{'tests'};}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00087}00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8php_source_l00089}00089\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Liquidador de Sentencias: Archivo de código fuente C:/xampp/htdocs/liquidador/app/Views/liquidaciones/liq_indexada_resultado.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Liquidador de Sentencias<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Liquidador de sentencias juridicas de la Gobernación de Antioquia</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li><li class="navelem"><a class="el" href="dir_71aab6f90b0412e948eb651ee031ad84.html">Views</a></li><li class="navelem"><a class="el" href="dir_dad0296e803addd7702c0fc3349d88ac.html">liquidaciones</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">liq_indexada_resultado.php</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php echo $this-&gt;extend(<span class="stringliteral">&#39;plantilla/layout&#39;</span>); ?&gt;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>&lt;?php echo $this-&gt;section(<span class="stringliteral">&#39;contenido&#39;</span>); ?&gt;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    &lt;?php echo validation_list_errors(); ?&gt;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    &lt;?php echo helper(<span class="stringliteral">&#39;Operaciones_helper&#39;</span>); ?&gt;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    &lt;?php $fechasFormateadas= formatearFechas($fechaDesde, $fechaHasta); ?&gt;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">&quot;contenido&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;contenido&quot;</span>&gt;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            &lt;h1 <span class="keyword">class</span>=<span class="stringliteral">&quot;titulo&quot;</span>&gt;&lt;?php echo $titulo; ?&gt;&lt;/h1&gt;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            &lt;h3&gt;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                    Ingrese las fechas que fueron expedidas en la orden del juez para que el sistema realice el cálculo del </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                    total que se debe pagar.</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            &lt;/h3&gt;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            &lt;hr&gt;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                &lt;form <span class="keywordtype">id</span>=<span class="stringliteral">&quot;formularioIndexada&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;formulario__liq-dtf&quot;</span> action=<span class="stringliteral">&quot;&lt;?php echo base_url(&#39;/liquidaciones/indexada/resultado&#39;) ?&gt;&quot;</span> method=<span class="stringliteral">&quot;post&quot;</span>&gt;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                    &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;formularioDtf__datos-demandante&quot;</span>&gt;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                        &lt;h2&gt;DATOS DEL DEMANDANTE&lt;/h2&gt;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                        &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;formularioDtf__datos-demandante__grid&quot;</span>&gt;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                            &lt;input name=<span class="stringliteral">&quot;nombreDemandante&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;nombreDemandante&quot;</span> type=<span class="stringliteral">&quot;text&quot;</span> placeholder=<span class="stringliteral">&quot;Nombre Completo&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo $nombreDemandante;?&gt;&quot;</span>&gt;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                            &lt;input name=<span class="stringliteral">&quot;numDocumento&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;numDocumento&quot;</span> type=<span class="stringliteral">&quot;number&quot;</span> placeholder=<span class="stringliteral">&quot;Numero de Documento&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo $numDocumento;?&gt;&quot;</span>&gt;                            </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                        &lt;/div&gt;  </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                        &lt;hr&gt;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                    &lt;/div&gt;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                    &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;formularioDtf__datos-liquidacion&quot;</span>&gt;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                        &lt;label <span class="keywordtype">id</span>=<span class="stringliteral">&quot;labelValorInicial&quot;</span> <span class="keywordflow">for</span>=<span class="stringliteral">&quot;valorInicial&quot;</span>&gt;Valor Inicial&lt;/label&gt;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                        &lt;label <span class="keywordtype">id</span>=<span class="stringliteral">&quot;labelFechaDesde&quot;</span> <span class="keywordflow">for</span>=<span class="stringliteral">&quot;fechaDesde&quot;</span>&gt;Fecha Desde&lt;/label&gt;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                        &lt;label <span class="keywordtype">id</span>=<span class="stringliteral">&quot;labelFechaHasta&quot;</span> <span class="keywordflow">for</span>=<span class="stringliteral">&quot;fechaHasta&quot;</span>&gt;Fecha Hasta&lt;/label&gt;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                        &lt;input name=<span class="stringliteral">&quot;valorInicial&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;valorInicial&quot;</span> type=<span class="stringliteral">&quot;text&quot;</span> placeholder=<span class="stringliteral">&quot;$0&quot;</span> min=<span class="stringliteral">&quot;0&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo $valorInicialFormateado;?&gt;&quot;</span>&gt;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                        &lt;input  name=<span class="stringliteral">&quot;fechaDesde&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;fechaDesde&quot;</span> type=<span class="stringliteral">&quot;date&quot;</span> min=<span class="stringliteral">&quot;1984-01-16&quot;</span> max=<span class="stringliteral">&quot;&lt;?php echo obtenerFechaActual();?&gt;&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo $fechaDesde;?&gt;&quot;</span>&gt;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                        &lt;input  name=<span class="stringliteral">&quot;fechaHasta&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;fechaHasta&quot;</span> type=<span class="stringliteral">&quot;date&quot;</span> min=<span class="stringliteral">&quot;1984-01-16&quot;</span> max=<span class="stringliteral">&quot;&lt;?php echo obtenerFechaActual();?&gt;&quot;</span>  value=<span class="stringliteral">&quot;&lt;?php echo $fechaHasta;?&gt;&quot;</span>&gt;  </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                    &lt;/div&gt;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                    &lt;input <span class="keyword">class</span>=<span class="stringliteral">&quot;btn__calcular&quot;</span> type=<span class="stringliteral">&quot;submit&quot;</span> value=<span class="stringliteral">&quot;Calcular&quot;</span>&gt;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                &lt;/form&gt;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">&quot;contenedorTablas&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;contenedor__tablas bordes margin-bottom&quot;</span> name=<span class="stringliteral">&quot;tablasContenido&quot;</span>&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    &lt;div <span class="keyword">class</span>=<span class="stringliteral">&quot;contenedor__tabla-totales&quot;</span>&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                        &lt;table <span class="keywordtype">id</span>=<span class="stringliteral">&quot;tablaTotales&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;tabla-totales &quot;</span>&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                            &lt;thead&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                                &lt;th&gt;Valor&lt;/th&gt;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                                &lt;th&gt;Desde&lt;/th&gt;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                                &lt;th&gt;Hasta&lt;/th&gt;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                                &lt;th&gt;Indice Inicial (i.i)&lt;/th&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                                &lt;th&gt;Indice Final (i.f)&lt;/th&gt;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                                &lt;th&gt;i.f/i.i&lt;/th&gt;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                                &lt;th&gt;Valor Total&lt;/th&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                            &lt;/thead&gt;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                            &lt;tbody&gt;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                                    &lt;tr&gt;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                                        &lt;td&gt;$&lt;?php echo $valorInicial; ?&gt;&lt;/td&gt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                        &lt;td&gt;&lt;?php echo $fechasFormateadas[<span class="stringliteral">&#39;fechaDesdeFormateada&#39;</span>]; ?&gt;&lt;/td&gt;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                                        &lt;td&gt;&lt;?php echo $fechasFormateadas[<span class="stringliteral">&#39;fechaHastaFormateada&#39;</span>]; ?&gt;&lt;/td&gt;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                                        &lt;td&gt;&lt;?php echo $ipcInicial; ?&gt;&lt;/td&gt;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                                        &lt;td&gt;&lt;?php echo $ipcFinal; ?&gt;&lt;/td&gt;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                        &lt;td&gt;&lt;?php echo number_format($ipcDivision, 4); ?&gt;&lt;/td&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                                        &lt;td&gt;$&lt;?php echo number_format($valorTotal, 0); ?&gt;&lt;/td&gt;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                                    &lt;/tr&gt;         </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                            &lt;/tbody&gt;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                        &lt;/table&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                    &lt;/div&gt;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                &lt;/div&gt;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;contenedor__btn-descargar-tablas&quot;</span>&gt;                    </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    &lt;form <span class="keywordtype">id</span>=<span class="stringliteral">&quot;formularioGuardar&quot;</span> action=<span class="stringliteral">&quot;&lt;?php echo base_url(&#39;/liquidaciones/indexada/resultado/guardar&#39;) ?&gt;&quot;</span> method=<span class="stringliteral">&quot;post&quot;</span>&gt;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                        &lt;input type=<span class="stringliteral">&quot;hidden&quot;</span> name=<span class="stringliteral">&quot;valorInicial&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo $valorInicial;?&gt;&quot;</span>&gt;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                        &lt;input type=<span class="stringliteral">&quot;hidden&quot;</span> name=<span class="stringliteral">&quot;fechaDesde&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo $fechasFormateadas[&#39;fechaDesdeFormateada&#39;];?&gt;&quot;</span>&gt;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                        &lt;input type=<span class="stringliteral">&quot;hidden&quot;</span> name=<span class="stringliteral">&quot;fechaHasta&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo $fechasFormateadas[&#39;fechaHastaFormateada&#39;];?&gt;&quot;</span>&gt;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                        &lt;input type=<span class="stringliteral">&quot;hidden&quot;</span> name=<span class="stringliteral">&quot;nombreDemandante&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo $nombreDemandante;?&gt;&quot;</span>&gt;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                        &lt;input type=<span class="stringliteral">&quot;hidden&quot;</span> name=<span class="stringliteral">&quot;numDocumento&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo $numDocumento;?&gt;&quot;</span>&gt;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                        &lt;input type=<span class="stringliteral">&quot;hidden&quot;</span> name=<span class="stringliteral">&quot;ipcInicial&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo $ipcInicial;?&gt;&quot;</span>&gt;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                        &lt;input type=<span class="stringliteral">&quot;hidden&quot;</span> name=<span class="stringliteral">&quot;ipcFinal&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo $ipcFinal;?&gt;&quot;</span>&gt;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                        &lt;input type=<span class="stringliteral">&quot;hidden&quot;</span> name=<span class="stringliteral">&quot;ipcDivision&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo number_format($ipcDivision, 4);?&gt;&quot;</span>&gt;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                        &lt;input type=<span class="stringliteral">&quot;hidden&quot;</span> name=<span class="stringliteral">&quot;valorTotal&quot;</span> value=<span class="stringliteral">&quot;&lt;?php echo number_format($valorTotal, 0);?&gt;&quot;</span>&gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                        &lt;input <span class="keywordtype">id</span>=<span class="stringliteral">&quot;btnGuardar&quot;</span> type=<span class="stringliteral">&quot;submit&quot;</span> <span class="keyword">class</span>=<span class="stringliteral">&quot;btn-descargar pdf&quot;</span> value=<span class="stringliteral">&quot;GUARDAR Y GENERAR PDF&quot;</span>&gt;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    &lt;/form&gt;      </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                &lt;/div&gt;              </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        &lt;/div&gt;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> &lt;/main&gt;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>&lt;script src=<span class="stringliteral">&quot;&lt;?php echo base_url();?&gt;/assets/js/validacionesLiquidacionIndexada.js&quot;</span>&gt;&lt;/script&gt;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>&lt;script src=<span class="stringliteral">&quot;&lt;?php echo base_url();?&gt;/assets/js/validacionesGuardarLiquidacion.js&quot;</span>&gt;&lt;/script&gt;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>&lt;?php echo $this-&gt;endSection(); ?&gt;</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

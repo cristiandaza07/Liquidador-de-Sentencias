@@ -1,0 +1,172 @@
+\doxysection{Referencia de la clase Usuarios\+Controller}
+\hypertarget{class_app_1_1_controllers_1_1_usuarios_controller}{}\label{class_app_1_1_controllers_1_1_usuarios_controller}\index{UsuariosController@{UsuariosController}}
+Diagrama de herencia de Usuarios\+Controller\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_controllers_1_1_usuarios_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_usuarios_controller_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_usuarios_controller_aa311da27ba5706f5710cea7706c8eae1}{login}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_usuarios_controller_a5dd4bf9f64be3ff64cbba51e7ddc3cfd}{verificar\+Usuario}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_usuarios_controller_a0f7728fa1e22b7b7a8281aebd5c5e50f}{cerrar\+Sesion}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos heredados de \mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller}{Base\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_aaa4ae087c2582ea613c7255f73d8a623}{init\+Controller}} (Request\+Interface \$request, Response\+Interface \$response, Logger\+Interface \$logger)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Otros miembros heredados}
+\doxysubsection*{Atributos protegidos heredados de \mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller}{Base\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abb35c8495a232b510389fa6d7b15d38a}{\$request}}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_aeeccfcd4e2765b8469c41f93ec023ee9}{\$helpers}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abefb3c26429d514777313e9a63d7cbac}{\$session}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_controller_8php_source_l00009}{9}} del archivo \mbox{\hyperlink{_usuarios_controller_8php_source}{Usuarios\+Controller.\+php}}.
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_app_1_1_controllers_1_1_usuarios_controller_a0f7728fa1e22b7b7a8281aebd5c5e50f}\index{UsuariosController@{UsuariosController}!cerrarSesion@{cerrarSesion}}
+\index{cerrarSesion@{cerrarSesion}!UsuariosController@{UsuariosController}}
+\doxysubsubsection{\texorpdfstring{cerrarSesion()}{cerrarSesion()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_usuarios_controller_a0f7728fa1e22b7b7a8281aebd5c5e50f} 
+cerrar\+Sesion (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Destruye la sesión activa
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_controller_8php_source_l00078}{78}} del archivo \mbox{\hyperlink{_usuarios_controller_8php_source}{Usuarios\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abefb3c26429d514777313e9a63d7cbac}{\$session}}\ =\ session();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abefb3c26429d514777313e9a63d7cbac}{\$session}}-\/>destroy();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ redirect()-\/>to(base\_url(\textcolor{charliteral}{'/'}));}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_usuarios_controller_a149eb92716c1084a935e04a8d95f7347}\index{UsuariosController@{UsuariosController}!index@{index}}
+\index{index@{index}!UsuariosController@{UsuariosController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_usuarios_controller_a149eb92716c1084a935e04a8d95f7347} 
+index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_controller_8php_source_l00010}{10}} del archivo \mbox{\hyperlink{_usuarios_controller_8php_source}{Usuarios\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \$mensaje\ =\ session(\textcolor{stringliteral}{'mensaje'});}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ view(\textcolor{stringliteral}{'index'},[\textcolor{stringliteral}{"{}mensaje"{}}\ =>\ \$mensaje]);}
+\DoxyCodeLine{00013\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_usuarios_controller_aa311da27ba5706f5710cea7706c8eae1}\index{UsuariosController@{UsuariosController}!login@{login}}
+\index{login@{login}!UsuariosController@{UsuariosController}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_usuarios_controller_aa311da27ba5706f5710cea7706c8eae1} 
+login (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Valida el usuario y la contraseña para poder ingresar al sitio web
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_controller_8php_source_l00020}{20}} del archivo \mbox{\hyperlink{_usuarios_controller_8php_source}{Usuarios\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \$usuario\ =\ \$\_POST[\textcolor{stringliteral}{'usuario'}];}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \$contraseña\ =\ \$\_POST[\textcolor{stringliteral}{'contraseña'}];}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \$Usuario\ =\ \textcolor{keyword}{new}\ UsuarioModel();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \$dataUsuario\ =\ \$Usuario-\/>obtenerUsuario([\textcolor{stringliteral}{'usuario'}\ =>\ \$usuario]);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(count(\$dataUsuario)\ >\ 0\ \&\&\ password\_verify(\$contraseña,\ \$dataUsuario[0][\textcolor{stringliteral}{'contrasena'}]))\{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'idUsuario'}\ =>\ \$dataUsuario[0][\textcolor{stringliteral}{'id\_usuario'}],}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}usuario"{}}\ =>\ \$dataUsuario[0][\textcolor{stringliteral}{'usuario'}],}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}nombreCompleto"{}}\ =>\ \$dataUsuario[0][\textcolor{stringliteral}{'nombre\_completo'}],}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}correo"{}}\ =>\ \$dataUsuario[0][\textcolor{stringliteral}{'correo'}],}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}dependencia"{}}\ =>\ \$dataUsuario[0][\textcolor{stringliteral}{'dependencia'}],}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}tipoUsuario"{}}\ =>\ \$dataUsuario[0][\textcolor{stringliteral}{'tipo\_usuario'}]}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abefb3c26429d514777313e9a63d7cbac}{\$session}}\ =\ session();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abefb3c26429d514777313e9a63d7cbac}{\$session}}-\/>set(\$data);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ redirect()-\/>to(base\_url(\textcolor{stringliteral}{'/liquidaciones'}));\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mensaje'}\ =>\ json\_encode(\textcolor{keyword}{true})}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ view(\textcolor{stringliteral}{'index'},\ \$data);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_usuarios_controller_a5dd4bf9f64be3ff64cbba51e7ddc3cfd}\index{UsuariosController@{UsuariosController}!verificarUsuario@{verificarUsuario}}
+\index{verificarUsuario@{verificarUsuario}!UsuariosController@{UsuariosController}}
+\doxysubsubsection{\texorpdfstring{verificarUsuario()}{verificarUsuario()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_usuarios_controller_a5dd4bf9f64be3ff64cbba51e7ddc3cfd} 
+verificar\+Usuario (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_controller_8php_source_l00058}{58}} del archivo \mbox{\hyperlink{_usuarios_controller_8php_source}{Usuarios\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \$usuario\ =\ \$\_POST[\textcolor{stringliteral}{'usuario'}];}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \$contraseña\ =\ \$\_POST[\textcolor{stringliteral}{'contraseña'}];}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \$Usuario\ =\ \textcolor{keyword}{new}\ UsuarioModel();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \$dataUsuario\ =\ \$Usuario-\/>obtenerUsuario([\textcolor{stringliteral}{'usuario'}\ =>\ \$usuario]);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(count(\$dataUsuario)\ >\ 0\ \&\&\ password\_verify(\$contraseña,\ \$dataUsuario[0][\textcolor{stringliteral}{'contrasena'}]))\{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>response-\/>setJSON([\textcolor{stringliteral}{'usuarioCorrecto'}\ =>\ \textcolor{keyword}{true}]);\ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>response-\/>setJSON([\textcolor{stringliteral}{'usuarioCorrecto'}\ =>\ \textcolor{keyword}{false}]);\ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Controllers/Usuarios\+Controller.\+php\end{DoxyCompactItemize}

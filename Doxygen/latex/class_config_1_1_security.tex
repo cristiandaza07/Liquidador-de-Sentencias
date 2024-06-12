@@ -1,0 +1,163 @@
+\doxysection{Referencia de la clase Security}
+\hypertarget{class_config_1_1_security}{}\label{class_config_1_1_security}\index{Security@{Security}}
+Diagrama de herencia de Security\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config_1_1_security}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_config_1_1_security_a9f3aa96a98a125025ef00e8c5c98533d}{\$csrf\+Protection}} = \textquotesingle{}cookie\textquotesingle{}
+\item 
+bool \mbox{\hyperlink{class_config_1_1_security_aad58df8789107c2525c330f202b26aa0}{\$token\+Randomize}} = false
+\item 
+string \mbox{\hyperlink{class_config_1_1_security_ab11082f44ef8634d2cd155998a826c4b}{\$token\+Name}} = \textquotesingle{}csrf\+\_\+test\+\_\+name\textquotesingle{}
+\item 
+string \mbox{\hyperlink{class_config_1_1_security_a2ca1e89f0c2de3adfdfd3b4b6a165cbb}{\$header\+Name}} = \textquotesingle{}X-\/CSRF-\/TOKEN\textquotesingle{}
+\item 
+string \mbox{\hyperlink{class_config_1_1_security_a064716e3160c4d3e950d34c8f9b4127e}{\$cookie\+Name}} = \textquotesingle{}csrf\+\_\+cookie\+\_\+name\textquotesingle{}
+\item 
+int \mbox{\hyperlink{class_config_1_1_security_acdfce26ac45e37839a888f513d085be7}{\$expires}} = 7200
+\item 
+bool \mbox{\hyperlink{class_config_1_1_security_a84d4daa110b55b45bdba0ecd34c5620a}{\$regenerate}} = true
+\item 
+bool \mbox{\hyperlink{class_config_1_1_security_aa88a9e47e1f3dd49038f7a9d4c1459ff}{\$redirect}} = false
+\item 
+string \mbox{\hyperlink{class_config_1_1_security_a98b5333262f996cc9220f222ebc3c2cb}{\$samesite}} = \textquotesingle{}Lax\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_security_8php_source_l00007}{7}} del archivo \mbox{\hyperlink{_security_8php_source}{Security.\+php}}.
+
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_config_1_1_security_a064716e3160c4d3e950d34c8f9b4127e}\index{Security@{Security}!\$cookieName@{\$cookieName}}
+\index{\$cookieName@{\$cookieName}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{\$cookieName}{\$cookieName}}
+{\footnotesize\ttfamily \label{class_config_1_1_security_a064716e3160c4d3e950d34c8f9b4127e} 
+string \$cookie\+Name = \textquotesingle{}csrf\+\_\+cookie\+\_\+name\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_security_autotoc_md143}{}\doxysubsubsection{\texorpdfstring{CSRF Cookie Name}{CSRF Cookie Name}}\label{class_config_1_1_security_autotoc_md143}
+Cookie name for Cross Site Request Forgery protection. 
+
+Definición en la línea \mbox{\hyperlink{_security_8php_source_l00054}{54}} del archivo \mbox{\hyperlink{_security_8php_source}{Security.\+php}}.
+
+\Hypertarget{class_config_1_1_security_a9f3aa96a98a125025ef00e8c5c98533d}\index{Security@{Security}!\$csrfProtection@{\$csrfProtection}}
+\index{\$csrfProtection@{\$csrfProtection}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{\$csrfProtection}{\$csrfProtection}}
+{\footnotesize\ttfamily \label{class_config_1_1_security_a9f3aa96a98a125025ef00e8c5c98533d} 
+string \$csrf\+Protection = \textquotesingle{}cookie\textquotesingle{}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_security_8php_source_l00018}{18}} del archivo \mbox{\hyperlink{_security_8php_source}{Security.\+php}}.
+
+\Hypertarget{class_config_1_1_security_acdfce26ac45e37839a888f513d085be7}\index{Security@{Security}!\$expires@{\$expires}}
+\index{\$expires@{\$expires}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{\$expires}{\$expires}}
+{\footnotesize\ttfamily \label{class_config_1_1_security_acdfce26ac45e37839a888f513d085be7} 
+int \$expires = 7200}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_security_autotoc_md145}{}\doxysubsubsection{\texorpdfstring{CSRF Expires}{CSRF Expires}}\label{class_config_1_1_security_autotoc_md145}
+Expiration time for Cross Site Request Forgery protection cookie.
+
+Defaults to two hours (in seconds). 
+
+Definición en la línea \mbox{\hyperlink{_security_8php_source_l00065}{65}} del archivo \mbox{\hyperlink{_security_8php_source}{Security.\+php}}.
+
+\Hypertarget{class_config_1_1_security_a2ca1e89f0c2de3adfdfd3b4b6a165cbb}\index{Security@{Security}!\$headerName@{\$headerName}}
+\index{\$headerName@{\$headerName}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{\$headerName}{\$headerName}}
+{\footnotesize\ttfamily \label{class_config_1_1_security_a2ca1e89f0c2de3adfdfd3b4b6a165cbb} 
+string \$header\+Name = \textquotesingle{}X-\/CSRF-\/TOKEN\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_security_autotoc_md141}{}\doxysubsubsection{\texorpdfstring{CSRF Header Name}{CSRF Header Name}}\label{class_config_1_1_security_autotoc_md141}
+Header name for Cross Site Request Forgery protection. 
+
+Definición en la línea \mbox{\hyperlink{_security_8php_source_l00045}{45}} del archivo \mbox{\hyperlink{_security_8php_source}{Security.\+php}}.
+
+\Hypertarget{class_config_1_1_security_aa88a9e47e1f3dd49038f7a9d4c1459ff}\index{Security@{Security}!\$redirect@{\$redirect}}
+\index{\$redirect@{\$redirect}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{\$redirect}{\$redirect}}
+{\footnotesize\ttfamily \label{class_config_1_1_security_aa88a9e47e1f3dd49038f7a9d4c1459ff} 
+bool \$redirect = false}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_security_autotoc_md149}{}\doxysubsubsection{\texorpdfstring{CSRF Redirect}{CSRF Redirect}}\label{class_config_1_1_security_autotoc_md149}
+Redirect to previous page with error on failure. 
+
+Definición en la línea \mbox{\hyperlink{_security_8php_source_l00083}{83}} del archivo \mbox{\hyperlink{_security_8php_source}{Security.\+php}}.
+
+\Hypertarget{class_config_1_1_security_a84d4daa110b55b45bdba0ecd34c5620a}\index{Security@{Security}!\$regenerate@{\$regenerate}}
+\index{\$regenerate@{\$regenerate}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{\$regenerate}{\$regenerate}}
+{\footnotesize\ttfamily \label{class_config_1_1_security_a84d4daa110b55b45bdba0ecd34c5620a} 
+bool \$regenerate = true}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_security_autotoc_md147}{}\doxysubsubsection{\texorpdfstring{CSRF Regenerate}{CSRF Regenerate}}\label{class_config_1_1_security_autotoc_md147}
+Regenerate CSRF Token on every submission. 
+
+Definición en la línea \mbox{\hyperlink{_security_8php_source_l00074}{74}} del archivo \mbox{\hyperlink{_security_8php_source}{Security.\+php}}.
+
+\Hypertarget{class_config_1_1_security_a98b5333262f996cc9220f222ebc3c2cb}\index{Security@{Security}!\$samesite@{\$samesite}}
+\index{\$samesite@{\$samesite}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{\$samesite}{\$samesite}}
+{\footnotesize\ttfamily \label{class_config_1_1_security_a98b5333262f996cc9220f222ebc3c2cb} 
+string \$samesite = \textquotesingle{}Lax\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_security_autotoc_md151}{}\doxysubsubsection{\texorpdfstring{CSRF Same\+Site}{CSRF Same\+Site}}\label{class_config_1_1_security_autotoc_md151}
+Setting for CSRF Same\+Site cookie token.
+
+Allowed values are\+: None -\/ Lax -\/ Strict -\/ \textquotesingle{}\textquotesingle{}.
+
+Defaults to {\ttfamily Lax} as recommended in this link\+:
+
+\begin{DoxySeeAlso}{Ver también}
+\href{https://portswigger.net/web-security/csrf/samesite-cookies}{\texttt{ https\+://portswigger.\+net/web-\/security/csrf/samesite-\/cookies}}
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Obsoleto}
+\item[\mbox{\hyperlink{deprecated__deprecated000006}{Obsoleto}}]{\ttfamily \doxylink{namespace_config}{Config}\textbackslash{}Cookie} \$samesite property is used. \end{DoxyRefDesc}
+
+
+Definición en la línea \mbox{\hyperlink{_security_8php_source_l00100}{100}} del archivo \mbox{\hyperlink{_security_8php_source}{Security.\+php}}.
+
+\Hypertarget{class_config_1_1_security_ab11082f44ef8634d2cd155998a826c4b}\index{Security@{Security}!\$tokenName@{\$tokenName}}
+\index{\$tokenName@{\$tokenName}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{\$tokenName}{\$tokenName}}
+{\footnotesize\ttfamily \label{class_config_1_1_security_ab11082f44ef8634d2cd155998a826c4b} 
+string \$token\+Name = \textquotesingle{}csrf\+\_\+test\+\_\+name\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_security_autotoc_md139}{}\doxysubsubsection{\texorpdfstring{CSRF Token Name}{CSRF Token Name}}\label{class_config_1_1_security_autotoc_md139}
+Token name for Cross Site Request Forgery protection. 
+
+Definición en la línea \mbox{\hyperlink{_security_8php_source_l00036}{36}} del archivo \mbox{\hyperlink{_security_8php_source}{Security.\+php}}.
+
+\Hypertarget{class_config_1_1_security_aad58df8789107c2525c330f202b26aa0}\index{Security@{Security}!\$tokenRandomize@{\$tokenRandomize}}
+\index{\$tokenRandomize@{\$tokenRandomize}!Security@{Security}}
+\doxysubsubsection{\texorpdfstring{\$tokenRandomize}{\$tokenRandomize}}
+{\footnotesize\ttfamily \label{class_config_1_1_security_aad58df8789107c2525c330f202b26aa0} 
+bool \$token\+Randomize = false}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_security_autotoc_md137}{}\doxysubsubsection{\texorpdfstring{CSRF Token Randomization}{CSRF Token Randomization}}\label{class_config_1_1_security_autotoc_md137}
+Randomize the CSRF Token for added security. 
+
+Definición en la línea \mbox{\hyperlink{_security_8php_source_l00027}{27}} del archivo \mbox{\hyperlink{_security_8php_source}{Security.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Config/Security.\+php\end{DoxyCompactItemize}

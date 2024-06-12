@@ -1,0 +1,48 @@
+\doxysection{Toolbar.\+php}
+\hypertarget{_toolbar_8php_source}{}\label{_toolbar_8php_source}\index{C:/xampp/htdocs/liquidador/app/Config/Toolbar.php@{C:/xampp/htdocs/liquidador/app/Config/Toolbar.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_config}{Config}};}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Config\(\backslash\)BaseConfig;}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00006}00006\ use\ CodeIgniter\(\backslash\)Debug\(\backslash\)Toolbar\(\backslash\)Collectors\(\backslash\)Database;}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00007}00007\ use\ CodeIgniter\(\backslash\)Debug\(\backslash\)Toolbar\(\backslash\)Collectors\(\backslash\)Events;}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00008}00008\ use\ CodeIgniter\(\backslash\)Debug\(\backslash\)Toolbar\(\backslash\)Collectors\(\backslash\)Files;}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00009}00009\ use\ CodeIgniter\(\backslash\)Debug\(\backslash\)Toolbar\(\backslash\)Collectors\(\backslash\)Logs;}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00010}00010\ use\ CodeIgniter\(\backslash\)Debug\(\backslash\)Toolbar\(\backslash\)Collectors\(\backslash\)Routes;}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00011}00011\ use\ CodeIgniter\(\backslash\)Debug\(\backslash\)Toolbar\(\backslash\)Collectors\(\backslash\)Timers;}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00012}00012\ use\ CodeIgniter\(\backslash\)Debug\(\backslash\)Toolbar\(\backslash\)Collectors\(\backslash\)Views;}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00024}\mbox{\hyperlink{class_config_1_1_toolbar}{00024}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_config_1_1_toolbar}{Toolbar}}\ \textcolor{keyword}{extends}\ BaseConfig}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00025}00025\ \{}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$collectors\ =\ [}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ Timers::class,}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ Database::class,}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ Logs::class,}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ Views::class,}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \(\backslash\)CodeIgniter\(\backslash\)Debug\(\backslash\)Toolbar\(\backslash\)Collectors\(\backslash\)Cache::class,}}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ Files::class,}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ Routes::class,}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ Events::class,}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00045}00045\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00055}\mbox{\hyperlink{class_config_1_1_toolbar_ac6173f3deb68f470fa6ed376b75512d5}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$collectVarData\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00066}\mbox{\hyperlink{class_config_1_1_toolbar_aa52b93b439d0cd4f44a2e90c9d7835da}{00066}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \$maxHistory\ =\ 20;}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00076}\mbox{\hyperlink{class_config_1_1_toolbar_a7723c43785016d1b7eb1ccc5a7373565}{00076}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$viewsPath\ =\ SYSTEMPATH\ .\ \textcolor{stringliteral}{'Debug/Toolbar/Views/'};}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00090}\mbox{\hyperlink{class_config_1_1_toolbar_a79c655e5f93f59a6015bebba4e6f8732}{00090}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \$maxQueries\ =\ 100;}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00105}00105\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$watchedDirectories\ =\ [}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'app'},}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00107}00107\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00119}00119\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$watchedExtensions\ =\ [}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'php'},\ \textcolor{stringliteral}{'css'},\ \textcolor{stringliteral}{'js'},\ \textcolor{stringliteral}{'html'},\ \textcolor{stringliteral}{'svg'},\ \textcolor{stringliteral}{'json'},\ \textcolor{stringliteral}{'env'},}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00121}00121\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_toolbar_8php_source_l00122}00122\ \}}
+
+\end{DoxyCode}

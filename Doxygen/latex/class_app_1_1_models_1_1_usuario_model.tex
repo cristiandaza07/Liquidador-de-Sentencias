@@ -1,0 +1,147 @@
+\doxysection{Referencia de la clase Usuario\+Model}
+\hypertarget{class_app_1_1_models_1_1_usuario_model}{}\label{class_app_1_1_models_1_1_usuario_model}\index{UsuarioModel@{UsuarioModel}}
+Diagrama de herencia de Usuario\+Model\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_models_1_1_usuario_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_model_a1d4f9aadc4de2b4533479f4f76a39cf8}{obtener\+Usuario}} (\$data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_model_ae8876a14058f368335baccf35af4a22b}{\$table}} = \textquotesingle{}usuarios\textquotesingle{}
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_model_a927b0256b942a3ee89485f2649af7981}{\$primary\+Key}} = \textquotesingle{}id\+\_\+usuario\textquotesingle{}
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_model_a7b093338cc53385a875ce811a2380275}{\$use\+Auto\+Increment}} = true
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_model_a0f317c2c1d4c617554890223a39037be}{\$return\+Type}} = \textquotesingle{}array\textquotesingle{}
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_model_aacbbba3d837af3ef63d666afa939da59}{\$use\+Soft\+Deletes}} = true
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_usuario_model_a412681ecbb6fac857f44871534d61208}{\$allowed\+Fields}} = \mbox{[}\textquotesingle{}nombre\+\_\+completo\textquotesingle{}, \textquotesingle{}correo\textquotesingle{}, \textquotesingle{}usuario\textquotesingle{}, \textquotesingle{}contrasena\textquotesingle{}, \textquotesingle{}dependencia\textquotesingle{}, \textquotesingle{}tipo\+\_\+usuario\textquotesingle{}, \textquotesingle{}fecha\+\_\+creacion\textquotesingle{}\mbox{]}
+\item 
+bool \mbox{\hyperlink{class_app_1_1_models_1_1_usuario_model_a65eaa4de6b3049e12bab2e6eb3d93fe2}{\$allow\+Empty\+Inserts}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_usuario_model_8php_source_l00006}{6}} del archivo \mbox{\hyperlink{_usuario_model_8php_source}{Usuario\+Model.\+php}}.
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_app_1_1_models_1_1_usuario_model_a1d4f9aadc4de2b4533479f4f76a39cf8}\index{UsuarioModel@{UsuarioModel}!obtenerUsuario@{obtenerUsuario}}
+\index{obtenerUsuario@{obtenerUsuario}!UsuarioModel@{UsuarioModel}}
+\doxysubsubsection{\texorpdfstring{obtenerUsuario()}{obtenerUsuario()}}
+{\footnotesize\ttfamily \label{class_app_1_1_models_1_1_usuario_model_a1d4f9aadc4de2b4533479f4f76a39cf8} 
+obtener\+Usuario (\begin{DoxyParamCaption}\item[{}]{\$data}{}\end{DoxyParamCaption})}
+
+Obtiene un usuario en especifico
+
+
+\begin{DoxyParams}[1]{Parámetros}
+string & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+array Retorna el usuario con el id suministrado 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_usuario_model_8php_source_l00025}{25}} del archivo \mbox{\hyperlink{_usuario_model_8php_source}{Usuario\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \$Usuario\ =\ \$this-\/>db-\/>table(\textcolor{stringliteral}{'usuarios'});}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \$Usuario-\/>where(\$data);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$Usuario-\/>get()-\/>getResultArray();}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_app_1_1_models_1_1_usuario_model_a412681ecbb6fac857f44871534d61208}\index{UsuarioModel@{UsuarioModel}!\$allowedFields@{\$allowedFields}}
+\index{\$allowedFields@{\$allowedFields}!UsuarioModel@{UsuarioModel}}
+\doxysubsubsection{\texorpdfstring{\$allowedFields}{\$allowedFields}}
+{\footnotesize\ttfamily \label{class_app_1_1_models_1_1_usuario_model_a412681ecbb6fac857f44871534d61208} 
+\$allowed\+Fields = \mbox{[}\textquotesingle{}nombre\+\_\+completo\textquotesingle{}, \textquotesingle{}correo\textquotesingle{}, \textquotesingle{}usuario\textquotesingle{}, \textquotesingle{}contrasena\textquotesingle{}, \textquotesingle{}dependencia\textquotesingle{}, \textquotesingle{}tipo\+\_\+usuario\textquotesingle{}, \textquotesingle{}fecha\+\_\+creacion\textquotesingle{}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuario_model_8php_source_l00015}{15}} del archivo \mbox{\hyperlink{_usuario_model_8php_source}{Usuario\+Model.\+php}}.
+
+\Hypertarget{class_app_1_1_models_1_1_usuario_model_a65eaa4de6b3049e12bab2e6eb3d93fe2}\index{UsuarioModel@{UsuarioModel}!\$allowEmptyInserts@{\$allowEmptyInserts}}
+\index{\$allowEmptyInserts@{\$allowEmptyInserts}!UsuarioModel@{UsuarioModel}}
+\doxysubsubsection{\texorpdfstring{\$allowEmptyInserts}{\$allowEmptyInserts}}
+{\footnotesize\ttfamily \label{class_app_1_1_models_1_1_usuario_model_a65eaa4de6b3049e12bab2e6eb3d93fe2} 
+bool \$allow\+Empty\+Inserts = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuario_model_8php_source_l00017}{17}} del archivo \mbox{\hyperlink{_usuario_model_8php_source}{Usuario\+Model.\+php}}.
+
+\Hypertarget{class_app_1_1_models_1_1_usuario_model_a927b0256b942a3ee89485f2649af7981}\index{UsuarioModel@{UsuarioModel}!\$primaryKey@{\$primaryKey}}
+\index{\$primaryKey@{\$primaryKey}!UsuarioModel@{UsuarioModel}}
+\doxysubsubsection{\texorpdfstring{\$primaryKey}{\$primaryKey}}
+{\footnotesize\ttfamily \label{class_app_1_1_models_1_1_usuario_model_a927b0256b942a3ee89485f2649af7981} 
+\$primary\+Key = \textquotesingle{}id\+\_\+usuario\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuario_model_8php_source_l00008}{8}} del archivo \mbox{\hyperlink{_usuario_model_8php_source}{Usuario\+Model.\+php}}.
+
+\Hypertarget{class_app_1_1_models_1_1_usuario_model_a0f317c2c1d4c617554890223a39037be}\index{UsuarioModel@{UsuarioModel}!\$returnType@{\$returnType}}
+\index{\$returnType@{\$returnType}!UsuarioModel@{UsuarioModel}}
+\doxysubsubsection{\texorpdfstring{\$returnType}{\$returnType}}
+{\footnotesize\ttfamily \label{class_app_1_1_models_1_1_usuario_model_a0f317c2c1d4c617554890223a39037be} 
+\$return\+Type = \textquotesingle{}array\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuario_model_8php_source_l00012}{12}} del archivo \mbox{\hyperlink{_usuario_model_8php_source}{Usuario\+Model.\+php}}.
+
+\Hypertarget{class_app_1_1_models_1_1_usuario_model_ae8876a14058f368335baccf35af4a22b}\index{UsuarioModel@{UsuarioModel}!\$table@{\$table}}
+\index{\$table@{\$table}!UsuarioModel@{UsuarioModel}}
+\doxysubsubsection{\texorpdfstring{\$table}{\$table}}
+{\footnotesize\ttfamily \label{class_app_1_1_models_1_1_usuario_model_ae8876a14058f368335baccf35af4a22b} 
+\$table = \textquotesingle{}usuarios\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuario_model_8php_source_l00007}{7}} del archivo \mbox{\hyperlink{_usuario_model_8php_source}{Usuario\+Model.\+php}}.
+
+\Hypertarget{class_app_1_1_models_1_1_usuario_model_a7b093338cc53385a875ce811a2380275}\index{UsuarioModel@{UsuarioModel}!\$useAutoIncrement@{\$useAutoIncrement}}
+\index{\$useAutoIncrement@{\$useAutoIncrement}!UsuarioModel@{UsuarioModel}}
+\doxysubsubsection{\texorpdfstring{\$useAutoIncrement}{\$useAutoIncrement}}
+{\footnotesize\ttfamily \label{class_app_1_1_models_1_1_usuario_model_a7b093338cc53385a875ce811a2380275} 
+\$use\+Auto\+Increment = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuario_model_8php_source_l00010}{10}} del archivo \mbox{\hyperlink{_usuario_model_8php_source}{Usuario\+Model.\+php}}.
+
+\Hypertarget{class_app_1_1_models_1_1_usuario_model_aacbbba3d837af3ef63d666afa939da59}\index{UsuarioModel@{UsuarioModel}!\$useSoftDeletes@{\$useSoftDeletes}}
+\index{\$useSoftDeletes@{\$useSoftDeletes}!UsuarioModel@{UsuarioModel}}
+\doxysubsubsection{\texorpdfstring{\$useSoftDeletes}{\$useSoftDeletes}}
+{\footnotesize\ttfamily \label{class_app_1_1_models_1_1_usuario_model_aacbbba3d837af3ef63d666afa939da59} 
+\$use\+Soft\+Deletes = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuario_model_8php_source_l00013}{13}} del archivo \mbox{\hyperlink{_usuario_model_8php_source}{Usuario\+Model.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Models/Usuario\+Model.\+php\end{DoxyCompactItemize}

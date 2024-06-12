@@ -1,0 +1,269 @@
+\doxysection{Operaciones\+\_\+helper.\+php}
+\hypertarget{_operaciones__helper_8php_source}{}\label{_operaciones__helper_8php_source}\index{C:/xampp/htdocs/liquidador/app/Helpers/Operaciones\_helper.php@{C:/xampp/htdocs/liquidador/app/Helpers/Operaciones\_helper.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00003}00003\ use\ CodeIgniter\(\backslash\)CLI\(\backslash\)Console;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00004}00004\ use\ Kint\(\backslash\)Zval\(\backslash\)DateTimeValue;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00006}00006\ use\ Dompdf\(\backslash\)Dompdf;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00007}00007\ use\ Dompdf\(\backslash\)Option;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00008}00008\ use\ Dompdf\(\backslash\)Exception\ as\ DomException;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00009}00009\ use\ Dompdf\(\backslash\)Options;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00010}00010\ use\ \mbox{\hyperlink{class_config_1_1_autoload}{Config\(\backslash\)Autoload}};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00011}00011\ use\ PhpParser\(\backslash\)Node\(\backslash\)Expr\(\backslash\)FuncCall;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00013}00013\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/\ HEADER\ -\/-\/-\/-\/-\/-\/-\/-\///}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00019}00019\ \textcolor{keyword}{function}\ mostrarHeader()\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00020}00020\ \ \ \ \ \$header\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{if}(session()-\/>\textcolor{keyword}{get}(\textcolor{stringliteral}{'tipoUsuario'})\ ==\ \textcolor{stringliteral}{'Liquidador'})\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \$header\ =\ \textcolor{stringliteral}{"{}headerLiquidador"{}};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00023}00023\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \$header\ =\ \textcolor{stringliteral}{"{}headerAdmin"{}};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00026}00026\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{return}\ \$header;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00031}00031\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/\ FUNCIONES\ DE\ CALCULOS\ -\/-\/-\/-\/-\/-\///}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00039}00039\ \textcolor{keyword}{function}\ calcularNumDiasPrimeraSemana(\$fechaDesde)\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00040}00040\ \ \ \ \ \$fechaLunesAnterior\ =\ obtenerLunesAnteior(\$fechaDesde);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00042}00042\ \ \ \ \ \$fechaDesde\ =\ \textcolor{keyword}{new}\ DateTime(\$fechaDesde);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00043}00043\ \ \ \ \ \$fechaLunesAnterior\ =\ \textcolor{keyword}{new}\ DateTime(\$fechaLunesAnterior);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00044}00044\ \ \ \ \ \$diff\ =\ \$fechaLunesAnterior\ -\/>\ diff(\$fechaDesde);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00045}00045\ \ \ \ \ \$numDias\ =\ 7\ -\/\ (\$diff\ -\/>\ days);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{return}\ \$numDias;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00056}00056\ \textcolor{keyword}{function}\ calcularNumDiasUltimaSemana(\$usuarioFechaHasta,\ \$fechaHasta)\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00057}00057\ \ \ \ \ \$usuarioFechaHasta\ =\ \textcolor{keyword}{new}\ DateTime(\$usuarioFechaHasta);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00058}00058\ \ \ \ \ \$fechaHasta\ =\ \textcolor{keyword}{new}\ DateTime(\$fechaHasta);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00060}00060\ \ \ \ \ \$diff\ =\ \$fechaHasta\ -\/>\ diff(\$usuarioFechaHasta);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00061}00061\ \ \ \ \ \$numDias\ =\ 7\ -\/\ (\$diff\ -\/>\ days);\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{return}\ \$numDias;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00072}00072\ \textcolor{keyword}{function}\ calcularDiasUnicaSemana(\$usuarioFechaDesde,\ \$usuarioFechaHasta)\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00073}00073\ \ \ \ \ \$usuarioFechaHasta\ =\ \textcolor{keyword}{new}\ DateTime(\$usuarioFechaHasta);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00074}00074\ \ \ \ \ \$usuarioFechaDesde\ =\ \textcolor{keyword}{new}\ DateTime(\$usuarioFechaDesde);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00076}00076\ \ \ \ \ \$diff\ =\ \$usuarioFechaDesde\ -\/>\ diff(\$usuarioFechaHasta);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00077}00077\ \ \ \ \ \$numDias\ =\ (\$diff\ -\/>\ days);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{return}\ \$numDias\ +1;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00089}00089\ \textcolor{keyword}{function}\ calcularInteres(\$valorInicial,\ \$dtfDia,\ \$numDias)\{\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00090}00090\ \ \ \ \ \$interes\ =\ (intval(\$valorInicial)\ *\ \$numDias)\ *\ \$dtfDia;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{return}\ \$interes;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00092}00092\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00101}00101\ \textcolor{keyword}{function}\ sumarDias(\$fechaDesde,\ \$fechaHasta)\ \{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00102}00102\ \ \ \ \ \$fechaInicio\ =\ \textcolor{keyword}{new}\ DateTime(\$fechaDesde);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00103}00103\ \ \ \ \ \$fechaFin\ =\ \textcolor{keyword}{new}\ DateTime(\$fechaHasta);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00105}00105\ \ \ \ \ \$totalDias\ =\ \$fechaInicio\ -\/>\ diff(\$fechaFin);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00106}00106\ \ \ \ \ \textcolor{keywordflow}{return}\ \$totalDias\ -\/>\ days\ +1;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00107}00107\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00116}00116\ \textcolor{keyword}{function}\ tasaNominal(\$porcentajeInteres,\ \$periodosAnio)\ \{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00117}00117\ \ \ \ \ \textcolor{comment}{//Conversión\ de\ porcentaje\ a\ decimal\ para\ hacer\ las\ operaciones}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00118}00118\ \ \ \ \ \$porcentajeInteres\ =\ \$porcentajeInteres\ /\ 100;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00119}00119\ \ \ \ \ \textcolor{comment}{//Formula\ de\ tasa\ nominal}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00120}00120\ \ \ \ \ \$tasaNominalPorcentaje\ =\ pow((1\ +\ (\$porcentajeInteres\ /\ \$periodosAnio)),\ \$periodosAnio)\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00121}00121\ \ \ \ \ \textcolor{comment}{//Conversión\ de\ deciaml\ a\ porcentaje\ para\ mostrarlo\ al\ usuario\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00122}00122\ \ \ \ \ \$tasaNominalPorcentaje\ =\ (\$tasaNominalPorcentaje)\ *\ 100;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00123}00123\ \ \ \ \ \textcolor{keywordflow}{return}\ \$tasaNominalPorcentaje;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00124}00124\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00133}00133\ \textcolor{keyword}{function}\ calcularDtfFuturo(\$fechaHastaUsuario,\ \$ultimaFechaHastaQuery)\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00134}00134\ \ \ \ \ \$fecha\ =\ \$ultimaFechaHastaQuery;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00135}00135\ \ \ \ \ \$proximosDtf\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00136}00136\ \ \ \ \ \textcolor{keywordflow}{while}\ (\$fecha\ <\ \$fechaHastaUsuario\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00137}00137\ \ \ \ \ \ \ \ \ \$nuevoDtfProximo\ =\ [}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'porcentaje'}\ =>\ 0,}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fechaDesde'}\ =>\ date(\textcolor{stringliteral}{'Y-\/m-\/d'},\ strtotime(\$fecha\ .\ \textcolor{stringliteral}{'\ +\ '}\ .\ 1\ .\ \textcolor{stringliteral}{'\ days'})),}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fechaHasta'}\ =>\ date(\textcolor{stringliteral}{'Y-\/m-\/d'},\ strtotime(\$fecha\ .\ \textcolor{stringliteral}{'\ +\ '}\ .\ 7\ .\ \textcolor{stringliteral}{'\ days'}))}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00141}00141\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00142}00142\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00143}00143\ \ \ \ \ \ \ \ \ \$proximosDtf[]\ =\ \$nuevoDtfProximo;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00144}00144\ \ \ \ \ \ \ \ \ \$fecha\ =\ \$nuevoDtfProximo[\textcolor{stringliteral}{'fechaHasta'}];}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00145}00145\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00147}00147\ \ \ \ \ \textcolor{keywordflow}{return}\ \$proximosDtf;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00148}00148\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00150}00150\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/\ FUNCIONES\ DE\ FECHAS\ -\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00158}00158\ \textcolor{keyword}{function}\ obtenerMes(\$fecha)\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00159}00159\ \ \ \ \ \$mes\ =\ date(\textcolor{charliteral}{'m'},\ strtotime(\$fecha));}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00161}00161\ \ \ \ \ \textcolor{keywordflow}{switch}\ (\$mes)\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00162}00162\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'Enero'};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'Febrero'};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'Marzo'};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00171}00171\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'Abril'};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00174}00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'Mayo'};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00177}00177\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'Junio'};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00180}00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'Julio'};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00183}00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'Agosto'};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00186}00186\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 9:}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'Septiembre'};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00189}00189\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 10:}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'Octubre'};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00192}00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 11:}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'Noviembre'};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00195}00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 12:}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'Diciembre'};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00198}00198\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'Error'};}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00200}00200\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00202}00202\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00210}00210\ \textcolor{keyword}{function}\ obtenerAño(\$fecha)\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00211}00211\ \ \ \ \ \$año\ =\ date(\textcolor{charliteral}{'Y'},\ strtotime(\$fecha));}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00213}00213\ \ \ \ \ \textcolor{keywordflow}{return}\ \$año;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00214}00214\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00221}00221\ \textcolor{keyword}{function}\ obtenerFechaActual()\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00222}00222\ \ \ \ \ \textcolor{comment}{//Obtener\ fecha\ de\ hoy}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00223}00223\ \ \ \ \ \$fechaActual\ =\ \textcolor{keyword}{new}\ DateTime();}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00225}00225\ \ \ \ \ \textcolor{comment}{//\ Formatear\ la\ fecha\ como\ cadena\ de\ texto}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00226}00226\ \ \ \ \ \$fechaFormateada\ =\ \$fechaActual-\/>format(\textcolor{stringliteral}{'Y-\/m-\/d'});}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00227}00227\ \ \ \ \ \textcolor{comment}{//Console.log();}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00228}00228\ \ \ \ \ \textcolor{keywordflow}{return}\ \$fechaFormateada;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00229}00229\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00230}00230\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00238}00238\ \textcolor{keyword}{function}\ formatearFechas(\$fechaDesde,\ \$fechaHasta)\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00239}00239\ \ \ \ \ \$fechaDesde\ =\ \textcolor{keyword}{new}\ DateTime(\$fechaDesde);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00240}00240\ \ \ \ \ \$fechaHasta\ =\ \textcolor{keyword}{new}\ DateTime(\$fechaHasta);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00242}00242\ \ \ \ \ \$fechaDesdeFormateada\ =\ \$fechaDesde-\/>format(\textcolor{stringliteral}{'d-\/m-\/Y'});}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00243}00243\ \ \ \ \ \$fechaHastaFormateada\ =\ \$fechaHasta-\/>format(\textcolor{stringliteral}{'d-\/m-\/Y'});}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00244}00244\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00245}00245\ \ \ \ \ \textcolor{keywordflow}{return}\ [\textcolor{stringliteral}{"{}fechaDesdeFormateada"{}}\ =>\ str\_replace(\textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'/'},\ \$fechaDesdeFormateada),\ \textcolor{stringliteral}{"{}fechaHastaFormateada"{}}\ =>\ str\_replace(\textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'/'},\ \$fechaHastaFormateada)];}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00246}00246\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00254}00254\ \textcolor{keyword}{function}\ diaSemana\ (\$fecha)\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00255}00255\ \ \ \ \ \$diaSemana\ =\ date(\textcolor{charliteral}{'w'},\ strtotime(\$fecha));}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00256}00256\ \ \ \ \ \textcolor{keywordflow}{return}\ \$diaSemana;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00257}00257\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00258}00258\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00265}00265\ \textcolor{keyword}{function}\ obtenerLunesAnteior(\$fechaDesde)\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00266}00266\ \ \ \ \ \$diaSemana\ =\ diaSemana(\$fechaDesde);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00267}00267\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00268}00268\ \ \ \ \ \$diferenciaDias\ =\ \$diaSemana\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00269}00269\ \ \ \ \ \textcolor{keywordflow}{if}\ (\$diferenciaDias\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00270}00270\ \ \ \ \ \ \ \ \ \$diferenciaDias\ +=\ 7;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00271}00271\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00272}00272\ \ \ \ \ \$fechaLunesAnterior\ =\ date(\textcolor{stringliteral}{'Y-\/m-\/d'},\ strtotime(\$fechaDesde\ .\ \textcolor{stringliteral}{'\ -\/\ '}\ .\ \$diferenciaDias\ .\ \textcolor{stringliteral}{'\ days'}));}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00273}00273\ \ \ \ \ \textcolor{keywordflow}{return}\ \$fechaLunesAnterior;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00274}00274\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00275}00275\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00276}00276\ \textcolor{comment}{//-\/-\/-\/-\/-\/\ GENERAR\ PDF\ -\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00284}00284\ \textcolor{keyword}{function}\ crearPdf(\$tipoLiquidacion)\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00285}00285\ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00286}00286\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Condicional\ para\ elegir\ que\ datos\ mostrar\ en\ el\ PDF}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00287}00287\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$tipoLiquidacion\ ==\ \textcolor{stringliteral}{'DTF'})\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'datosFechas'}\ =>\ \$\_POST[\textcolor{stringliteral}{'dtfs'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'datosGenerales'}\ =>\ \$\_POST[\textcolor{stringliteral}{'datosGenerales'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nombreDemandante'}\ =>\ \$\_POST[\textcolor{stringliteral}{'nombreDemandante'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'numDocumento'}\ =>\ \$\_POST[\textcolor{stringliteral}{'numDocumento'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'valorFinal'}\ =>\ \$\_POST[\textcolor{stringliteral}{'valorFinal'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}\ =>\ \textcolor{stringliteral}{'PDF'}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00296}00296\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\$tipoLiquidacion\ ==\ \textcolor{stringliteral}{'Indexada'})\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'valorInicial'}\ =>\ \$\_POST[\textcolor{stringliteral}{'valorInicial'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fechaDesde'}\ =>\ \$\_POST[\textcolor{stringliteral}{'fechaDesde'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fechaHasta'}\ =>\ \$\_POST[\textcolor{stringliteral}{'fechaHasta'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nombreDemandante'}\ =>\ \$\_POST[\textcolor{stringliteral}{'nombreDemandante'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'numDocumento'}\ =>\ \$\_POST[\textcolor{stringliteral}{'numDocumento'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ipcInicial'}\ =>\ \$\_POST[\textcolor{stringliteral}{'ipcInicial'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ipcFinal'}\ =>\ \$\_POST[\textcolor{stringliteral}{'ipcFinal'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ipcDivision'}\ =>\ \$\_POST[\textcolor{stringliteral}{'ipcDivision'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'valorTotal'}\ =>\ \$\_POST[\textcolor{stringliteral}{'valorTotal'}],}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}\ =>\ \textcolor{stringliteral}{'PDF'}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00309}00309\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00310}00310\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00311}00311\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Guardamos\ la\ vista\ de\ la\ liquidación\ correspondiente}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00312}00312\ \ \ \ \ \ \ \ \ \$contenido\ =\ view(\textcolor{stringliteral}{'pdf/plantillaPdf'}.\$tipoLiquidacion,\ \$data);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00313}00313\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00314}00314\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Asignamos\ nombre\ para\ el\ PDF}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00315}00315\ \ \ \ \ \ \ \ \ \$nombrePdf\ =\ \textcolor{stringliteral}{"{}Liquidacion\ "{}}.\$tipoLiquidacion.\textcolor{stringliteral}{"{}\ "{}}.\$data[\textcolor{stringliteral}{'numDocumento'}];}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00317}00317\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Opciones\ para\ prevenir\ errores\ con\ carga\ de\ imágenes}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00318}00318\ \ \ \ \ \ \ \ \ \$options\ =\ \textcolor{keyword}{new}\ Options();}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00319}00319\ \ \ \ \ \ \ \ \ \$options-\/>set(\textcolor{stringliteral}{'isRemoteEnabled'},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00320}00320\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00321}00321\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Instancia\ de\ la\ clase}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00322}00322\ \ \ \ \ \ \ \ \ \$dompdf\ =\ \textcolor{keyword}{new}\ Dompdf(\$options);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00323}00323\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00324}00324\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cargar\ el\ contenido\ HTML}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00325}00325\ \ \ \ \ \ \ \ \ \$dompdf-\/>loadHtml(\$contenido);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00326}00326\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00327}00327\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Formato\ y\ tamaño\ del\ PDF}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00328}00328\ \ \ \ \ \ \ \ \ \$dompdf-\/>setPaper(\textcolor{stringliteral}{'A4'},\ \textcolor{stringliteral}{'portrait'});}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00329}00329\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00330}00330\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Renderizar\ HTML\ como\ PDF}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00331}00331\ \ \ \ \ \ \ \ \ \$dompdf-\/>render();}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00332}00332\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00333}00333\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Parametros\ para\ generar\ pie\ de\ pagina\ con\ numero\ de\ la\ página}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00334}00334\ \ \ \ \ \ \ \ \ \$x\ \ \ \ \ \ \ \ \ \ =\ 470;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00335}00335\ \ \ \ \ \ \ \ \ \$y\ \ \ \ \ \ \ \ \ \ =\ 800;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00336}00336\ \ \ \ \ \ \ \ \ \$text\ \ \ \ \ \ \ =\ \textcolor{stringliteral}{"{}Página\ \{PAGE\_NUM\}\ de\ \{PAGE\_COUNT\}"{}};\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00337}00337\ \ \ \ \ \ \ \ \ \$font\ \ \ \ \ \ \ =\ \$dompdf-\/>getFontMetrics()-\/>get\_font(\textcolor{stringliteral}{'Helvetica'},\ \textcolor{stringliteral}{'normal'});\ \ \ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00338}00338\ \ \ \ \ \ \ \ \ \$size\ \ \ \ \ \ \ =\ 10;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00339}00339\ \ \ \ \ \ \ \ \ \$color\ \ \ \ \ \ =\ array(0,0,0);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00340}00340\ \ \ \ \ \ \ \ \ \$word\_space\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00341}00341\ \ \ \ \ \ \ \ \ \$char\_space\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00342}00342\ \ \ \ \ \ \ \ \ \$angle\ \ \ \ \ \ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00343}00343\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00344}00344\ \ \ \ \ \ \ \ \ \$dompdf-\/>getCanvas()-\/>page\_text(}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00345}00345\ \ \ \ \ \ \ \ \ \$x,\ \$y,\ \$text,\ \$font,\ \$size,\ \$color,\ \$word\_space,\ \$char\_space,\ \$angle}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00346}00346\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00347}00347\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00348}00348\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Salida\ para\ descargar}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00349}00349\ \ \ \ \ \ \ \ \ \$dompdf-\/>stream(\$nombrePdf,\ [\textcolor{stringliteral}{'Attachment'}\ =>\ \textcolor{keyword}{true}]);}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00350}00350\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00351}00351\ \ \ \ \ \}\textcolor{keywordflow}{catch}(Exception\ \$e)\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00352}00352\ \ \ \ \ \ \ \ \ echo\ \$e-\/>getMessage();}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00353}00353\ \ \ \ \ \}\textcolor{keywordflow}{catch}(DomException\ \$e)\{}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00354}00354\ \ \ \ \ \ \ \ \ echo\ \$e-\/>getMessage();}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00355}00355\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00356}00356\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00357}00357\ \}}
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00358}00358\ }
+\DoxyCodeLine{\Hypertarget{_operaciones__helper_8php_source_l00359}00359\ ?>}
+
+\end{DoxyCode}

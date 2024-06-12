@@ -1,0 +1,31 @@
+\doxysection{Usuario\+Seeder.\+php}
+\hypertarget{_usuario_seeder_8php_source}{}\label{_usuario_seeder_8php_source}\index{C:/xampp/htdocs/liquidador/app/Database/Seeds/UsuarioSeeder.php@{C:/xampp/htdocs/liquidador/app/Database/Seeds/UsuarioSeeder.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }App\(\backslash\)Database\(\backslash\)Seeds;}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Database\(\backslash\)Seeder;}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00007}\mbox{\hyperlink{class_app_1_1_database_1_1_seeds_1_1_usuario_seeder}{00007}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_app_1_1_database_1_1_seeds_1_1_usuario_seeder}{UsuarioSeeder}}\ \textcolor{keyword}{extends}\ Seeder}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00014}\mbox{\hyperlink{class_app_1_1_database_1_1_seeds_1_1_usuario_seeder_afb0fafe7e02a3ae1993c01c19fad2bae}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_app_1_1_database_1_1_seeds_1_1_usuario_seeder_afb0fafe7e02a3ae1993c01c19fad2bae}{run}}()}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \$password=\ password\_hash(\textcolor{stringliteral}{"{}123"{}},\ PASSWORD\_DEFAULT);}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'usuario'}\ =>\ \textcolor{stringliteral}{'prueba2'},}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'correo'}\ =>\ \textcolor{stringliteral}{'usuarioprueba2@gmail.com'},}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nombre\_completo'}\ =>\ \textcolor{stringliteral}{'Camilo\ Correa'},}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'dependencia'}\ =>\ \textcolor{stringliteral}{'Secretaria\ Vial'},}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'tipo\_usuario'}\ =>\ \textcolor{stringliteral}{'Administrador'},}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'contrasena'}\ =>\ \$password}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Usuario\ Query}}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \$this-\/>db-\/>table(\textcolor{stringliteral}{'usuarios'})-\/>insert(\$data);}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuario_seeder_8php_source_l00030}00030\ \}}
+
+\end{DoxyCode}

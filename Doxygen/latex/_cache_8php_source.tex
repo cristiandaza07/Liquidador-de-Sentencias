@@ -1,0 +1,64 @@
+\doxysection{Cache.\+php}
+\hypertarget{_cache_8php_source}{}\label{_cache_8php_source}\index{C:/xampp/htdocs/liquidador/app/Config/Cache.php@{C:/xampp/htdocs/liquidador/app/Config/Cache.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_config}{Config}};}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Cache\(\backslash\)CacheInterface;}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00006}00006\ use\ CodeIgniter\(\backslash\)Cache\(\backslash\)Handlers\(\backslash\)DummyHandler;}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00007}00007\ use\ CodeIgniter\(\backslash\)Cache\(\backslash\)Handlers\(\backslash\)FileHandler;}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00008}00008\ use\ CodeIgniter\(\backslash\)Cache\(\backslash\)Handlers\(\backslash\)MemcachedHandler;}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00009}00009\ use\ CodeIgniter\(\backslash\)Cache\(\backslash\)Handlers\(\backslash\)PredisHandler;}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00010}00010\ use\ CodeIgniter\(\backslash\)Cache\(\backslash\)Handlers\(\backslash\)RedisHandler;}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00011}00011\ use\ CodeIgniter\(\backslash\)Cache\(\backslash\)Handlers\(\backslash\)WincacheHandler;}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00012}00012\ use\ CodeIgniter\(\backslash\)Config\(\backslash\)BaseConfig;}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00014}\mbox{\hyperlink{class_config_1_1_cache}{00014}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_config_1_1_cache}{Cache}}\ \textcolor{keyword}{extends}\ BaseConfig}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00024}\mbox{\hyperlink{class_config_1_1_cache_acf894157f78bcbd5c186e2b0031db33d}{00024}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$handler\ =\ \textcolor{stringliteral}{'file'};}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00035}\mbox{\hyperlink{class_config_1_1_cache_a4c5440e58d14743ce727d5a82f2be613}{00035}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$backupHandler\ =\ \textcolor{stringliteral}{'dummy'};}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00047}\mbox{\hyperlink{class_config_1_1_cache_aa2e3217e9d03bf737e5b4fe147a46c4b}{00047}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$storePath\ =\ WRITEPATH\ .\ \textcolor{stringliteral}{'cache/'};}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{public}\ \$cacheQueryString\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00076}\mbox{\hyperlink{class_config_1_1_cache_a93e8010fa99f47cd28af952276e23910}{00076}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$prefix\ =\ \textcolor{stringliteral}{''};}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00089}\mbox{\hyperlink{class_config_1_1_cache_a108141f724b7d76f288722a700281862}{00089}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \$ttl\ =\ 60;}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00102}\mbox{\hyperlink{class_config_1_1_cache_ac9dde46d1885f15cd012ea0597534855}{00102}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$reservedCharacters\ =\ \textcolor{stringliteral}{'\{\}()/\(\backslash\)@:'};}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00113}00113\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$file\ =\ [}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'storePath'}\ =>\ WRITEPATH\ .\ \textcolor{stringliteral}{'cache/'},}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mode'}\ \ \ \ \ \ =>\ 0640,}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00116}00116\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00129}00129\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$memcached\ =\ [}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'host'}\ \ \ =>\ \textcolor{stringliteral}{'127.0.0.1'},}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'port'}\ \ \ =>\ 11211,}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'weight'}\ =>\ 1,}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00133}00133\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'raw'}\ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00134}00134\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00145}00145\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$redis\ =\ [}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'host'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'127.0.0.1'},}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00147}00147\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'password'}\ =>\ \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'port'}\ \ \ \ \ =>\ 6379,}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'timeout'}\ \ =>\ 0,}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'database'}\ =>\ 0,}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00151}00151\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00163}00163\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$validHandlers\ =\ [}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00164}00164\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'dummy'}\ \ \ \ \ =>\ DummyHandler::class,}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'file'}\ \ \ \ \ \ =>\ FileHandler::class,}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'memcached'}\ =>\ MemcachedHandler::class,}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00167}00167\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'predis'}\ \ \ \ =>\ PredisHandler::class,}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'redis'}\ \ \ \ \ =>\ RedisHandler::class,}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00169}00169\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'wincache'}\ \ =>\ WincacheHandler::class,}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00170}00170\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_cache_8php_source_l00171}00171\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,150 @@
+\doxysection{Referencia de la clase Database}
+\hypertarget{class_config_1_1_database}{}\label{class_config_1_1_database}\index{Database@{Database}}
+Diagrama de herencia de Database\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config_1_1_database}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_config_1_1_database_a99d97f41a2768fce217cf340e1b5c8b9}{\$files\+Path}} = APPPATH . \textquotesingle{}\mbox{\hyperlink{class_config_1_1_database}{Database}}\textquotesingle{} . DIRECTORY\+\_\+\+SEPARATOR
+\item 
+string \mbox{\hyperlink{class_config_1_1_database_a39b982ec685207b6e231f976994bdc29}{\$default\+Group}} = \textquotesingle{}default\textquotesingle{}
+\item 
+array \mbox{\hyperlink{class_config_1_1_database_a495b5a19a81348b0e6bab09713350c49}{\$default}}
+\item 
+array \mbox{\hyperlink{class_config_1_1_database_a56be3dee4edf4b14fcd6c3b7d790b8b7}{\$tests}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Database Configuration 
+
+Definición en la línea \mbox{\hyperlink{_database_8php_source_l00010}{10}} del archivo \mbox{\hyperlink{_database_8php_source}{Database.\+php}}.
+
+
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_config_1_1_database_a095c5d389db211932136b53f25f39685}\index{Database@{Database}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_config_1_1_database_a095c5d389db211932136b53f25f39685} 
+\+\_\+\+\_\+construct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_database_8php_source_l00078}{78}} del archivo \mbox{\hyperlink{_database_8php_source}{Database.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ensure\ that\ we\ always\ set\ the\ database\ group\ to\ 'tests'\ if}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ we\ are\ currently\ running\ an\ automated\ test\ suite,\ so\ that}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ we\ don't\ overwrite\ live\ data\ on\ accident.}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ENVIRONMENT\ ===\ \textcolor{stringliteral}{'testing'})\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>defaultGroup\ =\ \textcolor{stringliteral}{'tests'};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_config_1_1_database_a495b5a19a81348b0e6bab09713350c49}\index{Database@{Database}!\$default@{\$default}}
+\index{\$default@{\$default}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{\$default}{\$default}}
+{\footnotesize\ttfamily \label{class_config_1_1_database_a495b5a19a81348b0e6bab09713350c49} 
+array \$default}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DSN'}\ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'hostname'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'localhost'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'username'}\ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'password'}\ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'database'}\ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBDriver'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'MySQLi'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBPrefix'}\ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'pConnect'}\ \ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBDebug'}\ \ \ \ \ \ =>\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'charset'}\ \ \ \ \ \ =>\ \textcolor{stringliteral}{'utf8'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBCollat'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'utf8\_general\_ci'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'swapPre'}\ \ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'encrypt'}\ \ \ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'compress'}\ \ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'strictOn'}\ \ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'failover'}\ \ \ \ \ =>\ [],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'port'}\ \ \ \ \ \ \ \ \ =>\ 3306,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'numberNative'}\ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_database_8php_source_l00029}{29}} del archivo \mbox{\hyperlink{_database_8php_source}{Database.\+php}}.
+
+\Hypertarget{class_config_1_1_database_a39b982ec685207b6e231f976994bdc29}\index{Database@{Database}!\$defaultGroup@{\$defaultGroup}}
+\index{\$defaultGroup@{\$defaultGroup}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{\$defaultGroup}{\$defaultGroup}}
+{\footnotesize\ttfamily \label{class_config_1_1_database_a39b982ec685207b6e231f976994bdc29} 
+string \$default\+Group = \textquotesingle{}default\textquotesingle{}}
+
+Lets you choose which connection group to use if no other is specified. 
+
+Definición en la línea \mbox{\hyperlink{_database_8php_source_l00022}{22}} del archivo \mbox{\hyperlink{_database_8php_source}{Database.\+php}}.
+
+\Hypertarget{class_config_1_1_database_a99d97f41a2768fce217cf340e1b5c8b9}\index{Database@{Database}!\$filesPath@{\$filesPath}}
+\index{\$filesPath@{\$filesPath}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{\$filesPath}{\$filesPath}}
+{\footnotesize\ttfamily \label{class_config_1_1_database_a99d97f41a2768fce217cf340e1b5c8b9} 
+string \$files\+Path = APPPATH . \textquotesingle{}\mbox{\hyperlink{class_config_1_1_database}{Database}}\textquotesingle{} . DIRECTORY\+\_\+\+SEPARATOR}
+
+The directory that holds the Migrations and Seeds directories. 
+
+Definición en la línea \mbox{\hyperlink{_database_8php_source_l00016}{16}} del archivo \mbox{\hyperlink{_database_8php_source}{Database.\+php}}.
+
+\Hypertarget{class_config_1_1_database_a56be3dee4edf4b14fcd6c3b7d790b8b7}\index{Database@{Database}!\$tests@{\$tests}}
+\index{\$tests@{\$tests}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{\$tests}{\$tests}}
+{\footnotesize\ttfamily \label{class_config_1_1_database_a56be3dee4edf4b14fcd6c3b7d790b8b7} 
+array \$tests}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DSN'}\ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'hostname'}\ \ \ \ =>\ \textcolor{stringliteral}{'127.0.0.1'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'username'}\ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'password'}\ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'database'}\ \ \ \ =>\ \textcolor{stringliteral}{':memory:'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBDriver'}\ \ \ \ =>\ \textcolor{stringliteral}{'SQLite3'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBPrefix'}\ \ \ \ =>\ \textcolor{stringliteral}{'db\_'},\ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'pConnect'}\ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBDebug'}\ \ \ \ \ =>\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'charset'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'utf8'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'DBCollat'}\ \ \ \ =>\ \textcolor{stringliteral}{'utf8\_general\_ci'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'swapPre'}\ \ \ \ \ =>\ \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'encrypt'}\ \ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'compress'}\ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'strictOn'}\ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'failover'}\ \ \ \ =>\ [],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'port'}\ \ \ \ \ \ \ \ =>\ 3306,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'foreignKeys'}\ =>\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'busyTimeout'}\ =>\ 1000,}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_database_8php_source_l00056}{56}} del archivo \mbox{\hyperlink{_database_8php_source}{Database.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Config/Database.\+php\end{DoxyCompactItemize}

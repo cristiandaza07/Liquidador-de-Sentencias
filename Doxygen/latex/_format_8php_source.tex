@@ -1,0 +1,40 @@
+\doxysection{Format.\+php}
+\hypertarget{_format_8php_source}{}\label{_format_8php_source}\index{C:/xampp/htdocs/liquidador/app/Config/Format.php@{C:/xampp/htdocs/liquidador/app/Config/Format.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_config}{Config}};}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Config\(\backslash\)BaseConfig;}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00006}00006\ use\ CodeIgniter\(\backslash\)Format\(\backslash\)FormatterInterface;}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00007}00007\ use\ CodeIgniter\(\backslash\)Format\(\backslash\)JSONFormatter;}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00008}00008\ use\ CodeIgniter\(\backslash\)Format\(\backslash\)XMLFormatter;}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00010}\mbox{\hyperlink{class_config_1_1_format}{00010}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_config_1_1_format}{Format}}\ \textcolor{keyword}{extends}\ BaseConfig}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$supportedResponseFormats\ =\ [}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'application/json'},}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'application/xml'},\ \textcolor{comment}{//\ machine-\/readable\ XML}}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'text/xml'},\ \textcolor{comment}{//\ human-\/readable\ XML}}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00031}00031\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00044}00044\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$formatters\ =\ [}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'application/json'}\ =>\ JSONFormatter::class,}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'application/xml'}\ \ =>\ XMLFormatter::class,}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'text/xml'}\ \ \ \ \ \ \ \ \ =>\ XMLFormatter::class,}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00048}00048\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$formatterOptions\ =\ [}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'application/json'}\ =>\ JSON\_UNESCAPED\_UNICODE\ |\ JSON\_UNESCAPED\_SLASHES,}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'application/xml'}\ \ =>\ 0,}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'text/xml'}\ \ \ \ \ \ \ \ \ =>\ 0,}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00064}00064\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00073}\mbox{\hyperlink{class_config_1_1_format_ac6341d2788904fc2d43d12853fa22f78}{00073}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_config_1_1_format_ac6341d2788904fc2d43d12853fa22f78}{getFormatter}}(\textcolor{keywordtype}{string}\ \$mime)}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00074}00074\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Services::format()-\/>getFormatter(\$mime);}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_format_8php_source_l00077}00077\ \}}
+
+\end{DoxyCode}

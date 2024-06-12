@@ -1,0 +1,138 @@
+\doxysection{Referencia de la clase Exceptions}
+\hypertarget{class_config_1_1_exceptions}{}\label{class_config_1_1_exceptions}\index{Exceptions@{Exceptions}}
+Diagrama de herencia de Exceptions\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config_1_1_exceptions}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_config_1_1_exceptions_a59873155e78d8ff3d9e81b9513dde78a}{handler}} (int \$status\+Code, Throwable \$exception)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_config_1_1_exceptions_a22ac5682fc0bdd20dc708a8e559a42fc}{\$log}} = true
+\item 
+array \mbox{\hyperlink{class_config_1_1_exceptions_a585d3e201bc6b11b4e8e6a5db347ae9f}{\$ignore\+Codes}} = \mbox{[}404\mbox{]}
+\item 
+string \mbox{\hyperlink{class_config_1_1_exceptions_a4f61024e5497580d02a4400ee2b57088}{\$error\+View\+Path}} = APPPATH . \textquotesingle{}Views/errors\textquotesingle{}
+\item 
+array \mbox{\hyperlink{class_config_1_1_exceptions_af586fe851545e128056af68aa54b66ff}{\$sensitive\+Data\+In\+Trace}} = \mbox{[}$\,$\mbox{]}
+\item 
+bool \mbox{\hyperlink{class_config_1_1_exceptions_a4c10a90e04f55e12c761e08e0ee5ce8e}{\$log\+Deprecations}} = true
+\item 
+string \mbox{\hyperlink{class_config_1_1_exceptions_a0f516e8919c07917b034ea56536b6d56}{\$deprecation\+Log\+Level}} = Log\+Level\+::\+WARNING
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Setup how the exception handler works. 
+
+Definición en la línea \mbox{\hyperlink{_exceptions_8php_source_l00014}{14}} del archivo \mbox{\hyperlink{_exceptions_8php_source}{Exceptions.\+php}}.
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_config_1_1_exceptions_a59873155e78d8ff3d9e81b9513dde78a}\index{Exceptions@{Exceptions}!handler@{handler}}
+\index{handler@{handler}!Exceptions@{Exceptions}}
+\doxysubsubsection{\texorpdfstring{handler()}{handler()}}
+{\footnotesize\ttfamily \label{class_config_1_1_exceptions_a59873155e78d8ff3d9e81b9513dde78a} 
+handler (\begin{DoxyParamCaption}\item[{int}]{\$status\+Code}{, }\item[{Throwable}]{\$exception}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_exceptions_8php_source_l00104}{104}} del archivo \mbox{\hyperlink{_exceptions_8php_source}{Exceptions.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ ExceptionHandlerInterface}
+\DoxyCodeLine{00105\ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ ExceptionHandler(\$this);}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_config_1_1_exceptions_a0f516e8919c07917b034ea56536b6d56}\index{Exceptions@{Exceptions}!\$deprecationLogLevel@{\$deprecationLogLevel}}
+\index{\$deprecationLogLevel@{\$deprecationLogLevel}!Exceptions@{Exceptions}}
+\doxysubsubsection{\texorpdfstring{\$deprecationLogLevel}{\$deprecationLogLevel}}
+{\footnotesize\ttfamily \label{class_config_1_1_exceptions_a0f516e8919c07917b034ea56536b6d56} 
+string \$deprecation\+Log\+Level = Log\+Level\+::\+WARNING}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_exceptions_autotoc_md91}{}\doxysubsubsection{\texorpdfstring{LOG LEVEL THRESHOLD FOR DEPRECATIONS}{LOG LEVEL THRESHOLD FOR DEPRECATIONS}}\label{class_config_1_1_exceptions_autotoc_md91}
+If {\ttfamily \$log\+Deprecations} is set to {\ttfamily true}, this sets the log level to which the deprecation will be logged. This should be one of the log levels recognized by PSR-\/3.
+
+The related {\ttfamily \doxylink{namespace_config}{Config}\textbackslash{}Logger\+:\+:\$threshold} should be adjusted, if needed, to capture logging the deprecations. 
+
+Definición en la línea \mbox{\hyperlink{_exceptions_8php_source_l00083}{83}} del archivo \mbox{\hyperlink{_exceptions_8php_source}{Exceptions.\+php}}.
+
+\Hypertarget{class_config_1_1_exceptions_a4f61024e5497580d02a4400ee2b57088}\index{Exceptions@{Exceptions}!\$errorViewPath@{\$errorViewPath}}
+\index{\$errorViewPath@{\$errorViewPath}!Exceptions@{Exceptions}}
+\doxysubsubsection{\texorpdfstring{\$errorViewPath}{\$errorViewPath}}
+{\footnotesize\ttfamily \label{class_config_1_1_exceptions_a4f61024e5497580d02a4400ee2b57088} 
+string \$error\+View\+Path = APPPATH . \textquotesingle{}Views/errors\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_exceptions_autotoc_md85}{}\doxysubsubsection{\texorpdfstring{Error Views Path}{Error Views Path}}\label{class_config_1_1_exceptions_autotoc_md85}
+This is the path to the directory that contains the \textquotesingle{}cli\textquotesingle{} and \textquotesingle{}html\textquotesingle{} directories that hold the views used to generate errors.
+
+Default\+: APPPATH.\textquotesingle{}Views/errors\textquotesingle{} 
+
+Definición en la línea \mbox{\hyperlink{_exceptions_8php_source_l00047}{47}} del archivo \mbox{\hyperlink{_exceptions_8php_source}{Exceptions.\+php}}.
+
+\Hypertarget{class_config_1_1_exceptions_a585d3e201bc6b11b4e8e6a5db347ae9f}\index{Exceptions@{Exceptions}!\$ignoreCodes@{\$ignoreCodes}}
+\index{\$ignoreCodes@{\$ignoreCodes}!Exceptions@{Exceptions}}
+\doxysubsubsection{\texorpdfstring{\$ignoreCodes}{\$ignoreCodes}}
+{\footnotesize\ttfamily \label{class_config_1_1_exceptions_a585d3e201bc6b11b4e8e6a5db347ae9f} 
+array \$ignore\+Codes = \mbox{[}404\mbox{]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_exceptions_8php_source_l00036}{36}} del archivo \mbox{\hyperlink{_exceptions_8php_source}{Exceptions.\+php}}.
+
+\Hypertarget{class_config_1_1_exceptions_a22ac5682fc0bdd20dc708a8e559a42fc}\index{Exceptions@{Exceptions}!\$log@{\$log}}
+\index{\$log@{\$log}!Exceptions@{Exceptions}}
+\doxysubsubsection{\texorpdfstring{\$log}{\$log}}
+{\footnotesize\ttfamily \label{class_config_1_1_exceptions_a22ac5682fc0bdd20dc708a8e559a42fc} 
+bool \$log = true}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_exceptions_autotoc_md81}{}\doxysubsubsection{\texorpdfstring{LOG EXCEPTIONS?}{LOG EXCEPTIONS?}}\label{class_config_1_1_exceptions_autotoc_md81}
+If true, then exceptions will be logged through Services\textbackslash{}\+Log.
+
+Default\+: true 
+
+Definición en la línea \mbox{\hyperlink{_exceptions_8php_source_l00025}{25}} del archivo \mbox{\hyperlink{_exceptions_8php_source}{Exceptions.\+php}}.
+
+\Hypertarget{class_config_1_1_exceptions_a4c10a90e04f55e12c761e08e0ee5ce8e}\index{Exceptions@{Exceptions}!\$logDeprecations@{\$logDeprecations}}
+\index{\$logDeprecations@{\$logDeprecations}!Exceptions@{Exceptions}}
+\doxysubsubsection{\texorpdfstring{\$logDeprecations}{\$logDeprecations}}
+{\footnotesize\ttfamily \label{class_config_1_1_exceptions_a4c10a90e04f55e12c761e08e0ee5ce8e} 
+bool \$log\+Deprecations = true}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_exceptions_autotoc_md89}{}\doxysubsubsection{\texorpdfstring{LOG DEPRECATIONS INSTEAD OF THROWING?}{LOG DEPRECATIONS INSTEAD OF THROWING?}}\label{class_config_1_1_exceptions_autotoc_md89}
+By default, Code\+Igniter converts deprecations into exceptions. Also, starting in PHP 8.\+1 will cause a lot of deprecated usage warnings. Use this option to temporarily cease the warnings and instead log those. This option also works for user deprecations. 
+
+Definición en la línea \mbox{\hyperlink{_exceptions_8php_source_l00070}{70}} del archivo \mbox{\hyperlink{_exceptions_8php_source}{Exceptions.\+php}}.
+
+\Hypertarget{class_config_1_1_exceptions_af586fe851545e128056af68aa54b66ff}\index{Exceptions@{Exceptions}!\$sensitiveDataInTrace@{\$sensitiveDataInTrace}}
+\index{\$sensitiveDataInTrace@{\$sensitiveDataInTrace}!Exceptions@{Exceptions}}
+\doxysubsubsection{\texorpdfstring{\$sensitiveDataInTrace}{\$sensitiveDataInTrace}}
+{\footnotesize\ttfamily \label{class_config_1_1_exceptions_af586fe851545e128056af68aa54b66ff} 
+array \$sensitive\+Data\+In\+Trace = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_exceptions_8php_source_l00059}{59}} del archivo \mbox{\hyperlink{_exceptions_8php_source}{Exceptions.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Config/Exceptions.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\doxysection{Referencia de la clase Encryption}
+\hypertarget{class_config_1_1_encryption}{}\label{class_config_1_1_encryption}\index{Encryption@{Encryption}}
+Diagrama de herencia de Encryption\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config_1_1_encryption}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_config_1_1_encryption_af1b7751b6c09e2d3124df5828a7b6490}{\$key}} = \textquotesingle{}\textquotesingle{}
+\item 
+string \mbox{\hyperlink{class_config_1_1_encryption_a96051fa4a6041f5568a70fbf707d55f2}{\$driver}} = \textquotesingle{}Open\+SSL\textquotesingle{}
+\item 
+int \mbox{\hyperlink{class_config_1_1_encryption_a1acc067c471110db2867a7b102a570e7}{\$block\+Size}} = 16
+\item 
+string \mbox{\hyperlink{class_config_1_1_encryption_a32f491c1fabaae84db70bd7400bdfd24}{\$digest}} = \textquotesingle{}SHA512\textquotesingle{}
+\item 
+bool \mbox{\hyperlink{class_config_1_1_encryption_adc4452ccb2fab5274937c2c7234c16a9}{\$raw\+Data}} = true
+\item 
+string \mbox{\hyperlink{class_config_1_1_encryption_abd921dc6174168a2354ce63d97935708}{\$encrypt\+Key\+Info}} = \textquotesingle{}\textquotesingle{}
+\item 
+string \mbox{\hyperlink{class_config_1_1_encryption_afe9dc81c27d26b80eda5fa395626e290}{\$auth\+Key\+Info}} = \textquotesingle{}\textquotesingle{}
+\item 
+string \mbox{\hyperlink{class_config_1_1_encryption_a8a09650a14074a926f9ec4827d304c4d}{\$cipher}} = \textquotesingle{}AES-\/256-\/CTR\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Encryption configuration.
+
+These are the settings used for encryption, if you don\textquotesingle{}t pass a parameter array to the encrypter for creation/initialization. 
+
+Definición en la línea \mbox{\hyperlink{_encryption_8php_source_l00013}{13}} del archivo \mbox{\hyperlink{_encryption_8php_source}{Encryption.\+php}}.
+
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_config_1_1_encryption_afe9dc81c27d26b80eda5fa395626e290}\index{Encryption@{Encryption}!\$authKeyInfo@{\$authKeyInfo}}
+\index{\$authKeyInfo@{\$authKeyInfo}!Encryption@{Encryption}}
+\doxysubsubsection{\texorpdfstring{\$authKeyInfo}{\$authKeyInfo}}
+{\footnotesize\ttfamily \label{class_config_1_1_encryption_afe9dc81c27d26b80eda5fa395626e290} 
+string \$auth\+Key\+Info = \textquotesingle{}\textquotesingle{}}
+
+Authentication key info. This setting is only used by Open\+SSLHandler.
+
+Set to \textquotesingle{}authentication\textquotesingle{} for CI3 Encryption compatibility. 
+
+Definición en la línea \mbox{\hyperlink{_encryption_8php_source_l00082}{82}} del archivo \mbox{\hyperlink{_encryption_8php_source}{Encryption.\+php}}.
+
+\Hypertarget{class_config_1_1_encryption_a1acc067c471110db2867a7b102a570e7}\index{Encryption@{Encryption}!\$blockSize@{\$blockSize}}
+\index{\$blockSize@{\$blockSize}!Encryption@{Encryption}}
+\doxysubsubsection{\texorpdfstring{\$blockSize}{\$blockSize}}
+{\footnotesize\ttfamily \label{class_config_1_1_encryption_a1acc067c471110db2867a7b102a570e7} 
+int \$block\+Size = 16}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_encryption_autotoc_md77}{}\doxysubsubsection{\texorpdfstring{Sodium\+Handler\textquotesingle{}s Padding Length in Bytes}{Sodium\+Handler\textquotesingle{}s Padding Length in Bytes}}\label{class_config_1_1_encryption_autotoc_md77}
+This is the number of bytes that will be padded to the plaintext message before it is encrypted. This value should be greater than zero.
+
+See the user guide for more information on padding. 
+
+Definición en la línea \mbox{\hyperlink{_encryption_8php_source_l00049}{49}} del archivo \mbox{\hyperlink{_encryption_8php_source}{Encryption.\+php}}.
+
+\Hypertarget{class_config_1_1_encryption_a8a09650a14074a926f9ec4827d304c4d}\index{Encryption@{Encryption}!\$cipher@{\$cipher}}
+\index{\$cipher@{\$cipher}!Encryption@{Encryption}}
+\doxysubsubsection{\texorpdfstring{\$cipher}{\$cipher}}
+{\footnotesize\ttfamily \label{class_config_1_1_encryption_a8a09650a14074a926f9ec4827d304c4d} 
+string \$cipher = \textquotesingle{}AES-\/256-\/CTR\textquotesingle{}}
+
+Cipher to use. This setting is only used by Open\+SSLHandler.
+
+Set to \textquotesingle{}AES-\/128-\/\+CBC\textquotesingle{} to decrypt encrypted data that encrypted by CI3 Encryption default configuration. 
+
+Definición en la línea \mbox{\hyperlink{_encryption_8php_source_l00091}{91}} del archivo \mbox{\hyperlink{_encryption_8php_source}{Encryption.\+php}}.
+
+\Hypertarget{class_config_1_1_encryption_a32f491c1fabaae84db70bd7400bdfd24}\index{Encryption@{Encryption}!\$digest@{\$digest}}
+\index{\$digest@{\$digest}!Encryption@{Encryption}}
+\doxysubsubsection{\texorpdfstring{\$digest}{\$digest}}
+{\footnotesize\ttfamily \label{class_config_1_1_encryption_a32f491c1fabaae84db70bd7400bdfd24} 
+string \$digest = \textquotesingle{}SHA512\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_encryption_autotoc_md79}{}\doxysubsubsection{\texorpdfstring{Encryption digest}{Encryption digest}}\label{class_config_1_1_encryption_autotoc_md79}
+HMAC digest to use, e.\+g. \textquotesingle{}SHA512\textquotesingle{} or \textquotesingle{}SHA256\textquotesingle{}. Default value is \textquotesingle{}SHA512\textquotesingle{}. 
+
+Definición en la línea \mbox{\hyperlink{_encryption_8php_source_l00058}{58}} del archivo \mbox{\hyperlink{_encryption_8php_source}{Encryption.\+php}}.
+
+\Hypertarget{class_config_1_1_encryption_a96051fa4a6041f5568a70fbf707d55f2}\index{Encryption@{Encryption}!\$driver@{\$driver}}
+\index{\$driver@{\$driver}!Encryption@{Encryption}}
+\doxysubsubsection{\texorpdfstring{\$driver}{\$driver}}
+{\footnotesize\ttfamily \label{class_config_1_1_encryption_a96051fa4a6041f5568a70fbf707d55f2} 
+string \$driver = \textquotesingle{}Open\+SSL\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_encryption_autotoc_md75}{}\doxysubsubsection{\texorpdfstring{Encryption Driver to Use}{Encryption Driver to Use}}\label{class_config_1_1_encryption_autotoc_md75}
+One of the supported encryption drivers.
+
+Available drivers\+:
+\begin{DoxyItemize}
+\item Open\+SSL
+\item Sodium 
+\end{DoxyItemize}
+
+Definición en la línea \mbox{\hyperlink{_encryption_8php_source_l00037}{37}} del archivo \mbox{\hyperlink{_encryption_8php_source}{Encryption.\+php}}.
+
+\Hypertarget{class_config_1_1_encryption_abd921dc6174168a2354ce63d97935708}\index{Encryption@{Encryption}!\$encryptKeyInfo@{\$encryptKeyInfo}}
+\index{\$encryptKeyInfo@{\$encryptKeyInfo}!Encryption@{Encryption}}
+\doxysubsubsection{\texorpdfstring{\$encryptKeyInfo}{\$encryptKeyInfo}}
+{\footnotesize\ttfamily \label{class_config_1_1_encryption_abd921dc6174168a2354ce63d97935708} 
+string \$encrypt\+Key\+Info = \textquotesingle{}\textquotesingle{}}
+
+Encryption key info. This setting is only used by Open\+SSLHandler.
+
+Set to \textquotesingle{}encryption\textquotesingle{} for CI3 Encryption compatibility. 
+
+Definición en la línea \mbox{\hyperlink{_encryption_8php_source_l00074}{74}} del archivo \mbox{\hyperlink{_encryption_8php_source}{Encryption.\+php}}.
+
+\Hypertarget{class_config_1_1_encryption_af1b7751b6c09e2d3124df5828a7b6490}\index{Encryption@{Encryption}!\$key@{\$key}}
+\index{\$key@{\$key}!Encryption@{Encryption}}
+\doxysubsubsection{\texorpdfstring{\$key}{\$key}}
+{\footnotesize\ttfamily \label{class_config_1_1_encryption_af1b7751b6c09e2d3124df5828a7b6490} 
+string \$key = \textquotesingle{}\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_encryption_autotoc_md73}{}\doxysubsubsection{\texorpdfstring{Encryption Key Starter}{Encryption Key Starter}}\label{class_config_1_1_encryption_autotoc_md73}
+If you use the Encryption class you must set an encryption key (seed). You need to ensure it is long enough for the cipher and mode you plan to use. See the user guide for more info. 
+
+Definición en la línea \mbox{\hyperlink{_encryption_8php_source_l00024}{24}} del archivo \mbox{\hyperlink{_encryption_8php_source}{Encryption.\+php}}.
+
+\Hypertarget{class_config_1_1_encryption_adc4452ccb2fab5274937c2c7234c16a9}\index{Encryption@{Encryption}!\$rawData@{\$rawData}}
+\index{\$rawData@{\$rawData}!Encryption@{Encryption}}
+\doxysubsubsection{\texorpdfstring{\$rawData}{\$rawData}}
+{\footnotesize\ttfamily \label{class_config_1_1_encryption_adc4452ccb2fab5274937c2c7234c16a9} 
+bool \$raw\+Data = true}
+
+Whether the cipher-\/text should be raw. If set to false, then it will be base64 encoded. This setting is only used by Open\+SSLHandler.
+
+Set to false for CI3 Encryption compatibility. 
+
+Definición en la línea \mbox{\hyperlink{_encryption_8php_source_l00066}{66}} del archivo \mbox{\hyperlink{_encryption_8php_source}{Encryption.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Config/Encryption.\+php\end{DoxyCompactItemize}

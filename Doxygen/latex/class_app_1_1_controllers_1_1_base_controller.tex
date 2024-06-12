@@ -1,0 +1,101 @@
+\doxysection{Referencia de la clase Base\+Controller}
+\hypertarget{class_app_1_1_controllers_1_1_base_controller}{}\label{class_app_1_1_controllers_1_1_base_controller}\index{BaseController@{BaseController}}
+Diagrama de herencia de Base\+Controller\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.745098cm]{class_app_1_1_controllers_1_1_base_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_aaa4ae087c2582ea613c7255f73d8a623}{init\+Controller}} (Request\+Interface \$request, Response\+Interface \$response, Logger\+Interface \$logger)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abb35c8495a232b510389fa6d7b15d38a}{\$request}}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_aeeccfcd4e2765b8469c41f93ec023ee9}{\$helpers}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abefb3c26429d514777313e9a63d7cbac}{\$session}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Class Base\+Controller
+
+Base\+Controller provides a convenient place for loading components and performing functions that are needed by all your controllers. Extend this class in any new controllers\+: class Home extends Base\+Controller
+
+For security be sure to declare any new methods as protected or private. 
+
+Definición en la línea \mbox{\hyperlink{_base_controller_8php_source_l00022}{22}} del archivo \mbox{\hyperlink{_base_controller_8php_source}{Base\+Controller.\+php}}.
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_app_1_1_controllers_1_1_base_controller_aaa4ae087c2582ea613c7255f73d8a623}\index{BaseController@{BaseController}!initController@{initController}}
+\index{initController@{initController}!BaseController@{BaseController}}
+\doxysubsubsection{\texorpdfstring{initController()}{initController()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_base_controller_aaa4ae087c2582ea613c7255f73d8a623} 
+init\+Controller (\begin{DoxyParamCaption}\item[{Request\+Interface}]{\$request}{, }\item[{Response\+Interface}]{\$response}{, }\item[{Logger\+Interface}]{\$logger}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_base_controller_8php_source_l00049}{49}} del archivo \mbox{\hyperlink{_base_controller_8php_source}{Base\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Do\ Not\ Edit\ This\ Line}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ parent::initController(\$request,\ \$response,\ \$logger);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Preload\ any\ models,\ libraries,\ etc,\ here.}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ E.g.:\ \$this-\/>session\ =\ \(\backslash\)Config\(\backslash\)Services::session();}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \$this-\/>session\ =\ \(\backslash\)Config\(\backslash\)Services::session();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_app_1_1_controllers_1_1_base_controller_aeeccfcd4e2765b8469c41f93ec023ee9}\index{BaseController@{BaseController}!\$helpers@{\$helpers}}
+\index{\$helpers@{\$helpers}!BaseController@{BaseController}}
+\doxysubsubsection{\texorpdfstring{\$helpers}{\$helpers}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_base_controller_aeeccfcd4e2765b8469c41f93ec023ee9} 
+\$helpers = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_base_controller_8php_source_l00038}{38}} del archivo \mbox{\hyperlink{_base_controller_8php_source}{Base\+Controller.\+php}}.
+
+\Hypertarget{class_app_1_1_controllers_1_1_base_controller_abb35c8495a232b510389fa6d7b15d38a}\index{BaseController@{BaseController}!\$request@{\$request}}
+\index{\$request@{\$request}!BaseController@{BaseController}}
+\doxysubsubsection{\texorpdfstring{\$request}{\$request}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_base_controller_abb35c8495a232b510389fa6d7b15d38a} 
+\$request\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_base_controller_8php_source_l00029}{29}} del archivo \mbox{\hyperlink{_base_controller_8php_source}{Base\+Controller.\+php}}.
+
+\Hypertarget{class_app_1_1_controllers_1_1_base_controller_abefb3c26429d514777313e9a63d7cbac}\index{BaseController@{BaseController}!\$session@{\$session}}
+\index{\$session@{\$session}!BaseController@{BaseController}}
+\doxysubsubsection{\texorpdfstring{\$session}{\$session}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_base_controller_abefb3c26429d514777313e9a63d7cbac} 
+\$session\hspace{0.3cm}{\ttfamily [protected]}}
+
+Be sure to declare properties for any property fetch you initialized. The creation of dynamic property is deprecated in PHP 8.\+2. 
+
+Definición en la línea \mbox{\hyperlink{_base_controller_8php_source_l00044}{44}} del archivo \mbox{\hyperlink{_base_controller_8php_source}{Base\+Controller.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Controllers/Base\+Controller.\+php\end{DoxyCompactItemize}

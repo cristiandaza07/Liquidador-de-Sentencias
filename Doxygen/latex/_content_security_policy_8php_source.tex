@@ -1,0 +1,67 @@
+\doxysection{Content\+Security\+Policy.\+php}
+\hypertarget{_content_security_policy_8php_source}{}\label{_content_security_policy_8php_source}\index{C:/xampp/htdocs/liquidador/app/Config/ContentSecurityPolicy.php@{C:/xampp/htdocs/liquidador/app/Config/ContentSecurityPolicy.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_config}{Config}};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Config\(\backslash\)BaseConfig;}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00016}\mbox{\hyperlink{class_config_1_1_content_security_policy}{00016}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_config_1_1_content_security_policy}{ContentSecurityPolicy}}\ \textcolor{keyword}{extends}\ BaseConfig}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00018}00018\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//\ Broadbrush\ CSP\ management}}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00025}\mbox{\hyperlink{class_config_1_1_content_security_policy_a5149175dfc6c107cf073bf169cad70a4}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$reportOnly\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00031}\mbox{\hyperlink{class_config_1_1_content_security_policy_a035efd747ad5863dee45d5cc589834ea}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ ?\textcolor{keywordtype}{string}\ \$reportURI\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00038}\mbox{\hyperlink{class_config_1_1_content_security_policy_a61f5af76ac36a476b952434a9ab2198b}{00038}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$upgradeInsecureRequests\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ Sources\ allowed}}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ NOTE:\ once\ you\ set\ a\ policy\ to\ 'none',\ it\ cannot\ be\ further\ restricted}}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{public}\ \$defaultSrc;}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00057}00057\ \ \ \ \ \textcolor{keyword}{public}\ \$scriptSrc\ =\ \textcolor{stringliteral}{'self'};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00064}00064\ \ \ \ \ \textcolor{keyword}{public}\ \$styleSrc\ =\ \textcolor{stringliteral}{'self'};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00071}00071\ \ \ \ \ \textcolor{keyword}{public}\ \$imageSrc\ =\ \textcolor{stringliteral}{'self'};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00080}00080\ \ \ \ \ \textcolor{keyword}{public}\ \$baseURI;}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00087}00087\ \ \ \ \ \textcolor{keyword}{public}\ \$childSrc\ =\ \textcolor{stringliteral}{'self'};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00095}00095\ \ \ \ \ \textcolor{keyword}{public}\ \$connectSrc\ =\ \textcolor{stringliteral}{'self'};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00102}00102\ \ \ \ \ \textcolor{keyword}{public}\ \$fontSrc;}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00109}00109\ \ \ \ \ \textcolor{keyword}{public}\ \$formAction\ =\ \textcolor{stringliteral}{'self'};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00119}00119\ \ \ \ \ \textcolor{keyword}{public}\ \$frameAncestors;}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00127}00127\ \ \ \ \ \textcolor{keyword}{public}\ \$frameSrc;}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00134}00134\ \ \ \ \ \textcolor{keyword}{public}\ \$mediaSrc;}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00141}00141\ \ \ \ \ \textcolor{keyword}{public}\ \$objectSrc\ =\ \textcolor{stringliteral}{'self'};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00146}00146\ \ \ \ \ \textcolor{keyword}{public}\ \$manifestSrc;}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00153}00153\ \ \ \ \ \textcolor{keyword}{public}\ \$pluginTypes;}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00160}00160\ \ \ \ \ \textcolor{keyword}{public}\ \$sandbox;}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00165}\mbox{\hyperlink{class_config_1_1_content_security_policy_a39550502f1e727747e7089059a8ebe1f}{00165}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$styleNonceTag\ =\ \textcolor{stringliteral}{'\{csp-\/style-\/nonce\}'};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00170}\mbox{\hyperlink{class_config_1_1_content_security_policy_af8a2f4c9da0371921450ee912e3e834a}{00170}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$scriptNonceTag\ =\ \textcolor{stringliteral}{'\{csp-\/script-\/nonce\}'};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00175}\mbox{\hyperlink{class_config_1_1_content_security_policy_a08ed1e964e416c416467fa4f9cefcfde}{00175}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$autoNonce\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_content_security_policy_8php_source_l00176}00176\ \}}
+
+\end{DoxyCode}

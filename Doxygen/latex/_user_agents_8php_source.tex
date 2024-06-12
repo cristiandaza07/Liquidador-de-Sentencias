@@ -1,0 +1,215 @@
+\doxysection{User\+Agents.\+php}
+\hypertarget{_user_agents_8php_source}{}\label{_user_agents_8php_source}\index{C:/xampp/htdocs/liquidador/app/Config/UserAgents.php@{C:/xampp/htdocs/liquidador/app/Config/UserAgents.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_config}{Config}};}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Config\(\backslash\)BaseConfig;}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00017}\mbox{\hyperlink{class_config_1_1_user_agents}{00017}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_config_1_1_user_agents}{UserAgents}}\ \textcolor{keyword}{extends}\ BaseConfig}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$platforms\ =\ [}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows\ nt\ 10.0'}\ =>\ \textcolor{stringliteral}{'Windows\ 10'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows\ nt\ 6.3'}\ \ =>\ \textcolor{stringliteral}{'Windows\ 8.1'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows\ nt\ 6.2'}\ \ =>\ \textcolor{stringliteral}{'Windows\ 8'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows\ nt\ 6.1'}\ \ =>\ \textcolor{stringliteral}{'Windows\ 7'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows\ nt\ 6.0'}\ \ =>\ \textcolor{stringliteral}{'Windows\ Vista'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows\ nt\ 5.2'}\ \ =>\ \textcolor{stringliteral}{'Windows\ 2003'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows\ nt\ 5.1'}\ \ =>\ \textcolor{stringliteral}{'Windows\ XP'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows\ nt\ 5.0'}\ \ =>\ \textcolor{stringliteral}{'Windows\ 2000'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows\ nt\ 4.0'}\ \ =>\ \textcolor{stringliteral}{'Windows\ NT\ 4.0'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'winnt4.0'}\ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Windows\ NT\ 4.0'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'winnt\ 4.0'}\ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Windows\ NT'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'winnt'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Windows\ NT'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows\ 98'}\ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Windows\ 98'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'win98'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Windows\ 98'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows\ 95'}\ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Windows\ 95'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'win95'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Windows\ 95'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows\ phone'}\ \ \ =>\ \textcolor{stringliteral}{'Windows\ Phone'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows'}\ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Unknown\ Windows\ OS'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'android'}\ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Android'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'blackberry'}\ \ \ \ \ \ =>\ \textcolor{stringliteral}{'BlackBerry'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'iphone'}\ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'iOS'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ipad'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'iOS'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ipod'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'iOS'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'os\ x'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Mac\ OS\ X'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ppc\ mac'}\ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Power\ PC\ Mac'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'freebsd'}\ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'FreeBSD'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ppc'}\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Macintosh'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'linux'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Linux'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'debian'}\ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Debian'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'sunos'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Sun\ Solaris'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'beos'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'BeOS'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'apachebench'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'ApacheBench'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'aix'}\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'AIX'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'irix'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Irix'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'osf'}\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'DEC\ OSF'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'hp-\/ux'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'HP-\/UX'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'netbsd'}\ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'NetBSD'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'bsdi'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'BSDi'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'openbsd'}\ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'OpenBSD'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'gnu'}\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'GNU/Linux'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'unix'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Unknown\ Unix\ OS'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'symbian'}\ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Symbian\ OS'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00069}00069\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00081}00081\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$browsers\ =\ [}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'OPR'}\ \ \ \ =>\ \textcolor{stringliteral}{'Opera'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Flock'}\ \ =>\ \textcolor{stringliteral}{'Flock'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Edge'}\ \ \ =>\ \textcolor{stringliteral}{'Spartan'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Edg'}\ \ \ \ =>\ \textcolor{stringliteral}{'Edge'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Chrome'}\ =>\ \textcolor{stringliteral}{'Chrome'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Opera\ 10+\ always\ reports\ Opera/9.80\ and\ appends\ Version/<real\ version>\ to\ the\ user\ agent\ string}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Opera.*?Version'}\ \ \ =>\ \textcolor{stringliteral}{'Opera'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Opera'}\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Opera'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'MSIE'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Internet\ Explorer'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Internet\ Explorer'}\ =>\ \textcolor{stringliteral}{'Internet\ Explorer'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Trident.*\ rv'}\ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Internet\ Explorer'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Shiira'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Shiira'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Firefox'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Firefox'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Chimera'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Chimera'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Phoenix'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Phoenix'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Firebird'}\ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Firebird'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Camino'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Camino'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Netscape'}\ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Netscape'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'OmniWeb'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'OmniWeb'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Safari'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Safari'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Mozilla'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Mozilla'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Konqueror'}\ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Konqueror'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'icab'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'iCab'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Lynx'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Lynx'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Links'}\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Links'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'hotjava'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'HotJava'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'amaya'}\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Amaya'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'IBrowse'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'IBrowse'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Maxthon'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Maxthon'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Ubuntu'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Ubuntu\ Web\ Browser'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Vivaldi'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Vivaldi'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00113}00113\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00122}00122\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$mobiles\ =\ [}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00123}00123\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ legacy\ array,\ old\ values\ commented\ out}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mobileexplorer'}\ =>\ \textcolor{stringliteral}{'Mobile\ Explorer'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 'openwave'\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ 'Open\ Wave',}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 'opera\ mini'\ \ \ \ \ \ \ \ \ \ \ =>\ 'Opera\ Mini',}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 'operamini'\ \ \ \ \ \ \ \ \ \ \ \ =>\ 'Opera\ Mini',}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 'elaine'\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ 'Palm',}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'palmsource'}\ =>\ \textcolor{stringliteral}{'Palm'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 'digital\ paths'\ \ \ \ \ \ \ \ =>\ 'Palm',}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 'avantgo'\ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ 'Avantgo',}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 'xiino'\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ 'Xiino',}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00133}00133\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'palmscape'}\ =>\ \textcolor{stringliteral}{'Palmscape'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00134}00134\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 'nokia'\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ 'Nokia',}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00135}00135\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 'ericsson'\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ 'Ericsson',}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 'blackberry'\ \ \ \ \ \ \ \ \ \ \ =>\ 'BlackBerry',}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 'motorola'\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ 'Motorola'}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Phones\ and\ Manufacturers}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'motorola'}\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Motorola'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00141}00141\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nokia'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Nokia'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00142}00142\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'palm'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Palm'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'iphone'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Apple\ iPhone'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00144}00144\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ipad'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'iPad'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00145}00145\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ipod'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Apple\ iPod\ Touch'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'sony'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Sony\ Ericsson'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00147}00147\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ericsson'}\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Sony\ Ericsson'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'blackberry'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'BlackBerry'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'cocoon'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'O2\ Cocoon'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'blazer'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Treo'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00151}00151\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'lg'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'LG'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00152}00152\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'amoi'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Amoi'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'xda'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'XDA'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00154}00154\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mda'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'MDA'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00155}00155\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'vario'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Vario'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00156}00156\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'htc'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'HTC'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00157}00157\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'samsung'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Samsung'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00158}00158\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'sharp'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Sharp'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'sie-\/'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Siemens'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00160}00160\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'alcatel'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Alcatel'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00161}00161\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'benq'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'BenQ'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00162}00162\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ipaq'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'HP\ iPaq'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00163}00163\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mot-\/'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Motorola'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00164}00164\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'playstation\ portable'}\ =>\ \textcolor{stringliteral}{'PlayStation\ Portable'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'playstation\ 3'}\ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'PlayStation\ 3'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'playstation\ vita'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'PlayStation\ Vita'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00167}00167\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'hiptop'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Danger\ Hiptop'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nec-\/'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'NEC'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00169}00169\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'panasonic'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Panasonic'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00170}00170\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'philips'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Philips'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00171}00171\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'sagem'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Sagem'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00172}00172\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'sanyo'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Sanyo'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00173}00173\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'spv'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'SPV'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00174}00174\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'zte'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'ZTE'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00175}00175\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'sendo'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Sendo'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00176}00176\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nintendo\ dsi'}\ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Nintendo\ DSi'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00177}00177\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nintendo\ ds'}\ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Nintendo\ DS'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00178}00178\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nintendo\ 3ds'}\ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Nintendo\ 3DS'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'wii'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Nintendo\ Wii'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00180}00180\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'open\ web'}\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Open\ Web'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00181}00181\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'openweb'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'OpenWeb'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00183}00183\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operating\ Systems}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00184}00184\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'android'}\ \ \ \ =>\ \textcolor{stringliteral}{'Android'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00185}00185\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'symbian'}\ \ \ \ =>\ \textcolor{stringliteral}{'Symbian'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00186}00186\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'SymbianOS'}\ \ =>\ \textcolor{stringliteral}{'SymbianOS'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00187}00187\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'elaine'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'Palm'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00188}00188\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'series60'}\ \ \ =>\ \textcolor{stringliteral}{'Symbian\ S60'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00189}00189\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'windows\ ce'}\ =>\ \textcolor{stringliteral}{'Windows\ CE'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00191}00191\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Browsers}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00192}00192\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'obigo'}\ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Obigo'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00193}00193\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'netfront'}\ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Netfront\ Browser'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00194}00194\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'openwave'}\ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Openwave\ Browser'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00195}00195\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mobilexplorer'}\ =>\ \textcolor{stringliteral}{'Mobile\ Explorer'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00196}00196\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'operamini'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'Opera\ Mini'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00197}00197\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'opera\ mini'}\ \ \ \ =>\ \textcolor{stringliteral}{'Opera\ Mini'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00198}00198\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'opera\ mobi'}\ \ \ \ =>\ \textcolor{stringliteral}{'Opera\ Mobile'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00199}00199\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fennec'}\ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Firefox\ Mobile'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00201}00201\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Other}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00202}00202\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'digital\ paths'}\ =>\ \textcolor{stringliteral}{'Digital\ Paths'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00203}00203\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'avantgo'}\ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'AvantGo'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00204}00204\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'xiino'}\ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Xiino'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00205}00205\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'novarra'}\ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Novarra\ Transcoder'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00206}00206\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'vodafone'}\ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Vodafone'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00207}00207\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'docomo'}\ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'NTT\ DoCoMo'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00208}00208\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'o2'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'O2'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00210}00210\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fallback}}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00211}00211\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mobile'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'Generic\ Mobile'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00212}00212\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'wireless'}\ \ \ =>\ \textcolor{stringliteral}{'Generic\ Mobile'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00213}00213\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'j2me'}\ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Generic\ Mobile'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00214}00214\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'midp'}\ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Generic\ Mobile'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00215}00215\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'cldc'}\ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Generic\ Mobile'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00216}00216\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'up.link'}\ \ \ \ =>\ \textcolor{stringliteral}{'Generic\ Mobile'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00217}00217\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'up.browser'}\ =>\ \textcolor{stringliteral}{'Generic\ Mobile'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00218}00218\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'smartphone'}\ =>\ \textcolor{stringliteral}{'Generic\ Mobile'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00219}00219\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'cellphone'}\ \ =>\ \textcolor{stringliteral}{'Generic\ Mobile'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00220}00220\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00231}00231\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$robots\ =\ [}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00232}00232\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'googlebot'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Googlebot'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00233}00233\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'msnbot'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'MSNBot'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00234}00234\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'baiduspider'}\ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Baiduspider'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00235}00235\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'bingbot'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Bing'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00236}00236\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'slurp'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Inktomi\ Slurp'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00237}00237\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'yahoo'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Yahoo'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00238}00238\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ask\ jeeves'}\ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Ask\ Jeeves'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00239}00239\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fastcrawler'}\ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'FastCrawler'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00240}00240\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'infoseek'}\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'InfoSeek\ Robot\ 1.0'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00241}00241\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'lycos'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Lycos'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00242}00242\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'yandex'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'YandexBot'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00243}00243\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mediapartners-\/google'}\ =>\ \textcolor{stringliteral}{'MediaPartners\ Google'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00244}00244\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'CRAZYWEBCRAWLER'}\ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Crazy\ Webcrawler'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00245}00245\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'adsbot-\/google'}\ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'AdsBot\ Google'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00246}00246\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'feedfetcher-\/google'}\ \ \ =>\ \textcolor{stringliteral}{'Feedfetcher\ Google'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00247}00247\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'curious\ george'}\ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Curious\ George'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00248}00248\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ia\_archiver'}\ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Alexa\ Crawler'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00249}00249\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'MJ12bot'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Majestic-\/12'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00250}00250\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Uptimebot'}\ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{stringliteral}{'Uptimebot'},}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00251}00251\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_user_agents_8php_source_l00252}00252\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,56 @@
+\doxysection{crear\+Nuevo\+Usuario.\+php}
+\hypertarget{crear_nuevo_usuario_8php_source}{}\label{crear_nuevo_usuario_8php_source}\index{C:/xampp/htdocs/liquidador/app/Views/admin/crearNuevoUsuario.php@{C:/xampp/htdocs/liquidador/app/Views/admin/crearNuevoUsuario.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00001}00001\ <?php\ echo\ \$this-\/>extend(\textcolor{stringliteral}{'plantilla/layout'});\ ?>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00003}00003\ <?php\ echo\ \$this-\/>section(\textcolor{stringliteral}{'contenido'});\ ?>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00005}00005\ \ \ \ \ <?php\ echo\ \$mensaje;\ ?>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ <nav\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}navegacion\_\_admin"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url('/admin/crearUsuario')?>"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}navegacion\_\_admin-\/enlace\ seleccionado"{}}>Crear\ Usuario</a>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url('/admin/crearDtf')?>"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}navegacion\_\_admin-\/enlace"{}}>Agregar\ DTF</a>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url('/admin/crearIpc')?>"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}navegacion\_\_admin-\/enlace"{}}>Agregar\ IPC</a>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ </nav>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}contenido\_\_panel"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ <h3>DATOS\ DEL\ NUEVO\ USUARIO</h3>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ <form\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}formularioCrearUsuario"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}formulario\_\_admin\_\_crear"{}}\ action=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url('/admin/crearUsuario/agregarUsuario')\ ?>"{}}\ method=\textcolor{stringliteral}{"{}post"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}nombreCompleto"{}}\ name=\textcolor{stringliteral}{"{}nombreCompleto"{}}\ type=\textcolor{stringliteral}{"{}text"{}}\ placeholder=\textcolor{stringliteral}{"{}Nombre\ Completo"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}correo"{}}\ name=\textcolor{stringliteral}{"{}correo"{}}\ type=\textcolor{stringliteral}{"{}email"{}}\ placeholder=\textcolor{stringliteral}{"{}Correo"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}grid\_\_admin-\/usuario"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}usuario"{}}\ name=\textcolor{stringliteral}{"{}usuario"{}}\ type=\textcolor{stringliteral}{"{}text"{}}\ placeholder=\textcolor{stringliteral}{"{}Usuario"{}}\ title=\textcolor{stringliteral}{"{}Debe\ tener\ minimo\ 6\ caracteres"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <img\ \ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}usuarioImg"{}}\ src=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url();?>/assets/img/invalid.png"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}imagen\_\_admin-\/usuario"{}}\ alt=\textcolor{stringliteral}{"{}imagen\ check"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <select\ name=\textcolor{stringliteral}{"{}dependencia"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}dependecia"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ selected\ disabled>Seleccionar\ Dependencia</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}SECRETARÍA\ DE\ HACIENDA"{}}>SECRETARÍA\ DE\ HACIENDA</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}SECRETARÍA\ GENERAL"{}}>SECRETARÍA\ GENERAL</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}SECRETARÍA\ DE\ INFRAESTRUCTURA\ FÍSICA"{}}>SECRETARÍA\ DE\ INFRAESTRUCTURA\ FÍSICA</option>\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}SECRETARÍA\ DE\ EDUCACIÓN"{}}>SECRETARÍA\ DE\ EDUCACIÓN</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}SECRETARÍA\ DE\ TALENTO\ HUMANO\ Y\ DESARROLLO\ ORGANIZACIONAL"{}}>SECRETARÍA\ DE\ TALENTO\ HUMANO\ Y\ DESARROLLO\ ORGANIZACIONAL</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}SECRETARÍA\ DE\ SALUD"{}}>SECRETARÍA\ DE\ SALUD</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </select>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <select\ name=\textcolor{stringliteral}{"{}tipoUsuario"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}tipoUsuario"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ selected\ disabled>Tipo\ de\ Usuario</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Liquidador"{}}>Liquidador</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Abogado"{}}>Abogado</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Administrador"{}}>Administrador</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </select>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}contraseña"{}}\ name=\textcolor{stringliteral}{"{}contrasena"{}}\ type=\textcolor{stringliteral}{"{}password"{}}\ placeholder=\textcolor{stringliteral}{"{}Contraseña"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}btnGuardarAdmin"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn-\/crear"{}}\ name=\textcolor{stringliteral}{"{}btnCrearUsuario"{}}\ type=\textcolor{stringliteral}{"{}submit"{}}\ value=\textcolor{stringliteral}{"{}Guardar"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00044}00044\ </div>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00046}00046\ </main>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00048}00048\ <script\ src=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url();?>/assets/js/nuevoUsuarioAdmin.js"{}}\ defer></script>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_usuario_8php_source_l00050}00050\ <?php\ echo\ \$this-\/>endSection();\ ?>}
+
+\end{DoxyCode}

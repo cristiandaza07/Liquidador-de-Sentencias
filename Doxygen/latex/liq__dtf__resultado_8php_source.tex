@@ -1,0 +1,130 @@
+\doxysection{liq\+\_\+dtf\+\_\+resultado.\+php}
+\hypertarget{liq__dtf__resultado_8php_source}{}\label{liq__dtf__resultado_8php_source}\index{C:/xampp/htdocs/liquidador/app/Views/liquidaciones/liq\_dtf\_resultado.php@{C:/xampp/htdocs/liquidador/app/Views/liquidaciones/liq\_dtf\_resultado.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00001}00001\ <?php\ echo\ \$this-\/>extend(\textcolor{stringliteral}{'plantilla/layout'});\ ?>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00003}00003\ <?php\ echo\ \$this-\/>section(\textcolor{stringliteral}{'contenido'});\ ?>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00005}00005\ \ \ \ \ <?php\ echo\ validation\_list\_errors();\ ?>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00006}00006\ \ \ \ \ <?php\ echo\ helper(\textcolor{stringliteral}{'Operaciones\_helper'});\ ?>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00007}00007\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}contenido"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}contenido"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ <h1\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}titulo"{}}><?php\ echo\ \$titulo;\ ?></h1>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ <h3>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Ingrese\ las\ fechas\ que\ fueron\ expedidas\ en\ la\ orden\ del\ juez\ para\ que\ el\ sistema\ realice\ el\ cálculo\ del\ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ que\ se\ debe\ pagar.}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ </h3>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ <hr>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <form\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}formularioDtf"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}formulario\_\_liq-\/dtf"{}}\ action=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url('/liquidaciones/dtf/resultado')\ ?>"{}}\ method=\textcolor{stringliteral}{"{}post"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}formularioDtf\_\_datos-\/demandante"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h2>DATOS\ DEL\ DEMANDANTE</h2>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}formularioDtf\_\_datos-\/demandante\_\_grid"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ name=\textcolor{stringliteral}{"{}nombreDemandante"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}nombreDemandante"{}}\ type=\textcolor{stringliteral}{"{}text"{}}\ placeholder=\textcolor{stringliteral}{"{}Nombre\ Completo"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$nombreDemandante;?>"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ name=\textcolor{stringliteral}{"{}numDocumento"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}numDocumento"{}}\ type=\textcolor{stringliteral}{"{}number"{}}\ placeholder=\textcolor{stringliteral}{"{}Numero\ de\ Documento"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$numDocumento;?>"{}}>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>\ \ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <hr>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}formularioDtf\_\_datos-\/liquidacion"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}labelValorInicial"{}}\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}valorInicial"{}}>Valor\ Inicial</label>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}labelFechaDesde"{}}\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}fechaDesde"{}}>Fecha\ Desde</label>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}labelFechaHasta"{}}\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}fechaHasta"{}}>Fecha\ Hasta</label>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ name=\textcolor{stringliteral}{"{}valorInicial"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}valorInicial"{}}\ type=\textcolor{stringliteral}{"{}text"{}}\ placeholder=\textcolor{stringliteral}{"{}\$0"{}}\ min=\textcolor{stringliteral}{"{}0"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$valorInicialFormateado;?>"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \ name=\textcolor{stringliteral}{"{}fechaDesde"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechaDesde"{}}\ type=\textcolor{stringliteral}{"{}date"{}}\ min=\textcolor{stringliteral}{"{}1984-\/01-\/16"{}}\ max=\textcolor{stringliteral}{"{}<?php\ echo\ obtenerFechaActual();?>"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$fechaDesde;?>"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \ name=\textcolor{stringliteral}{"{}fechaHasta"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechaHasta"{}}\ type=\textcolor{stringliteral}{"{}date"{}}\ min=\textcolor{stringliteral}{"{}1984-\/01-\/16"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$fechaHasta;?>"{}}>\ \ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn\_\_calcular"{}}\ type=\textcolor{stringliteral}{"{}submit"{}}\ value=\textcolor{stringliteral}{"{}Calcular"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}contenedorTablas"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}contenedor\_\_tablas"{}}\ name=\textcolor{stringliteral}{"{}tablasContenido"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}contenedor\_\_tabla-\/totales"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}tablaTotales"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}tabla-\/totales"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <thead>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Total\ Días</th>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Valor\ Inicial\ [k]</th>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Total\ Intereses\ [i]</th>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Valor\ Total\ [k\ +\ i]</th>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </thead>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?php\ echo\ sumarDias(\$fechaDesde,\ \$fechaHasta);?></td>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>\$<?php\ echo\ number\_format(\$valorInicial,\ 0);?></td>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>\$<?php\ echo\ number\_format(\$interesTotal,0);?></td>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>\$<?php\ echo\ number\_format(\$valorInicial+\$interesTotal,0);?></td>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}contenedorTablaFechas"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}contenedor\_\_tabla-\/fechas"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}tablaFechas"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}tabla-\/fechas"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <thead>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Fecha\ Desde</th>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Fecha\ Hasta</th>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>No.\ Días</th>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>DTF</th>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>DTF\ Nominal</th>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>DTF\ Día</th>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Interes\ [i]</th>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </thead>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}(\$dtfs\ as\ \$dtf):\ ?>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?php\ echo\ \$dtf[\textcolor{stringliteral}{'fechaDesde'}];\ ?></td>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?php\ echo\ \$dtf[\textcolor{stringliteral}{'fechaHasta'}];\ ?></td>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?php\ echo\ \$dtf[\textcolor{stringliteral}{'numDias'}];\ ?></td>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?php\ echo\ \$dtf[\textcolor{stringliteral}{'porcentaje'}];\ ?>\%</td>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?php\ echo\ tasaNominal(\$dtf[\textcolor{stringliteral}{'porcentaje'}],360);\ ?>\%</td>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?php\ echo\ number\_format((tasaNominal(\$dtf[\textcolor{stringliteral}{'porcentaje'}],360))/360,\ 4);\ ?>\%</td>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>\$<?php\ echo\ \ number\_format((calcularInteres(\$valorInicial,\ number\_format((tasaNominal(\$dtf[\textcolor{stringliteral}{'porcentaje'}],360))/360,\ 4),\ \$dtf[\textcolor{stringliteral}{'numDias'}]))/100,0);\ ?></td>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endforeach;\ ?>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>\ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}1"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}contenedor\_\_btn-\/descargar-\/tablas"{}}>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <form\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}formularioGuardar"{}}\ action=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url('/liquidaciones/dtf/resultado/guardar')\ ?>"{}}\ method=\textcolor{stringliteral}{"{}post"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}hidden"{}}\ name=\textcolor{stringliteral}{"{}datosGenerales"{}}\ value=\textcolor{stringliteral}{"{}}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00089}00089\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00090}00090\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style='border:\ 2px\ solid\ \#e1e1e1c4;'><?php\ echo\ sumarDias(\$fechaDesde,\ \$fechaHasta);?></td>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00091}00091\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style='border:\ 2px\ solid\ \#e1e1e1c4;'>\$<?php\ echo\ number\_format(\$valorInicial,\ 0);?></td>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00092}00092\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style='border:\ 2px\ solid\ \#e1e1e1c4;'>\$<?php\ echo\ number\_format(\$interesTotal,0);?></td>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00093}00093\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style='border:\ 2px\ solid\ \#e1e1e1c4;'>\$<?php\ echo\ number\_format(\$valorInicial+\$interesTotal,0);?></td>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00094}00094\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00095}00095\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}}>\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}hidden"{}}\ name=\textcolor{stringliteral}{"{}dtfs"{}}\ value=\textcolor{stringliteral}{"{}}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00097}00097\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ foreach(\$dtfs\ as\ \$dtf):\ ?>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00098}00098\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00099}00099\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style='border:\ 2px\ solid\ \#e1e1e1c4;'><?php\ echo\ \$dtf['fechaDesde'];\ ?></td>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00100}00100\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style='border:\ 2px\ solid\ \#e1e1e1c4;'><?php\ echo\ \$dtf['fechaHasta'];\ ?></td>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00101}00101\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style='border:\ 2px\ solid\ \#e1e1e1c4;'><?php\ echo\ \$dtf['numDias'];\ ?></td>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00102}00102\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style='border:\ 2px\ solid\ \#e1e1e1c4;'><?php\ echo\ \$dtf['porcentaje'];\ ?>\%</td>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00103}00103\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style='border:\ 2px\ solid\ \#e1e1e1c4;'><?php\ echo\ tasaNominal(\$dtf['porcentaje'],360);\ ?>\%</td>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00104}00104\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style='border:\ 2px\ solid\ \#e1e1e1c4;'><?php\ echo\ number\_format((tasaNominal(\$dtf['porcentaje'],360))/360,\ 4);\ ?>\%</td>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00105}00105\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style='border:\ 2px\ solid\ \#e1e1e1c4;'>\$<?php\ echo\ \ number\_format((calcularInteres(\$valorInicial,\ number\_format((tasaNominal(\$dtf['porcentaje'],360))/360,\ 4),\ \$dtf['numDias']))/100,0);\ ?></td>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00106}00106\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00107}00107\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endforeach;\ ?>}}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00108}00108\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}hidden"{}}\ name=\textcolor{stringliteral}{"{}valorFinal"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ number\_format(\$valorInicial+\$interesTotal,0);?>"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}hidden"{}}\ name=\textcolor{stringliteral}{"{}fechaDesde"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$fechaDesde;?>"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}hidden"{}}\ name=\textcolor{stringliteral}{"{}fechaHasta"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$fechaHasta;?>"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}hidden"{}}\ name=\textcolor{stringliteral}{"{}nombreDemandante"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$nombreDemandante;?>"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}hidden"{}}\ name=\textcolor{stringliteral}{"{}numDocumento"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ \$numDocumento;?>"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}btnGuardar"{}}\ type=\textcolor{stringliteral}{"{}submit"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn-\/descargar\ pdf"{}}\ value=\textcolor{stringliteral}{"{}GUARDAR\ Y\ GENERAR\ PDF"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </form>\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>\ \ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00117}00117\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00119}00119\ </main>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00121}00121\ <script\ src=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url();?>/assets/js/validacionesLiquidacionDtf.js"{}}></script>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00122}00122\ <script\ src=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url();?>/assets/js/validacionesGuardarLiquidacion.js"{}}></script>}
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{liq__dtf__resultado_8php_source_l00124}00124\ <?php\ echo\ \$this-\/>endSection();\ ?>}
+
+\end{DoxyCode}

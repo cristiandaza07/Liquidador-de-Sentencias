@@ -1,0 +1,61 @@
+\doxysection{Events.\+php}
+\hypertarget{_events_8php_source}{}\label{_events_8php_source}\index{C:/xampp/htdocs/liquidador/app/Config/Events.php@{C:/xampp/htdocs/liquidador/app/Config/Events.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_config}{Config}};}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Events\(\backslash\)Events;}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00006}00006\ use\ CodeIgniter\(\backslash\)Exceptions\(\backslash\)FrameworkException;}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00007}00007\ use\ CodeIgniter\(\backslash\)HotReloader\(\backslash\)HotReloader;}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00009}00009\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00010}00010\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00011}00011\ \textcolor{comment}{\ *\ Application\ Events}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00012}00012\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00013}00013\ \textcolor{comment}{\ *\ Events\ allow\ you\ to\ tap\ into\ the\ execution\ of\ the\ program\ without}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00014}00014\ \textcolor{comment}{\ *\ modifying\ or\ extending\ core\ files.\ This\ file\ provides\ a\ central}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00015}00015\ \textcolor{comment}{\ *\ location\ to\ define\ your\ events,\ though\ they\ can\ always\ be\ added}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00016}00016\ \textcolor{comment}{\ *\ at\ run-\/time,\ also,\ if\ needed.}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00017}00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00018}00018\ \textcolor{comment}{\ *\ You\ create\ code\ that\ can\ execute\ by\ subscribing\ to\ events\ with}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00019}00019\ \textcolor{comment}{\ *\ the\ 'on()'\ method.\ This\ accepts\ any\ form\ of\ callable,\ including}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00020}00020\ \textcolor{comment}{\ *\ Closures,\ that\ will\ be\ executed\ when\ the\ event\ is\ triggered.}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00021}00021\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00022}00022\ \textcolor{comment}{\ *\ Example:}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00023}00023\ \textcolor{comment}{\ *\ \ \ \ \ \ Events::on('create',\ [\$myInstance,\ 'myMethod']);}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00024}00024\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00026}00026\ Events::on(\textcolor{stringliteral}{'pre\_system'},\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (ENVIRONMENT\ !==\ \textcolor{stringliteral}{'testing'})\ \{}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ini\_get(\textcolor{stringliteral}{'zlib.output\_compression'}))\ \{}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ FrameworkException::forEnabledZlibOutputCompression();}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (ob\_get\_level()\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ ob\_end\_flush();}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ ob\_start(\textcolor{keyword}{static}\ fn\ (\$buffer)\ =>\ \$buffer);}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00039}00039\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00040}00040\ \textcolor{comment}{\ \ \ \ \ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00041}00041\ \textcolor{comment}{\ \ \ \ \ *\ Debug\ Toolbar\ Listeners.}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00042}00042\ \textcolor{comment}{\ \ \ \ \ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00043}00043\ \textcolor{comment}{\ \ \ \ \ *\ If\ you\ delete,\ they\ will\ no\ longer\ be\ collected.}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00044}00044\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (CI\_DEBUG\ \&\&\ !\ is\_cli())\ \{}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ Events::on(\textcolor{stringliteral}{'DBQuery'},\ \textcolor{stringliteral}{'CodeIgniter\(\backslash\)Debug\(\backslash\)Toolbar\(\backslash\)Collectors\(\backslash\)Database::collect'});}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ Services::toolbar()-\/>respond();}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Hot\ Reload\ route\ -\/\ for\ framework\ use\ on\ the\ hot\ reloader.}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ENVIRONMENT\ ===\ \textcolor{stringliteral}{'development'})\ \{}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ Services::routes()-\/>get(\textcolor{stringliteral}{'\_\_hot-\/reload'},\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keyword}{new}\ HotReloader())-\/>run();}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_events_8php_source_l00055}00055\ \});}
+
+\end{DoxyCode}

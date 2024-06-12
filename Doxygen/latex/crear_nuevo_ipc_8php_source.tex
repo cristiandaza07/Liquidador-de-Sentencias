@@ -1,0 +1,53 @@
+\doxysection{crear\+Nuevo\+Ipc.\+php}
+\hypertarget{crear_nuevo_ipc_8php_source}{}\label{crear_nuevo_ipc_8php_source}\index{C:/xampp/htdocs/liquidador/app/Views/admin/crearNuevoIpc.php@{C:/xampp/htdocs/liquidador/app/Views/admin/crearNuevoIpc.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00001}00001\ <?php\ echo\ \$this-\/>extend(\textcolor{stringliteral}{'plantilla/layout'});\ ?>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00003}00003\ <?php\ echo\ \$this-\/>section(\textcolor{stringliteral}{'contenido'});\ ?>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ <?php\ echo\ \$mensaje;\ ?>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ <nav\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}navegacion\_\_admin"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url('/admin/crearUsuario')?>"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}navegacion\_\_admin-\/enlace"{}}>Crear\ Usuario</a>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url('/admin/crearDtf')?>"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}navegacion\_\_admin-\/enlace"{}}>Agregar\ DTF</a>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url('/admin/crearIpc')?>"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}navegacion\_\_admin-\/enlace\ seleccionado"{}}>Agregar\ IPC</a>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ </nav>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}contenido\_\_panel"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ <h3>DATOS\ DEL\ NUEVO\ IPC</h3>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ <form\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}formularioCrearIpc"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}formulario\_\_admin\_\_crear"{}}\ action=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url('/admin/crearIpc/agregarIpc')\ ?>"{}}\ method=\textcolor{stringliteral}{"{}post"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}grid\_\_admin-\/fecha"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <select\ name=\textcolor{stringliteral}{"{}mes"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}mes"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ selected\ disabled>Seleccionar\ Mes</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Enero"{}}>Enero</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Febrero"{}}>Febrero</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Marzo"{}}>Marzo</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Abril"{}}>Abril</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Mayo"{}}>Mayo</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Junio"{}}>Junio</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Julio"{}}>Julio</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Agosto"{}}>Agosto</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Septiembre"{}}>Septiembre</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Octubre"{}}>Octubre</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Noviembre"{}}>Noviembre</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option\ value=\textcolor{stringliteral}{"{}Diciembre"{}}>Diciembre</option>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </select>\ \ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}año"{}}\ name=\textcolor{stringliteral}{"{}año"{}}\ type=\textcolor{stringliteral}{"{}number"{}}\ value=\textcolor{stringliteral}{"{}<?php\ echo\ obtenerAño(obtenerFechaActual())?>"{}}>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}indice"{}}\ name=\textcolor{stringliteral}{"{}indice"{}}\ type=\textcolor{stringliteral}{"{}text"{}}\ placeholder=\textcolor{stringliteral}{"{}Indice"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}btnGuardarAdmin"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn-\/crear"{}}\ name=\textcolor{stringliteral}{"{}btnCrearIpc"{}}\ type=\textcolor{stringliteral}{"{}submit"{}}\ value=\textcolor{stringliteral}{"{}Guardar"{}}>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00043}00043\ </main>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00045}00045\ <script\ src=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url();?>/assets/js/nuevoIpcAdmin.js"{}}\ defer></script>}
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{crear_nuevo_ipc_8php_source_l00047}00047\ <?php\ echo\ \$this-\/>endSection();\ ?>}
+
+\end{DoxyCode}

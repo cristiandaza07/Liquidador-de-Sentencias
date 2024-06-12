@@ -1,0 +1,67 @@
+\doxysection{Referencia de la clase Feature}
+\hypertarget{class_config_1_1_feature}{}\label{class_config_1_1_feature}\index{Feature@{Feature}}
+Diagrama de herencia de Feature\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config_1_1_feature}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_config_1_1_feature_ab8de9610dce39a8f99684211e7e009b0}{\$multiple\+Filters}} = false
+\item 
+bool \mbox{\hyperlink{class_config_1_1_feature_a20e15c8882168f622214ec011808b59b}{\$auto\+Routes\+Improved}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Enable/disable backward compatibility breaking features. 
+
+Definición en la línea \mbox{\hyperlink{_feature_8php_source_l00010}{10}} del archivo \mbox{\hyperlink{_feature_8php_source}{Feature.\+php}}.
+
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_config_1_1_feature_a20e15c8882168f622214ec011808b59b}\index{Feature@{Feature}!\$autoRoutesImproved@{\$autoRoutesImproved}}
+\index{\$autoRoutesImproved@{\$autoRoutesImproved}!Feature@{Feature}}
+\doxysubsubsection{\texorpdfstring{\$autoRoutesImproved}{\$autoRoutesImproved}}
+{\footnotesize\ttfamily \label{class_config_1_1_feature_a20e15c8882168f622214ec011808b59b} 
+bool \$auto\+Routes\+Improved = false}
+
+Use improved new auto routing instead of the default legacy version. 
+
+Definición en la línea \mbox{\hyperlink{_feature_8php_source_l00029}{29}} del archivo \mbox{\hyperlink{_feature_8php_source}{Feature.\+php}}.
+
+\Hypertarget{class_config_1_1_feature_ab8de9610dce39a8f99684211e7e009b0}\index{Feature@{Feature}!\$multipleFilters@{\$multipleFilters}}
+\index{\$multipleFilters@{\$multipleFilters}!Feature@{Feature}}
+\doxysubsubsection{\texorpdfstring{\$multipleFilters}{\$multipleFilters}}
+{\footnotesize\ttfamily \label{class_config_1_1_feature_ab8de9610dce39a8f99684211e7e009b0} 
+bool \$multiple\+Filters = false}
+
+Enable multiple filters for a route or not.
+
+If you enable this\+:
+\begin{DoxyItemize}
+\item Code\+Igniter\textbackslash{}\+Code\+Igniterhandle\+Request() uses\+:
+\begin{DoxyItemize}
+\item Code\+Igniter\textbackslash{}\+Filters\textbackslash{}\+Filtersenable\+Filters(), instead of enable\+Filter()
+\end{DoxyItemize}
+\item Code\+Igniter\textbackslash{}\+Code\+Ignitertry\+To\+Route\+It() uses\+:
+\begin{DoxyItemize}
+\item Code\+Igniter\textbackslash{}\+Router\textbackslash{}\+Routerget\+Filters(), instead of get\+Filter()
+\end{DoxyItemize}
+\item Code\+Igniter\textbackslash{}\+Router\textbackslash{}\+Routerhandle() uses\+:
+\begin{DoxyItemize}
+\item property \$filters\+Info, instead of \$filter\+Info
+\item Code\+Igniter\textbackslash{}\+Router\textbackslash{}\+Route\+Collectionget\+Filters\+For\+Route(), instead of get\+Filter\+For\+Route() 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Definición en la línea \mbox{\hyperlink{_feature_8php_source_l00024}{24}} del archivo \mbox{\hyperlink{_feature_8php_source}{Feature.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Config/Feature.\+php\end{DoxyCompactItemize}

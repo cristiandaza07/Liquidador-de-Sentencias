@@ -1,0 +1,121 @@
+\doxysection{Referencia de la clase Format}
+\hypertarget{class_config_1_1_format}{}\label{class_config_1_1_format}\index{Format@{Format}}
+Diagrama de herencia de Format\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config_1_1_format}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_config_1_1_format_ac6341d2788904fc2d43d12853fa22f78}{get\+Formatter}} (string \$mime)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+array \mbox{\hyperlink{class_config_1_1_format_aaa0827cc72fe5ac15d4fa70d3a42d5fc}{\$supported\+Response\+Formats}}
+\item 
+array \mbox{\hyperlink{class_config_1_1_format_ac108207788750398533af24e309de74d}{\$formatters}}
+\item 
+array \mbox{\hyperlink{class_config_1_1_format_aea330b7b701cdcc2e9c9179be7327a66}{\$formatter\+Options}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_format_8php_source_l00010}{10}} del archivo \mbox{\hyperlink{_format_8php_source}{Format.\+php}}.
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_config_1_1_format_ac6341d2788904fc2d43d12853fa22f78}\index{Format@{Format}!getFormatter@{getFormatter}}
+\index{getFormatter@{getFormatter}!Format@{Format}}
+\doxysubsubsection{\texorpdfstring{getFormatter()}{getFormatter()}}
+{\footnotesize\ttfamily \label{class_config_1_1_format_ac6341d2788904fc2d43d12853fa22f78} 
+get\+Formatter (\begin{DoxyParamCaption}\item[{string}]{\$mime}{}\end{DoxyParamCaption})}
+
+A Factory method to return the appropriate formatter for the given mime type.
+
+\begin{DoxyReturn}{Devuelve}
+Formatter\+Interface
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Obsoleto}
+\item[\mbox{\hyperlink{deprecated__deprecated000005}{Obsoleto}}]This is an alias of {\ttfamily \textbackslash{}Code\+Igniter\textbackslash{}Format\textbackslash{}Format\textbackslash{}get\+Formatter}. Use that instead. \end{DoxyRefDesc}
+
+
+Definición en la línea \mbox{\hyperlink{_format_8php_source_l00073}{73}} del archivo \mbox{\hyperlink{_format_8php_source}{Format.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Services::format()-\/>getFormatter(\$mime);}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_config_1_1_format_aea330b7b701cdcc2e9c9179be7327a66}\index{Format@{Format}!\$formatterOptions@{\$formatterOptions}}
+\index{\$formatterOptions@{\$formatterOptions}!Format@{Format}}
+\doxysubsubsection{\texorpdfstring{\$formatterOptions}{\$formatterOptions}}
+{\footnotesize\ttfamily \label{class_config_1_1_format_aea330b7b701cdcc2e9c9179be7327a66} 
+array \$formatter\+Options}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'application/json'}\ =>\ JSON\_UNESCAPED\_UNICODE\ |\ JSON\_UNESCAPED\_SLASHES,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'application/xml'}\ \ =>\ 0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'text/xml'}\ \ \ \ \ \ \ \ \ =>\ 0,}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_format_8php_source_l00060}{60}} del archivo \mbox{\hyperlink{_format_8php_source}{Format.\+php}}.
+
+\Hypertarget{class_config_1_1_format_ac108207788750398533af24e309de74d}\index{Format@{Format}!\$formatters@{\$formatters}}
+\index{\$formatters@{\$formatters}!Format@{Format}}
+\doxysubsubsection{\texorpdfstring{\$formatters}{\$formatters}}
+{\footnotesize\ttfamily \label{class_config_1_1_format_ac108207788750398533af24e309de74d} 
+array \$formatters}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'application/json'}\ =>\ JSONFormatter::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'application/xml'}\ \ =>\ XMLFormatter::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'text/xml'}\ \ \ \ \ \ \ \ \ =>\ XMLFormatter::class,}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_format_8php_source_l00044}{44}} del archivo \mbox{\hyperlink{_format_8php_source}{Format.\+php}}.
+
+\Hypertarget{class_config_1_1_format_aaa0827cc72fe5ac15d4fa70d3a42d5fc}\index{Format@{Format}!\$supportedResponseFormats@{\$supportedResponseFormats}}
+\index{\$supportedResponseFormats@{\$supportedResponseFormats}!Format@{Format}}
+\doxysubsubsection{\texorpdfstring{\$supportedResponseFormats}{\$supportedResponseFormats}}
+{\footnotesize\ttfamily \label{class_config_1_1_format_aaa0827cc72fe5ac15d4fa70d3a42d5fc} 
+array \$supported\+Response\+Formats}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'application/json'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'application/xml'},\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'text/xml'},\ }
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_format_8php_source_l00027}{27}} del archivo \mbox{\hyperlink{_format_8php_source}{Format.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Config/Format.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,54 @@
+\doxysection{Exceptions.\+php}
+\hypertarget{_exceptions_8php_source}{}\label{_exceptions_8php_source}\index{C:/xampp/htdocs/liquidador/app/Config/Exceptions.php@{C:/xampp/htdocs/liquidador/app/Config/Exceptions.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_config}{Config}};}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Config\(\backslash\)BaseConfig;}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00006}00006\ use\ CodeIgniter\(\backslash\)Debug\(\backslash\)ExceptionHandler;}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00007}00007\ use\ CodeIgniter\(\backslash\)Debug\(\backslash\)ExceptionHandlerInterface;}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00008}00008\ use\ Psr\(\backslash\)Log\(\backslash\)LogLevel;}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00009}00009\ use\ Throwable;}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00014}\mbox{\hyperlink{class_config_1_1_exceptions}{00014}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_config_1_1_exceptions}{Exceptions}}\ \textcolor{keyword}{extends}\ BaseConfig}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00025}\mbox{\hyperlink{class_config_1_1_exceptions_a22ac5682fc0bdd20dc708a8e559a42fc}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$log\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$ignoreCodes\ =\ [404];}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00047}\mbox{\hyperlink{class_config_1_1_exceptions_a4f61024e5497580d02a4400ee2b57088}{00047}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$errorViewPath\ =\ APPPATH\ .\ \textcolor{stringliteral}{'Views/errors'};}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00059}00059\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$sensitiveDataInTrace\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00070}\mbox{\hyperlink{class_config_1_1_exceptions_a4c10a90e04f55e12c761e08e0ee5ce8e}{00070}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$logDeprecations\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00083}\mbox{\hyperlink{class_config_1_1_exceptions_a0f516e8919c07917b034ea56536b6d56}{00083}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$deprecationLogLevel\ =\ LogLevel::WARNING;}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00085}00085\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00086}00086\ \textcolor{comment}{\ \ \ \ \ *\ DEFINE\ THE\ HANDLERS\ USED}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00087}00087\ \textcolor{comment}{\ \ \ \ \ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00088}00088\ \textcolor{comment}{\ \ \ \ \ *\ Given\ the\ HTTP\ status\ code,\ returns\ exception\ handler\ that}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00089}00089\ \textcolor{comment}{\ \ \ \ \ *\ should\ be\ used\ to\ deal\ with\ this\ error.\ By\ default,\ it\ will\ run\ CodeIgniter's}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00090}00090\ \textcolor{comment}{\ \ \ \ \ *\ default\ handler\ and\ display\ the\ error\ information\ in\ the\ expected\ format}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00091}00091\ \textcolor{comment}{\ \ \ \ \ *\ for\ CLI,\ HTTP,\ or\ AJAX\ requests,\ as\ determined\ by\ is\_cli()\ and\ the\ expected}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00092}00092\ \textcolor{comment}{\ \ \ \ \ *\ response\ format.}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00093}00093\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00094}00094\ \textcolor{comment}{\ \ \ \ \ *\ Custom\ handlers\ can\ be\ returned\ if\ you\ want\ to\ handle\ one\ or\ more\ specific}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00095}00095\ \textcolor{comment}{\ \ \ \ \ *\ error\ codes\ yourself\ like:}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00096}00096\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00097}00097\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ if\ (in\_array(\$statusCode,\ [400,\ 404,\ 500]))\ \{}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00098}00098\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ \ \ \ \ return\ new\ \(\backslash\)App\(\backslash\)Libraries\(\backslash\)MyExceptionHandler();}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00099}00099\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00100}00100\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ if\ (\$exception\ instanceOf\ PageNotFoundException)\ \{}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00101}00101\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ \ \ \ \ return\ new\ \(\backslash\)App\(\backslash\)Libraries\(\backslash\)MyExceptionHandler();}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00102}00102\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00103}00103\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00104}00104\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ handler(\textcolor{keywordtype}{int}\ \$statusCode,\ Throwable\ \$exception):\ ExceptionHandlerInterface}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00105}00105\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ ExceptionHandler(\$this);}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00107}00107\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exceptions_8php_source_l00108}00108\ \}}
+
+\end{DoxyCode}

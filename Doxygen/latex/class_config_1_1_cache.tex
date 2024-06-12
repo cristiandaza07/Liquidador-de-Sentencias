@@ -1,0 +1,219 @@
+\doxysection{Referencia de la clase Cache}
+\hypertarget{class_config_1_1_cache}{}\label{class_config_1_1_cache}\index{Cache@{Cache}}
+Diagrama de herencia de Cache\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config_1_1_cache}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_config_1_1_cache_acf894157f78bcbd5c186e2b0031db33d}{\$handler}} = \textquotesingle{}file\textquotesingle{}
+\item 
+string \mbox{\hyperlink{class_config_1_1_cache_a4c5440e58d14743ce727d5a82f2be613}{\$backup\+Handler}} = \textquotesingle{}dummy\textquotesingle{}
+\item 
+string \mbox{\hyperlink{class_config_1_1_cache_aa2e3217e9d03bf737e5b4fe147a46c4b}{\$store\+Path}} = WRITEPATH . \textquotesingle{}cache/\textquotesingle{}
+\item 
+\mbox{\hyperlink{class_config_1_1_cache_a25be35dde1cb33569e96b49f0ad430b3}{\$cache\+Query\+String}} = false
+\item 
+string \mbox{\hyperlink{class_config_1_1_cache_a93e8010fa99f47cd28af952276e23910}{\$prefix}} = \textquotesingle{}\textquotesingle{}
+\item 
+int \mbox{\hyperlink{class_config_1_1_cache_a108141f724b7d76f288722a700281862}{\$ttl}} = 60
+\item 
+string \mbox{\hyperlink{class_config_1_1_cache_ac9dde46d1885f15cd012ea0597534855}{\$reserved\+Characters}} = \textquotesingle{}\{\}()/\textbackslash{}@\+:\textquotesingle{}
+\item 
+array \mbox{\hyperlink{class_config_1_1_cache_a4b44afb383bff9cc2e34fe14d604f80a}{\$file}}
+\item 
+array \mbox{\hyperlink{class_config_1_1_cache_aefd62cc10ed6559be3d9c5071bdd6850}{\$memcached}}
+\item 
+array \mbox{\hyperlink{class_config_1_1_cache_a231daae03629818c33899f52dff219dc}{\$redis}}
+\item 
+array \mbox{\hyperlink{class_config_1_1_cache_a88d14e6bf246509e22da0be37fadd09b}{\$valid\+Handlers}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_cache_8php_source_l00014}{14}} del archivo \mbox{\hyperlink{_cache_8php_source}{Cache.\+php}}.
+
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_config_1_1_cache_a4c5440e58d14743ce727d5a82f2be613}\index{Cache@{Cache}!\$backupHandler@{\$backupHandler}}
+\index{\$backupHandler@{\$backupHandler}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$backupHandler}{\$backupHandler}}
+{\footnotesize\ttfamily \label{class_config_1_1_cache_a4c5440e58d14743ce727d5a82f2be613} 
+string \$backup\+Handler = \textquotesingle{}dummy\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_cache_autotoc_md35}{}\doxysubsubsection{\texorpdfstring{Backup Handler}{Backup Handler}}\label{class_config_1_1_cache_autotoc_md35}
+The name of the handler that will be used in case the first one is unreachable. Often, \textquotesingle{}file\textquotesingle{} is used here since the filesystem is always available, though that\textquotesingle{}s not always practical for the app. 
+
+Definición en la línea \mbox{\hyperlink{_cache_8php_source_l00035}{35}} del archivo \mbox{\hyperlink{_cache_8php_source}{Cache.\+php}}.
+
+\Hypertarget{class_config_1_1_cache_a25be35dde1cb33569e96b49f0ad430b3}\index{Cache@{Cache}!\$cacheQueryString@{\$cacheQueryString}}
+\index{\$cacheQueryString@{\$cacheQueryString}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$cacheQueryString}{\$cacheQueryString}}
+{\footnotesize\ttfamily \label{class_config_1_1_cache_a25be35dde1cb33569e96b49f0ad430b3} 
+\$cache\+Query\+String = false}
+
+
+
+Definición en la línea \mbox{\hyperlink{_cache_8php_source_l00066}{66}} del archivo \mbox{\hyperlink{_cache_8php_source}{Cache.\+php}}.
+
+\Hypertarget{class_config_1_1_cache_a4b44afb383bff9cc2e34fe14d604f80a}\index{Cache@{Cache}!\$file@{\$file}}
+\index{\$file@{\$file}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$file}{\$file}}
+{\footnotesize\ttfamily \label{class_config_1_1_cache_a4b44afb383bff9cc2e34fe14d604f80a} 
+array \$file}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'storePath'}\ =>\ WRITEPATH\ .\ \textcolor{stringliteral}{'cache/'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mode'}\ \ \ \ \ \ =>\ 0640,}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_cache_8php_source_l00113}{113}} del archivo \mbox{\hyperlink{_cache_8php_source}{Cache.\+php}}.
+
+\Hypertarget{class_config_1_1_cache_acf894157f78bcbd5c186e2b0031db33d}\index{Cache@{Cache}!\$handler@{\$handler}}
+\index{\$handler@{\$handler}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$handler}{\$handler}}
+{\footnotesize\ttfamily \label{class_config_1_1_cache_acf894157f78bcbd5c186e2b0031db33d} 
+string \$handler = \textquotesingle{}file\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_cache_autotoc_md33}{}\doxysubsubsection{\texorpdfstring{Primary Handler}{Primary Handler}}\label{class_config_1_1_cache_autotoc_md33}
+The name of the preferred handler that should be used. If for some reason it is not available, the \$backup\+Handler will be used in its place. 
+
+Definición en la línea \mbox{\hyperlink{_cache_8php_source_l00024}{24}} del archivo \mbox{\hyperlink{_cache_8php_source}{Cache.\+php}}.
+
+\Hypertarget{class_config_1_1_cache_aefd62cc10ed6559be3d9c5071bdd6850}\index{Cache@{Cache}!\$memcached@{\$memcached}}
+\index{\$memcached@{\$memcached}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$memcached}{\$memcached}}
+{\footnotesize\ttfamily \label{class_config_1_1_cache_aefd62cc10ed6559be3d9c5071bdd6850} 
+array \$memcached}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'host'}\ \ \ =>\ \textcolor{stringliteral}{'127.0.0.1'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'port'}\ \ \ =>\ 11211,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'weight'}\ =>\ 1,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'raw'}\ \ \ \ =>\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_cache_8php_source_l00129}{129}} del archivo \mbox{\hyperlink{_cache_8php_source}{Cache.\+php}}.
+
+\Hypertarget{class_config_1_1_cache_a93e8010fa99f47cd28af952276e23910}\index{Cache@{Cache}!\$prefix@{\$prefix}}
+\index{\$prefix@{\$prefix}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$prefix}{\$prefix}}
+{\footnotesize\ttfamily \label{class_config_1_1_cache_a93e8010fa99f47cd28af952276e23910} 
+string \$prefix = \textquotesingle{}\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_cache_autotoc_md41}{}\doxysubsubsection{\texorpdfstring{Key Prefix}{Key Prefix}}\label{class_config_1_1_cache_autotoc_md41}
+This string is added to all cache item names to help avoid collisions if you run multiple applications with the same cache engine. 
+
+Definición en la línea \mbox{\hyperlink{_cache_8php_source_l00076}{76}} del archivo \mbox{\hyperlink{_cache_8php_source}{Cache.\+php}}.
+
+\Hypertarget{class_config_1_1_cache_a231daae03629818c33899f52dff219dc}\index{Cache@{Cache}!\$redis@{\$redis}}
+\index{\$redis@{\$redis}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$redis}{\$redis}}
+{\footnotesize\ttfamily \label{class_config_1_1_cache_a231daae03629818c33899f52dff219dc} 
+array \$redis}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'host'}\ \ \ \ \ =>\ \textcolor{stringliteral}{'127.0.0.1'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'password'}\ =>\ \textcolor{keyword}{null},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'port'}\ \ \ \ \ =>\ 6379,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'timeout'}\ \ =>\ 0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'database'}\ =>\ 0,}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_cache_8php_source_l00145}{145}} del archivo \mbox{\hyperlink{_cache_8php_source}{Cache.\+php}}.
+
+\Hypertarget{class_config_1_1_cache_ac9dde46d1885f15cd012ea0597534855}\index{Cache@{Cache}!\$reservedCharacters@{\$reservedCharacters}}
+\index{\$reservedCharacters@{\$reservedCharacters}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$reservedCharacters}{\$reservedCharacters}}
+{\footnotesize\ttfamily \label{class_config_1_1_cache_ac9dde46d1885f15cd012ea0597534855} 
+string \$reserved\+Characters = \textquotesingle{}\{\}()/\textbackslash{}@\+:\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_cache_autotoc_md45}{}\doxysubsubsection{\texorpdfstring{Reserved Characters}{Reserved Characters}}\label{class_config_1_1_cache_autotoc_md45}
+A string of reserved characters that will not be allowed in keys or tags. Strings that violate this restriction will cause handlers to throw. Default\+: \{\}()/@\+:
+
+NOTE\+: The default set is required for PSR-\/6 compliance. 
+
+Definición en la línea \mbox{\hyperlink{_cache_8php_source_l00102}{102}} del archivo \mbox{\hyperlink{_cache_8php_source}{Cache.\+php}}.
+
+\Hypertarget{class_config_1_1_cache_aa2e3217e9d03bf737e5b4fe147a46c4b}\index{Cache@{Cache}!\$storePath@{\$storePath}}
+\index{\$storePath@{\$storePath}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$storePath}{\$storePath}}
+{\footnotesize\ttfamily \label{class_config_1_1_cache_aa2e3217e9d03bf737e5b4fe147a46c4b} 
+string \$store\+Path = WRITEPATH . \textquotesingle{}cache/\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_cache_autotoc_md37}{}\doxysubsubsection{\texorpdfstring{Cache Directory Path}{Cache Directory Path}}\label{class_config_1_1_cache_autotoc_md37}
+The path to where cache files should be stored, if using a file-\/based system.
+
+\begin{DoxyRefDesc}{Obsoleto}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Obsoleto}}]Use the driver-\/specific variant under \$file \end{DoxyRefDesc}
+
+
+Definición en la línea \mbox{\hyperlink{_cache_8php_source_l00047}{47}} del archivo \mbox{\hyperlink{_cache_8php_source}{Cache.\+php}}.
+
+\Hypertarget{class_config_1_1_cache_a108141f724b7d76f288722a700281862}\index{Cache@{Cache}!\$ttl@{\$ttl}}
+\index{\$ttl@{\$ttl}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$ttl}{\$ttl}}
+{\footnotesize\ttfamily \label{class_config_1_1_cache_a108141f724b7d76f288722a700281862} 
+int \$ttl = 60}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_cache_autotoc_md43}{}\doxysubsubsection{\texorpdfstring{Default TTL}{Default TTL}}\label{class_config_1_1_cache_autotoc_md43}
+The default number of seconds to save items when none is specified.
+
+WARNING\+: This is not used by framework handlers where 60 seconds is hard-\/coded, but may be useful to projects and modules. This will replace the hard-\/coded value in a future release. 
+
+Definición en la línea \mbox{\hyperlink{_cache_8php_source_l00089}{89}} del archivo \mbox{\hyperlink{_cache_8php_source}{Cache.\+php}}.
+
+\Hypertarget{class_config_1_1_cache_a88d14e6bf246509e22da0be37fadd09b}\index{Cache@{Cache}!\$validHandlers@{\$validHandlers}}
+\index{\$validHandlers@{\$validHandlers}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$validHandlers}{\$validHandlers}}
+{\footnotesize\ttfamily \label{class_config_1_1_cache_a88d14e6bf246509e22da0be37fadd09b} 
+array \$valid\+Handlers}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'dummy'}\ \ \ \ \ =>\ DummyHandler::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'file'}\ \ \ \ \ \ =>\ FileHandler::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'memcached'}\ =>\ MemcachedHandler::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'predis'}\ \ \ \ =>\ PredisHandler::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'redis'}\ \ \ \ \ =>\ RedisHandler::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'wincache'}\ \ =>\ WincacheHandler::class,}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_cache_8php_source_l00163}{163}} del archivo \mbox{\hyperlink{_cache_8php_source}{Cache.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Config/Cache.\+php\end{DoxyCompactItemize}

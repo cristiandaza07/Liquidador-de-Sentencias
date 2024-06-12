@@ -1,0 +1,48 @@
+\doxysection{liq\+\_\+indexada.\+php}
+\hypertarget{liq__indexada_8php_source}{}\label{liq__indexada_8php_source}\index{C:/xampp/htdocs/liquidador/app/Views/liquidaciones/liq\_indexada.php@{C:/xampp/htdocs/liquidador/app/Views/liquidaciones/liq\_indexada.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00001}00001\ <?php\ echo\ \$this-\/>extend(\textcolor{stringliteral}{'plantilla/layout'});\ ?>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00003}00003\ <?php\ echo\ \$this-\/>section(\textcolor{stringliteral}{'contenido'});\ ?>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00004}00004\ \ \ \ \ <?php\ echo\ helper(\textcolor{stringliteral}{'Operaciones\_helper'});\ ?>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00006}00006\ \ \ \ \ <?php\ echo\ validation\_list\_errors();\ ?>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}contenido"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ <h1\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}titulo"{}}><?php\ echo\ \$titulo;\ ?></h1>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ <h3>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Ingrese\ las\ fechas\ que\ fueron\ expedidas\ en\ la\ orden\ del\ juez\ para\ que\ el\ sistema\ realice\ el\ cálculo\ del\ }
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ que\ se\ debe\ pagar.}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ </h3>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ <hr>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ <form\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}formularioIndexada"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}formulario\_\_liq-\/dtf"{}}\ action=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url('/liquidaciones/indexada/resultado')\ ?>"{}}\ method=\textcolor{stringliteral}{"{}post"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}formularioDtf\_\_datos-\/demandante"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h2>DATOS\ DEL\ DEMANDANTE</h2>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}formularioDtf\_\_datos-\/demandante\_\_grid"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input"{}}\ name=\textcolor{stringliteral}{"{}nombreDemandante"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}nombreDemandante"{}}\ type=\textcolor{stringliteral}{"{}text"{}}\ placeholder=\textcolor{stringliteral}{"{}Nombre\ Completo"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input"{}}\ name=\textcolor{stringliteral}{"{}numDocumento"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}numDocumento"{}}\ type=\textcolor{stringliteral}{"{}number"{}}\ placeholder=\textcolor{stringliteral}{"{}Numero\ de\ Documento"{}}>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>\ \ }
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <hr>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}formularioDtf\_\_datos-\/liquidacion"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}labelValorInicial"{}}\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}valorInicial"{}}>Valor\ Inicial</label>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}labelFechaDesde"{}}\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}fechaDesde"{}}>Fecha\ Desde</label>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <label\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}labelFechaHasta"{}}\ \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}fechaHasta"{}}>Fecha\ Hasta</label>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input"{}}\ name=\textcolor{stringliteral}{"{}valorInicial"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}valorInicial"{}}\ type=\textcolor{stringliteral}{"{}text"{}}\ placeholder=\textcolor{stringliteral}{"{}\$0"{}}\ min=\textcolor{stringliteral}{"{}0"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input"{}}\ name=\textcolor{stringliteral}{"{}fechaDesde"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechaDesde"{}}\ type=\textcolor{stringliteral}{"{}date"{}}\ min=\textcolor{stringliteral}{"{}1984-\/01-\/16"{}}\ max=\textcolor{stringliteral}{"{}<?php\ echo\ obtenerFechaActual();?>"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input"{}}\ name=\textcolor{stringliteral}{"{}fechaHasta"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}fechaHasta"{}}\ type=\textcolor{stringliteral}{"{}date"{}}\ min=\textcolor{stringliteral}{"{}1984-\/01-\/16"{}}\ max=\textcolor{stringliteral}{"{}<?php\ echo\ obtenerFechaActual();?>"{}}>\ \ }
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <input\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn\_\_calcular"{}}\ type=\textcolor{stringliteral}{"{}submit"{}}\ value=\textcolor{stringliteral}{"{}Calcular"{}}>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00038}00038\ </main>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00040}00040\ <script\ src=\textcolor{stringliteral}{"{}<?php\ echo\ base\_url();?>/assets/js/validacionesLiquidacionIndexada.js"{}}></script>}
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{liq__indexada_8php_source_l00042}00042\ <?php\ echo\ \$this-\/>endSection();\ ?>}
+
+\end{DoxyCode}

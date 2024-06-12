@@ -12,6 +12,11 @@ class UsuariosController extends BaseController{
         return view('index',["mensaje" => $mensaje]);
     }
 
+    /**
+     * Valida el usuario y la contraseña para poder ingresar al sitio web
+     *
+     * @return void
+     */
     public function login(){
         $usuario = $_POST['usuario'];
         $contraseña = $_POST['contraseña'];
@@ -45,7 +50,11 @@ class UsuariosController extends BaseController{
 
     }
 
-    //Verifica si los datos ingresados por el usuario existen en la BD
+    /*
+     * Verifica si los datos ingresados por el usuario existen en la BD
+     *
+     * @return boolean Devuelve si un booleano que indica si el usuario existe o no
+     */
     public function verificarUsuario(){
         $usuario = $_POST['usuario'];
         $contraseña = $_POST['contraseña'];
@@ -61,6 +70,11 @@ class UsuariosController extends BaseController{
         }
     }
 
+    /**
+     * Destruye la sesión activa
+     *
+     * @return void
+     */
     public function cerrarSesion(){
         $session = session();
         $session->destroy();

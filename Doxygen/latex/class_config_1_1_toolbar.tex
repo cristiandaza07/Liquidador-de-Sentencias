@@ -1,0 +1,150 @@
+\doxysection{Referencia de la clase Toolbar}
+\hypertarget{class_config_1_1_toolbar}{}\label{class_config_1_1_toolbar}\index{Toolbar@{Toolbar}}
+Diagrama de herencia de Toolbar\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config_1_1_toolbar}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+array \mbox{\hyperlink{class_config_1_1_toolbar_a720188da59540d86b7d0118335258334}{\$collectors}}
+\item 
+bool \mbox{\hyperlink{class_config_1_1_toolbar_ac6173f3deb68f470fa6ed376b75512d5}{\$collect\+Var\+Data}} = true
+\item 
+int \mbox{\hyperlink{class_config_1_1_toolbar_aa52b93b439d0cd4f44a2e90c9d7835da}{\$max\+History}} = 20
+\item 
+string \mbox{\hyperlink{class_config_1_1_toolbar_a7723c43785016d1b7eb1ccc5a7373565}{\$views\+Path}} = SYSTEMPATH . \textquotesingle{}Debug/\mbox{\hyperlink{class_config_1_1_toolbar}{Toolbar}}/Views/\textquotesingle{}
+\item 
+int \mbox{\hyperlink{class_config_1_1_toolbar_a79c655e5f93f59a6015bebba4e6f8732}{\$max\+Queries}} = 100
+\item 
+array \mbox{\hyperlink{class_config_1_1_toolbar_a9a1a350a74662f384cc1cadb6463c0a0}{\$watched\+Directories}}
+\item 
+array \mbox{\hyperlink{class_config_1_1_toolbar_a8725d28f046b351b68ab27ea6499cff8}{\$watched\+Extensions}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_toolbar_autotoc_md169}{}\doxysubsubsection{\texorpdfstring{Debug Toolbar}{Debug Toolbar}}\label{class_config_1_1_toolbar_autotoc_md169}
+The Debug Toolbar provides a way to see information about the performance and state of your application during that page display. By default it will NOT be displayed under production environments, and will only display if {\ttfamily CI\+\_\+\+DEBUG} is true, since if it\textquotesingle{}s not, there\textquotesingle{}s not much to display anyway. 
+
+Definición en la línea \mbox{\hyperlink{_toolbar_8php_source_l00024}{24}} del archivo \mbox{\hyperlink{_toolbar_8php_source}{Toolbar.\+php}}.
+
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_config_1_1_toolbar_a720188da59540d86b7d0118335258334}\index{Toolbar@{Toolbar}!\$collectors@{\$collectors}}
+\index{\$collectors@{\$collectors}!Toolbar@{Toolbar}}
+\doxysubsubsection{\texorpdfstring{\$collectors}{\$collectors}}
+{\footnotesize\ttfamily \label{class_config_1_1_toolbar_a720188da59540d86b7d0118335258334} 
+array \$collectors}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Timers::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Database::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Logs::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Views::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Files::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Routes::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Events::class,}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_toolbar_8php_source_l00036}{36}} del archivo \mbox{\hyperlink{_toolbar_8php_source}{Toolbar.\+php}}.
+
+\Hypertarget{class_config_1_1_toolbar_ac6173f3deb68f470fa6ed376b75512d5}\index{Toolbar@{Toolbar}!\$collectVarData@{\$collectVarData}}
+\index{\$collectVarData@{\$collectVarData}!Toolbar@{Toolbar}}
+\doxysubsubsection{\texorpdfstring{\$collectVarData}{\$collectVarData}}
+{\footnotesize\ttfamily \label{class_config_1_1_toolbar_ac6173f3deb68f470fa6ed376b75512d5} 
+bool \$collect\+Var\+Data = true}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_toolbar_autotoc_md173}{}\doxysubsubsection{\texorpdfstring{Collect Var Data}{Collect Var Data}}\label{class_config_1_1_toolbar_autotoc_md173}
+If set to false var data from the views will not be collected. Useful to avoid high memory usage when there are lots of data passed to the view. 
+
+Definición en la línea \mbox{\hyperlink{_toolbar_8php_source_l00055}{55}} del archivo \mbox{\hyperlink{_toolbar_8php_source}{Toolbar.\+php}}.
+
+\Hypertarget{class_config_1_1_toolbar_aa52b93b439d0cd4f44a2e90c9d7835da}\index{Toolbar@{Toolbar}!\$maxHistory@{\$maxHistory}}
+\index{\$maxHistory@{\$maxHistory}!Toolbar@{Toolbar}}
+\doxysubsubsection{\texorpdfstring{\$maxHistory}{\$maxHistory}}
+{\footnotesize\ttfamily \label{class_config_1_1_toolbar_aa52b93b439d0cd4f44a2e90c9d7835da} 
+int \$max\+History = 20}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_toolbar_autotoc_md175}{}\doxysubsubsection{\texorpdfstring{Max History}{Max History}}\label{class_config_1_1_toolbar_autotoc_md175}
+{\ttfamily \$max\+History} sets a limit on the number of past requests that are stored, helping to conserve file space used to store them. You can set it to 0 (zero) to not have any history stored, or -\/1 for unlimited history. 
+
+Definición en la línea \mbox{\hyperlink{_toolbar_8php_source_l00066}{66}} del archivo \mbox{\hyperlink{_toolbar_8php_source}{Toolbar.\+php}}.
+
+\Hypertarget{class_config_1_1_toolbar_a79c655e5f93f59a6015bebba4e6f8732}\index{Toolbar@{Toolbar}!\$maxQueries@{\$maxQueries}}
+\index{\$maxQueries@{\$maxQueries}!Toolbar@{Toolbar}}
+\doxysubsubsection{\texorpdfstring{\$maxQueries}{\$maxQueries}}
+{\footnotesize\ttfamily \label{class_config_1_1_toolbar_a79c655e5f93f59a6015bebba4e6f8732} 
+int \$max\+Queries = 100}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_toolbar_autotoc_md179}{}\doxysubsubsection{\texorpdfstring{Max Queries}{Max Queries}}\label{class_config_1_1_toolbar_autotoc_md179}
+If the Database Collector is enabled, it will log every query that the the system generates so they can be displayed on the toolbar\textquotesingle{}s timeline and in the query log. This can lead to memory issues in some instances with hundreds of queries.
+
+{\ttfamily \$max\+Queries} defines the maximum amount of queries that will be stored. 
+
+Definición en la línea \mbox{\hyperlink{_toolbar_8php_source_l00090}{90}} del archivo \mbox{\hyperlink{_toolbar_8php_source}{Toolbar.\+php}}.
+
+\Hypertarget{class_config_1_1_toolbar_a7723c43785016d1b7eb1ccc5a7373565}\index{Toolbar@{Toolbar}!\$viewsPath@{\$viewsPath}}
+\index{\$viewsPath@{\$viewsPath}!Toolbar@{Toolbar}}
+\doxysubsubsection{\texorpdfstring{\$viewsPath}{\$viewsPath}}
+{\footnotesize\ttfamily \label{class_config_1_1_toolbar_a7723c43785016d1b7eb1ccc5a7373565} 
+string \$views\+Path = SYSTEMPATH . \textquotesingle{}Debug/\mbox{\hyperlink{class_config_1_1_toolbar}{Toolbar}}/Views/\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_toolbar_autotoc_md177}{}\doxysubsubsection{\texorpdfstring{Toolbar Views Path}{Toolbar Views Path}}\label{class_config_1_1_toolbar_autotoc_md177}
+The full path to the the views that are used by the toolbar. This MUST have a trailing slash. 
+
+Definición en la línea \mbox{\hyperlink{_toolbar_8php_source_l00076}{76}} del archivo \mbox{\hyperlink{_toolbar_8php_source}{Toolbar.\+php}}.
+
+\Hypertarget{class_config_1_1_toolbar_a9a1a350a74662f384cc1cadb6463c0a0}\index{Toolbar@{Toolbar}!\$watchedDirectories@{\$watchedDirectories}}
+\index{\$watchedDirectories@{\$watchedDirectories}!Toolbar@{Toolbar}}
+\doxysubsubsection{\texorpdfstring{\$watchedDirectories}{\$watchedDirectories}}
+{\footnotesize\ttfamily \label{class_config_1_1_toolbar_a9a1a350a74662f384cc1cadb6463c0a0} 
+array \$watched\+Directories}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'app'},}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_toolbar_8php_source_l00105}{105}} del archivo \mbox{\hyperlink{_toolbar_8php_source}{Toolbar.\+php}}.
+
+\Hypertarget{class_config_1_1_toolbar_a8725d28f046b351b68ab27ea6499cff8}\index{Toolbar@{Toolbar}!\$watchedExtensions@{\$watchedExtensions}}
+\index{\$watchedExtensions@{\$watchedExtensions}!Toolbar@{Toolbar}}
+\doxysubsubsection{\texorpdfstring{\$watchedExtensions}{\$watchedExtensions}}
+{\footnotesize\ttfamily \label{class_config_1_1_toolbar_a8725d28f046b351b68ab27ea6499cff8} 
+array \$watched\+Extensions}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'php'},\ \textcolor{stringliteral}{'css'},\ \textcolor{stringliteral}{'js'},\ \textcolor{stringliteral}{'html'},\ \textcolor{stringliteral}{'svg'},\ \textcolor{stringliteral}{'json'},\ \textcolor{stringliteral}{'env'},}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_toolbar_8php_source_l00119}{119}} del archivo \mbox{\hyperlink{_toolbar_8php_source}{Toolbar.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Config/Toolbar.\+php\end{DoxyCompactItemize}

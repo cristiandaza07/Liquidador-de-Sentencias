@@ -1,0 +1,62 @@
+\doxysection{App.\+php}
+\hypertarget{_app_8php_source}{}\label{_app_8php_source}\index{C:/xampp/htdocs/liquidador/app/Config/App.php@{C:/xampp/htdocs/liquidador/app/Config/App.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00003}\mbox{\hyperlink{namespace_config}{00003}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_config}{Config}};}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Config\(\backslash\)BaseConfig;}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00007}\mbox{\hyperlink{class_config_1_1_app}{00007}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_config_1_1_app}{App}}\ \textcolor{keyword}{extends}\ BaseConfig}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00019}\mbox{\hyperlink{class_config_1_1_app_ad48d203a13c3af525763f5b0fd9069e0}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$baseURL\ =\ \textcolor{stringliteral}{'http://localhost/liquidador/public/'};}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$allowedHostnames\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00043}\mbox{\hyperlink{class_config_1_1_app_aca760733e07817776f8e737d27a630ae}{00043}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$indexPage\ =\ \textcolor{stringliteral}{'index.php'};}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00060}\mbox{\hyperlink{class_config_1_1_app_a7b2fd3ed928967e6f5443226b3ea7105}{00060}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$uriProtocol\ =\ \textcolor{stringliteral}{'REQUEST\_URI'};}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00062}00062\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00063}00063\ \textcolor{comment}{\ \ \ \ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00064}00064\ \textcolor{comment}{\ \ \ \ |\ Allowed\ URL\ Characters}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00065}00065\ \textcolor{comment}{\ \ \ \ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00066}00066\ \textcolor{comment}{\ \ \ \ |}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00067}00067\ \textcolor{comment}{\ \ \ \ |\ This\ lets\ you\ specify\ which\ characters\ are\ permitted\ within\ your\ URLs.}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00068}00068\ \textcolor{comment}{\ \ \ \ |\ When\ someone\ tries\ to\ submit\ a\ URL\ with\ disallowed\ characters\ they\ will}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00069}00069\ \textcolor{comment}{\ \ \ \ |\ get\ a\ warning\ message.}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00070}00070\ \textcolor{comment}{\ \ \ \ |}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00071}00071\ \textcolor{comment}{\ \ \ \ |\ As\ a\ security\ measure\ you\ are\ STRONGLY\ encouraged\ to\ restrict\ URLs\ to}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00072}00072\ \textcolor{comment}{\ \ \ \ |\ as\ few\ characters\ as\ possible.}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00073}00073\ \textcolor{comment}{\ \ \ \ |}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00074}00074\ \textcolor{comment}{\ \ \ \ |\ By\ default,\ only\ these\ are\ allowed:\ \`{}a-\/z\ 0-\/9\string~\%.:\_-\/`}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00075}00075\ \textcolor{comment}{\ \ \ \ |}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00076}00076\ \textcolor{comment}{\ \ \ \ |\ Set\ an\ empty\ string\ to\ allow\ all\ characters\ -\/-\/\ but\ only\ if\ you\ are\ insane.}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00077}00077\ \textcolor{comment}{\ \ \ \ |}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00078}00078\ \textcolor{comment}{\ \ \ \ |\ The\ configured\ value\ is\ actually\ a\ regular\ expression\ character\ group}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00079}00079\ \textcolor{comment}{\ \ \ \ |\ and\ it\ will\ be\ used\ as:\ '/\(\backslash\)A[<permittedURIChars>]+\(\backslash\)z/iu'}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00080}00080\ \textcolor{comment}{\ \ \ \ |}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00081}00081\ \textcolor{comment}{\ \ \ \ |\ DO\ NOT\ CHANGE\ THIS\ UNLESS\ YOU\ FULLY\ UNDERSTAND\ THE\ REPERCUSSIONS!!}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00082}00082\ \textcolor{comment}{\ \ \ \ |}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00083}00083\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00084}00084\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$permittedURIChars\ =\ \textcolor{stringliteral}{'a-\/z\ 0-\/9\string~\%.:\_\(\backslash\)-\/'};}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00096}\mbox{\hyperlink{class_config_1_1_app_abd9a23a97c0048bbf665005425dc7b62}{00096}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$defaultLocale\ =\ \textcolor{stringliteral}{'en'};}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00108}\mbox{\hyperlink{class_config_1_1_app_a0ab739a4e00cb722e059b969721537f9}{00108}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$negotiateLocale\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00123}00123\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$supportedLocales\ =\ [\textcolor{stringliteral}{'en'}];}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00136}\mbox{\hyperlink{class_config_1_1_app_ad2eed19796edad37731781a82056af67}{00136}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$appTimezone\ =\ \textcolor{stringliteral}{'UTC'};}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00148}\mbox{\hyperlink{class_config_1_1_app_a6a379de4be73212fcd18448782d2ad97}{00148}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$charset\ =\ \textcolor{stringliteral}{'UTF-\/8'};}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00160}\mbox{\hyperlink{class_config_1_1_app_a98505b62049e6da122fc0e294b9f0cfd}{00160}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$forceGlobalSecureRequests\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00183}00183\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$proxyIPs\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00201}\mbox{\hyperlink{class_config_1_1_app_a083f043272079af5ffaa3b31e668662a}{00201}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$CSPEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_app_8php_source_l00202}00202\ \}}
+
+\end{DoxyCode}

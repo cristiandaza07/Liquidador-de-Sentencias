@@ -4,25 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $titulo; ?></title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <style>
-        :root{
-            --negro: #1D1D1B;
-            --amarillo: #E08709;
-            --verde: #009640;
-            --verdeSuave: #C5EBAA;
-            --verdeIntermedio: #A5DD9B;
-            --verdeHover: #96ce8c;
-            --blanco: #FFFFFF;
-            --gris: #e1e1e1c4;
-            --grisHover: #c4c3c3c4;
-            --grisOscuro: #333333;
-
-            --separacion: 5rem;
-
-            --fuentePrincipal: 'Rubik', normal;
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .encabezado{
@@ -32,17 +16,11 @@
         }
 
         h1{
-            font-family: 'Rubik', normal; font-weight: 400; text-align: center; font-size: 18px; text-decoration: underline;
-        }
-
-        
-
-        p{
-            font-family: 'Rubik', normal;
+            font-weight: 400; text-align: center; font-size: 18px; text-decoration: underline;
         }
 
         .encabezado__fecha{
-            font-family: 'Rubik', normal; font-weight: 400; text-align: center; text-decoration: none; font-size: 12px; margin-top: -1px; margin-bottom: 10px; color: #333333;
+            font-weight: 400; text-align: center; text-decoration: none; font-size: 12px; margin-top: -1px; margin-bottom: 10px; color: #333333;
         }
 
         img{
@@ -51,7 +29,7 @@
         }
 
         .tabla{
-            text-align: center; font-family: 'Rubik', normal; font-size: 13px; width: 100%;
+            text-align: center; font-size: 13px; width: 100%;
         }
 
         .tabla th{

@@ -1,0 +1,34 @@
+\doxysection{Session.\+php}
+\hypertarget{_filters_2_session_8php_source}{}\label{_filters_2_session_8php_source}\index{C:/xampp/htdocs/liquidador/app/Filters/Session.php@{C:/xampp/htdocs/liquidador/app/Filters/Session.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }App\(\backslash\)Filters;}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Filters\(\backslash\)FilterInterface;}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00006}00006\ use\ CodeIgniter\(\backslash\)HTTP\(\backslash\)RequestInterface;}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00007}00007\ use\ CodeIgniter\(\backslash\)HTTP\(\backslash\)ResponseInterface;}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00009}\mbox{\hyperlink{class_app_1_1_filters_1_1_session}{00009}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_app_1_1_filters_1_1_session}{Session}}\ \textcolor{keyword}{implements}\ FilterInterface}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ before(RequestInterface\ \$request,\ \$arguments\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtener\ el\ tipo\ de\ usuario\ actual}}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \$tipoUsuario\ =\ session()-\/>get(\textcolor{stringliteral}{'tipoUsuario'});}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificar\ si\ el\ tipo\ de\ usuario\ es\ 'liquidador'}}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$tipoUsuario\ !==\ \textcolor{stringliteral}{'Liquidador'}\ \&\&\ \$tipoUsuario\ !==\ \textcolor{stringliteral}{'Administrador'})\ \{}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Denegar\ acceso\ y\ redirigir\ a\ la\ página\ de\ inicio}}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ redirect()-\/>to(\textcolor{charliteral}{'/'});}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ after(RequestInterface\ \$request,\ ResponseInterface\ \$response,\ \$arguments\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00025}00025\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Do\ something\ here}}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_filters_2_session_8php_source_l00028}00028\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,352 @@
+\doxysection{Referencia de la clase Admin\+Controller}
+\hypertarget{class_app_1_1_controllers_1_1_admin_1_1_admin_controller}{}\label{class_app_1_1_controllers_1_1_admin_1_1_admin_controller}\index{AdminController@{AdminController}}
+Diagrama de herencia de Admin\+Controller\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_controllers_1_1_admin_1_1_admin_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_aacb493257d114ee9f915ba540b351538}{menu\+Admin}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a2d9f5935d1df3f9cd5fd9a5287434a4a}{crear\+Nuevo\+Dtf}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_ae15bd01203ee17ee8c5f6e769fd9c289}{crear\+Nuevo\+Ipc}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a5550ebcdc200d8c186452cffbc6caa77}{agregar\+Usuario}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a2bb76a7728af09319ae6fd0677bae2d1}{agregar\+Dtf}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a1878473c6704ec0896d0949a66df2873}{agregar\+Ipc}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a5bf479d66000479c264c7dedc19d1cfc}{usuario\+Existe}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos heredados de \mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller}{Base\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_aaa4ae087c2582ea613c7255f73d8a623}{init\+Controller}} (Request\+Interface \$request, Response\+Interface \$response, Logger\+Interface \$logger)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Otros miembros heredados}
+\doxysubsection*{Atributos protegidos heredados de \mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller}{Base\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abb35c8495a232b510389fa6d7b15d38a}{\$request}}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_aeeccfcd4e2765b8469c41f93ec023ee9}{\$helpers}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abefb3c26429d514777313e9a63d7cbac}{\$session}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_admin_controller_8php_source_l00012}{12}} del archivo \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a2bb76a7728af09319ae6fd0677bae2d1}\index{AdminController@{AdminController}!agregarDtf@{agregarDtf}}
+\index{agregarDtf@{agregarDtf}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{agregarDtf()}{agregarDtf()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a2bb76a7728af09319ae6fd0677bae2d1} 
+agregar\+Dtf (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_admin_controller_8php_source_l00116}{116}} del archivo \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Conexion\ a\ la\ base\ de\ datos}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \$db\ =\ \(\backslash\)Config\(\backslash\)Database::connect();}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ helper(\textcolor{stringliteral}{'Operaciones\_helper'});}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \$fechaDesde\ =\ \$\_POST[\textcolor{stringliteral}{'fechaDesde'}];}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \$fechaHasta\ =\ \$\_POST[\textcolor{stringliteral}{'fechaHasta'}];}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \$porcentaje\ =\ substr(\$\_POST[\textcolor{stringliteral}{'porcentaje'}],\ 0,\ -\/1);\ \textcolor{comment}{//Eliminamos\ el\ simbolo\ '\%'\ para\ ingresar\ correctamente\ el\ dato\ en\ la\ BD}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \$dataDtf=\ [}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fechaDesde'}\ =>\ \$fechaDesde,}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fechaHasta'}\ =>\ \$fechaHasta,}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'porcentaje'}\ =>\ \$porcentaje}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Inserción\ del\ nuevo\ registro\ a\ la\ BD}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \$usuario\ =\ \textcolor{keyword}{new}\ DtfModel();}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \$usuario-\/>insert(\$dataDtf);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Mostramos\ mensaje\ al\ usuario\ por\ medio\ de\ SweetAlert}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \$mensaje\ =\ \textcolor{stringliteral}{"{}<script>}}
+\DoxyCodeLine{00137\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Swal.fire(\{}}
+\DoxyCodeLine{00138\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ title:\ 'DTF\ semanal\ registrado',}}
+\DoxyCodeLine{00139\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ icon:\ 'success'}}
+\DoxyCodeLine{00140\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}}
+\DoxyCodeLine{00141\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </script>"{}};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}\ =>\ \textcolor{stringliteral}{"{}Panel\ de\ Administración"{}},}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'header'}\ =>\ mostrarHeader(),}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mensaje'}\ =>\ \$mensaje}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ view(\textcolor{stringliteral}{'admin/crearNuevoDtf'},\ \$data);}
+\DoxyCodeLine{00150\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a1878473c6704ec0896d0949a66df2873}\index{AdminController@{AdminController}!agregarIpc@{agregarIpc}}
+\index{agregarIpc@{agregarIpc}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{agregarIpc()}{agregarIpc()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a1878473c6704ec0896d0949a66df2873} 
+agregar\+Ipc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_admin_controller_8php_source_l00152}{152}} del archivo \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Conexion\ a\ la\ base\ de\ datos}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \$db\ =\ \(\backslash\)Config\(\backslash\)Database::connect();}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ helper(\textcolor{stringliteral}{'Operaciones\_helper'});}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \$mes\ =\ \$\_POST[\textcolor{stringliteral}{'mes'}];}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \$año\ =\ \$\_POST[\textcolor{stringliteral}{'año'}];}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \$indice\ =\ \$\_POST[\textcolor{stringliteral}{'indice'}];}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \$dataIpc=\ [}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mes'}\ =>\ \$mes,}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'año'}\ =>\ \$año,}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'indice'}\ =>\ \$indice}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Inserción\ del\ nuevo\ registro\ a\ la\ BD}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \$usuario\ =\ \textcolor{keyword}{new}\ IpcModel();}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \$usuario-\/>insert(\$dataIpc);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Mostramos\ mensaje\ al\ usuario\ por\ medio\ de\ SweetAlert}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \$mensaje\ =\ \textcolor{stringliteral}{"{}<script>}}
+\DoxyCodeLine{00174\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Swal.fire(\{}}
+\DoxyCodeLine{00175\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ title:\ 'IPC\ mensual\ registrado',}}
+\DoxyCodeLine{00176\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ icon:\ 'success'}}
+\DoxyCodeLine{00177\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}}
+\DoxyCodeLine{00178\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </script>"{}};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}\ =>\ \textcolor{stringliteral}{"{}Panel\ de\ Administración"{}},}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'header'}\ =>\ mostrarHeader(),}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mensaje'}\ =>\ \$mensaje}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ view(\textcolor{stringliteral}{'admin/crearNuevoIpc'},\ \$data);}
+\DoxyCodeLine{00187\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a5550ebcdc200d8c186452cffbc6caa77}\index{AdminController@{AdminController}!agregarUsuario@{agregarUsuario}}
+\index{agregarUsuario@{agregarUsuario}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{agregarUsuario()}{agregarUsuario()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a5550ebcdc200d8c186452cffbc6caa77} 
+agregar\+Usuario (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_admin_controller_8php_source_l00062}{62}} del archivo \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Conexion\ a\ la\ base\ de\ datos}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \$db\ =\ \(\backslash\)Config\(\backslash\)Database::connect();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ helper(\textcolor{stringliteral}{'Operaciones\_helper'});}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \$nombreCompleto\ =\ \$\_POST[\textcolor{stringliteral}{'nombreCompleto'}];}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \$correo\ =\ \$\_POST[\textcolor{stringliteral}{'correo'}];}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \$usuario\ =\ \$\_POST[\textcolor{stringliteral}{'usuario'}];}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \$dependencia\ =\ \$\_POST[\textcolor{stringliteral}{'dependencia'}];}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \$tipoUsuario\ =\ \$\_POST[\textcolor{stringliteral}{'tipoUsuario'}];}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \$password=\ password\_hash(\$\_POST[\textcolor{stringliteral}{'contrasena'}],\ PASSWORD\_DEFAULT);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \$query\ =\ \$db-\/>query(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ usuarios\ WHERE\ usuario\ =\ '\$usuario'"{}});}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \$Usuario\ =\ \$query-\/>getResultArray();}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(count(\$Usuario)\ >\ 0)\{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \$mensaje\ =\ \textcolor{stringliteral}{"{}<script>}}
+\DoxyCodeLine{00078\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Swal.fire(\{}}
+\DoxyCodeLine{00079\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ title:\ 'El\ usuario\ ya\ existe',}}
+\DoxyCodeLine{00080\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ icon:\ 'error'}}
+\DoxyCodeLine{00081\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}}
+\DoxyCodeLine{00082\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </script>"{}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ redirect()-\/>back();}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \$dataUsuario=\ [}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'nombre\_completo'}\ =>\ \$nombreCompleto,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'correo'}\ =>\ \$correo,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'usuario'}\ =>\ \$usuario,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'dependencia'}\ =>\ \$dependencia,}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'tipo\_usuario'}\ =>\ \$tipoUsuario,}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'contrasena'}\ =>\ \$password}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Inserción\ del\ nuevo\ registro\ a\ la\ BD}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \$usuario\ =\ \textcolor{keyword}{new}\ UsuarioModel();}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \$usuario-\/>insert(\$dataUsuario);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Mostramos\ mensaje\ al\ usuario\ por\ medio\ de\ SweetAlert}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \$mensaje\ =\ \textcolor{stringliteral}{"{}<script>}}
+\DoxyCodeLine{00101\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Swal.fire(\{}}
+\DoxyCodeLine{00102\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ title:\ 'Usuario\ creado',}}
+\DoxyCodeLine{00103\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ icon:\ 'success'}}
+\DoxyCodeLine{00104\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}}
+\DoxyCodeLine{00105\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </script>"{}};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}\ =>\ \textcolor{stringliteral}{"{}Panel\ de\ Administración"{}},}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'header'}\ =>\ mostrarHeader(),}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mensaje'}\ =>\ \$mensaje}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ view(\textcolor{stringliteral}{'admin/crearNuevoUsuario'},\ \$data);}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a2d9f5935d1df3f9cd5fd9a5287434a4a}\index{AdminController@{AdminController}!crearNuevoDtf@{crearNuevoDtf}}
+\index{crearNuevoDtf@{crearNuevoDtf}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{crearNuevoDtf()}{crearNuevoDtf()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a2d9f5935d1df3f9cd5fd9a5287434a4a} 
+crear\+Nuevo\+Dtf (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra la sección para crear nuevo DTF
+
+\begin{DoxyReturn}{Devuelve}
+view Retorna la vista para ingresar una nueva tasa DTF 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_admin_controller_8php_source_l00035}{35}} del archivo \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ helper(\textcolor{stringliteral}{'Operaciones\_helper'});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}\ =>\ \textcolor{stringliteral}{"{}Panel\ de\ Administración"{}},}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'header'}\ =>\ mostrarHeader(),}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mensaje'}\ =>\ \textcolor{stringliteral}{"{}"{}}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ view(\textcolor{stringliteral}{'admin/crearNuevoDtf'},\ \$data);}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_ae15bd01203ee17ee8c5f6e769fd9c289}\index{AdminController@{AdminController}!crearNuevoIpc@{crearNuevoIpc}}
+\index{crearNuevoIpc@{crearNuevoIpc}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{crearNuevoIpc()}{crearNuevoIpc()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_ae15bd01203ee17ee8c5f6e769fd9c289} 
+crear\+Nuevo\+Ipc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra la sección para crear nuevo IPC
+
+\begin{DoxyReturn}{Devuelve}
+view Retorna la vista para ingresar una nueva tasa IPC 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_admin_controller_8php_source_l00051}{51}} del archivo \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ helper(\textcolor{stringliteral}{'Operaciones\_helper'});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}\ =>\ \textcolor{stringliteral}{"{}Panel\ de\ Administración"{}},}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'header'}\ =>\ mostrarHeader(),}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mensaje'}\ =>\ \textcolor{stringliteral}{"{}"{}}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ view(\textcolor{stringliteral}{'admin/crearNuevoIpc'},\ \$data);}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_aacb493257d114ee9f915ba540b351538}\index{AdminController@{AdminController}!menuAdmin@{menuAdmin}}
+\index{menuAdmin@{menuAdmin}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{menuAdmin()}{menuAdmin()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_aacb493257d114ee9f915ba540b351538} 
+menu\+Admin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra la sección para crear nuevo usuario
+
+\begin{DoxyReturn}{Devuelve}
+view Retorna la vista para crear un nuevo usuario 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_admin_controller_8php_source_l00019}{19}} del archivo \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ helper(\textcolor{stringliteral}{'Operaciones\_helper'});}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'titulo'}\ =>\ \textcolor{stringliteral}{"{}Panel\ de\ Administración"{}},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'header'}\ =>\ mostrarHeader(),}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mensaje'}\ =>\ \textcolor{stringliteral}{"{}"{}}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ view(\textcolor{stringliteral}{'admin/crearNuevoUsuario'},\ \$data);}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a5bf479d66000479c264c7dedc19d1cfc}\index{AdminController@{AdminController}!usuarioExiste@{usuarioExiste}}
+\index{usuarioExiste@{usuarioExiste}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{usuarioExiste()}{usuarioExiste()}}
+{\footnotesize\ttfamily \label{class_app_1_1_controllers_1_1_admin_1_1_admin_controller_a5bf479d66000479c264c7dedc19d1cfc} 
+usuario\+Existe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Verifica si el usuario ingresado al intertar crear un nuevo usuario ya existe
+
+\begin{DoxyReturn}{Devuelve}
+boolean 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_admin_controller_8php_source_l00194}{194}} del archivo \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Conexion\ a\ la\ base\ de\ datos}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \$db\ =\ \(\backslash\)Config\(\backslash\)Database::connect();}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \$usuario\ =\ \$\_POST[\textcolor{stringliteral}{'usuario'}];}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Verificamos\ en\ la\ BD\ si\ el\ usuario\ ingresado\ ya\ existe}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \$query\ =\ \$db-\/>query(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ usuarios\ WHERE\ usuario\ =\ '\$usuario'"{}});}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \$usuario\ =\ \$query-\/>getResultArray();}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \$usuarioExiste\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(count(\$usuario)\ >\ 0)\{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$usuarioExiste\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$usuarioExiste\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>response-\/>setJSON([\textcolor{stringliteral}{'usuarioExiste'}\ =>\ \$usuarioExiste]);}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{catch}\ (Exception\ \$e)\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ echo\ json\_encode(\textcolor{stringliteral}{'Error:\ '}.\ \$e-\/>getMessage());}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00218\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Controllers/\+Admin/Admin\+Controller.\+php\end{DoxyCompactItemize}

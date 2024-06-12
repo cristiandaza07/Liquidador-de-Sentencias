@@ -11,6 +11,11 @@ use Config\Autoload;
 use PhpParser\Node\Expr\FuncCall;
 
 //------- HEADER --------//
+/**
+ * Se encarga de mostrar el respectivo header dependiendo del tipo de usuario
+ *
+ * @return string Retorna el nombre del header que se debe mostrar
+ */
 function mostrarHeader(){
     $header = "";
     if(session()->get('tipoUsuario') == 'Liquidador'){
@@ -25,19 +30,29 @@ function mostrarHeader(){
 
 //------- FUNCIONES DE CALCULOS ------//
 
-//Hace el calculo de cuantos dias de la primera semana hay que contar para el calculo del interes (Si hay más de una semana)
+/**
+ * Hace el calculo de cuantos dias de la primera semana hay que contar para el calculo del interes (Si hay más de una semana)
+ *
+ * @param [date] $fechaDesde
+ * @return int 
+ */
 function calcularNumDiasPrimeraSemana($fechaDesde){
     $fechaLunesAnterior = obtenerLunesAnteior($fechaDesde);
 
     $fechaDesde = new DateTime($fechaDesde);
     $fechaLunesAnterior = new DateTime($fechaLunesAnterior);
-
     $diff = $fechaLunesAnterior -> diff($fechaDesde);
     $numDias = 7 - ($diff -> days);
     return $numDias;
 }
 
-//Hace el calculo de cuantos dias de la ultima semana hay que contar para el calculo del interes (Si hay más de una semana)
+/**
+ * Hace el calculo de cuantos dias de la ultima semana hay que contar para el calculo del interes (Si hay más de una semana)
+ *
+ * @param [date] $usuarioFechaHasta
+ * @param [date] $fechaHasta
+ * @return int 
+ */
 function calcularNumDiasUltimaSemana($usuarioFechaHasta, $fechaHasta){
     $usuarioFechaHasta = new DateTime($usuarioFechaHasta);
     $fechaHasta = new DateTime($fechaHasta);
@@ -47,7 +62,13 @@ function calcularNumDiasUltimaSemana($usuarioFechaHasta, $fechaHasta){
     return $numDias;
 }
 
-//Hace el calculo de cuantos dias hay entre la fechaDesde y la fechaHasta (si las fechas están en una misma semana)
+/**
+ * Hace el calculo de cuantos dias hay entre la fechaDesde y la fechaHasta (si las fechas están en una misma semana)
+ *
+ * @param [date] $usuarioFechaDesde
+ * @param [date] $usuarioFechaHasta
+ * @return int
+ */
 function calcularDiasUnicaSemana($usuarioFechaDesde, $usuarioFechaHasta){
     $usuarioFechaHasta = new DateTime($usuarioFechaHasta);
     $usuarioFechaDesde = new DateTime($usuarioFechaDesde);
@@ -57,13 +78,26 @@ function calcularDiasUnicaSemana($usuarioFechaDesde, $usuarioFechaHasta){
     return $numDias +1;
 }
 
-//Funcion para hacer el calculo de cada interes de las filas que se muestran en la tabla de fechas
+/**
+ * Funcion para hacer el calculo de cada interes de las filas que se muestran en la tabla de fechas
+ *
+ * @param [int] $valorInicial
+ * @param [int] $dtfDia
+ * @param [int] $numDias
+ * @return int
+ */
 function calcularInteres($valorInicial, $dtfDia, $numDias){ 
     $interes = (intval($valorInicial) * $numDias) * $dtfDia;
     return $interes;
 }
 
-//Hace la suma de cuantos días hay en total
+/**
+ * Hace la suma de cuantos días hay en total
+ *
+ * @param [date] $fechaDesde
+ * @param [date] $fechaHasta
+ * @return date
+ */
 function sumarDias($fechaDesde, $fechaHasta) {
     $fechaInicio = new DateTime($fechaDesde);
     $fechaFin = new DateTime($fechaHasta);
@@ -72,7 +106,13 @@ function sumarDias($fechaDesde, $fechaHasta) {
     return $totalDias -> days +1;
 }
 
-//Hace el calculo de la columna 'DTF nominal' que se muestra en la tabla resultante de la liquidación DTF
+/**
+ * Hace el calculo de la columna 'DTF nominal' que se muestra en la tabla resultante de la liquidación DTF
+ *
+ * @param [double] $porcentajeInteres
+ * @param [int] $periodosAnio
+ * @return double
+ */
 function tasaNominal($porcentajeInteres, $periodosAnio) {
     //Conversión de porcentaje a decimal para hacer las operaciones
     $porcentajeInteres = $porcentajeInteres / 100;
@@ -83,7 +123,13 @@ function tasaNominal($porcentajeInteres, $periodosAnio) {
     return $tasaNominalPorcentaje;
 }
 
-//Si la fechaHasta ingresada por el usuario en la liquidación DTF es una fecha futura entonces le agrega las semanas futuras a las que trae la consulta de la BD (las que trae la BD solo están hasta la fecha actual)  
+/**
+ * Si la fechaHasta ingresada por el usuario en la liquidación DTF es una fecha futura entonces le agrega las semanas futuras a las que trae la consulta de la BD (las que trae la BD solo están hasta la fecha actual)  
+ *
+ * @param [date] $fechaHastaUsuario
+ * @param [date] $ultimaFechaHastaQuery
+ * @return array
+ */
 function calcularDtfFuturo($fechaHastaUsuario, $ultimaFechaHastaQuery){
     $fecha = $ultimaFechaHastaQuery;
     $proximosDtf = [];
@@ -103,6 +149,12 @@ function calcularDtfFuturo($fechaHastaUsuario, $ultimaFechaHastaQuery){
 
 //-------- FUNCIONES DE FECHAS ---------
 
+/**
+ * Indica el mes actual
+ *
+ * @param [date] $fecha
+ * @return string
+ */
 function obtenerMes($fecha){
     $mes = date('m', strtotime($fecha));
 
@@ -149,12 +201,23 @@ function obtenerMes($fecha){
 
 }
 
+/**
+ * Indica el año actual
+ * 
+ * @param [date] $fecha
+ * @return date
+ */
 function obtenerAño($fecha){
     $año = date('Y', strtotime($fecha));
 
     return $año;
 }
 
+/**
+ * Devuelve la fecha actual en formato AÑO-MES-DIA
+ *
+ * @return date
+ */
 function obtenerFechaActual(){
     //Obtener fecha de hoy
     $fechaActual = new DateTime();
@@ -165,7 +228,13 @@ function obtenerFechaActual(){
     return $fechaFormateada;
 }
 
-//Covierte la fecha de formato Mes-Dia-Año a formato Dia-Mes-Año
+/**
+ * Covierte la fecha de formato Mes-Dia-Año a formato Dia-Mes-Año
+ *
+ * @param [date] $fechaDesde
+ * @param [date] $fechaHasta
+ * @return array
+ */
 function formatearFechas($fechaDesde, $fechaHasta){
     $fechaDesde = new DateTime($fechaDesde);
     $fechaHasta = new DateTime($fechaHasta);
@@ -176,13 +245,23 @@ function formatearFechas($fechaDesde, $fechaHasta){
     return ["fechaDesdeFormateada" => str_replace('-', '/', $fechaDesdeFormateada), "fechaHastaFormateada" => str_replace('-', '/', $fechaHastaFormateada)];
 }
 
-//retorna el dia de la semana de 0 a 6 (0 es domingo y lunes es 6)
+/**
+ * retorna el dia de la semana de 0 a 6 (0 es domingo y lunes es 6)
+ *
+ * @param [date] $fecha
+ * @return int
+ */
 function diaSemana ($fecha){
     $diaSemana = date('w', strtotime($fecha));
     return $diaSemana;
 }
 
-//Funcion que entrega el lunes que pasó (Si la fecha es diferente a lunes)
+/**
+ * Funcion que entrega el lunes que pasó (Si la fecha es diferente a lunes)
+ *
+ * @param [date] $fechaDesde
+ * @return int
+ */
 function obtenerLunesAnteior($fechaDesde){
     $diaSemana = diaSemana($fechaDesde);
 
@@ -196,6 +275,12 @@ function obtenerLunesAnteior($fechaDesde){
 
 //----- GENERAR PDF ----- //
 
+/**
+ * Genera el PDF por medio de la libreria DOMPDF
+ *
+ * @param [string] $tipoLiquidacion
+ * @return void
+ */
 function crearPdf($tipoLiquidacion){
     try{
         //Condicional para elegir que datos mostrar en el PDF

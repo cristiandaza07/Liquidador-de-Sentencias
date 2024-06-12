@@ -11,7 +11,11 @@ use Exception;
 
 class AdminController extends BaseController{
 
-    //Muestra la sección para crear nuevo usuario
+    /**
+     * Muestra la sección para crear nuevo usuario
+     *
+     * @return view Retorna la vista para crear un nuevo usuario
+     */
     public function menuAdmin(){
         helper('Operaciones_helper');
         $data = [
@@ -23,7 +27,11 @@ class AdminController extends BaseController{
         return view('admin/crearNuevoUsuario', $data);
     }
 
-    //Muestra la sección para crear nuevo DTF
+    /**
+     * Muestra la sección para crear nuevo DTF
+     *
+     * @return view Retorna la vista para ingresar una nueva tasa DTF
+     */
     public function crearNuevoDtf(){
         helper('Operaciones_helper');
         $data = [
@@ -35,7 +43,11 @@ class AdminController extends BaseController{
         return view('admin/crearNuevoDtf', $data);
     }
 
-    //Muestra la sección para crear nuevo IPC
+    /**
+     * Muestra la sección para crear nuevo IPC
+     *
+     * @return view Retorna la vista para ingresar una nueva tasa IPC
+     */
     public function crearNuevoIpc(){
         helper('Operaciones_helper');
         $data = [
@@ -174,7 +186,11 @@ class AdminController extends BaseController{
         return view('admin/crearNuevoIpc', $data);
     }
 
-    //Verifica si el usuario ingresado al intertar crear un nuevo usuario ya existe
+    /**
+     * Verifica si el usuario ingresado al intertar crear un nuevo usuario ya existe
+     *
+     * @return boolean
+     */
     public function usuarioExiste(){
         try{
             //Conexion a la base de datos

@@ -1,0 +1,81 @@
+\doxysection{Referencia de la clase Migrations}
+\hypertarget{class_config_1_1_migrations}{}\label{class_config_1_1_migrations}\index{Migrations@{Migrations}}
+Diagrama de herencia de Migrations\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config_1_1_migrations}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_config_1_1_migrations_a274943df191ed1b8d6af979916af555d}{\$enabled}} = true
+\item 
+string \mbox{\hyperlink{class_config_1_1_migrations_adab5438224e48204d162e89b273b36b3}{\$table}} = \textquotesingle{}migrations\textquotesingle{}
+\item 
+string \mbox{\hyperlink{class_config_1_1_migrations_af6231e950944c7396e4a384f6eb6ef17}{\$timestamp\+Format}} = \textquotesingle{}Y-\/m-\/d-\/His\+\_\+\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_migrations_8php_source_l00007}{7}} del archivo \mbox{\hyperlink{_migrations_8php_source}{Migrations.\+php}}.
+
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_config_1_1_migrations_a274943df191ed1b8d6af979916af555d}\index{Migrations@{Migrations}!\$enabled@{\$enabled}}
+\index{\$enabled@{\$enabled}!Migrations@{Migrations}}
+\doxysubsubsection{\texorpdfstring{\$enabled}{\$enabled}}
+{\footnotesize\ttfamily \label{class_config_1_1_migrations_a274943df191ed1b8d6af979916af555d} 
+bool \$enabled = true}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_migrations_autotoc_md109}{}\doxysubsubsection{\texorpdfstring{Enable/\+Disable Migrations}{Enable/\+Disable Migrations}}\label{class_config_1_1_migrations_autotoc_md109}
+Migrations are enabled by default.
+
+You should enable migrations whenever you intend to do a schema migration and disable it back when you\textquotesingle{}re done. 
+
+Definición en la línea \mbox{\hyperlink{_migrations_8php_source_l00019}{19}} del archivo \mbox{\hyperlink{_migrations_8php_source}{Migrations.\+php}}.
+
+\Hypertarget{class_config_1_1_migrations_adab5438224e48204d162e89b273b36b3}\index{Migrations@{Migrations}!\$table@{\$table}}
+\index{\$table@{\$table}!Migrations@{Migrations}}
+\doxysubsubsection{\texorpdfstring{\$table}{\$table}}
+{\footnotesize\ttfamily \label{class_config_1_1_migrations_adab5438224e48204d162e89b273b36b3} 
+string \$table = \textquotesingle{}migrations\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_migrations_autotoc_md111}{}\doxysubsubsection{\texorpdfstring{Migrations Table}{Migrations Table}}\label{class_config_1_1_migrations_autotoc_md111}
+This is the name of the table that will store the current migrations state. When migrations runs it will store in a database table which migration files have already been run. 
+
+Definición en la línea \mbox{\hyperlink{_migrations_8php_source_l00030}{30}} del archivo \mbox{\hyperlink{_migrations_8php_source}{Migrations.\+php}}.
+
+\Hypertarget{class_config_1_1_migrations_af6231e950944c7396e4a384f6eb6ef17}\index{Migrations@{Migrations}!\$timestampFormat@{\$timestampFormat}}
+\index{\$timestampFormat@{\$timestampFormat}!Migrations@{Migrations}}
+\doxysubsubsection{\texorpdfstring{\$timestampFormat}{\$timestampFormat}}
+{\footnotesize\ttfamily \label{class_config_1_1_migrations_af6231e950944c7396e4a384f6eb6ef17} 
+string \$timestamp\+Format = \textquotesingle{}Y-\/m-\/d-\/His\+\_\+\textquotesingle{}}
+
+\DoxyHorRuler{0}
+ \hypertarget{class_config_1_1_migrations_autotoc_md113}{}\doxysubsubsection{\texorpdfstring{Timestamp Format}{Timestamp Format}}\label{class_config_1_1_migrations_autotoc_md113}
+This is the format that will be used when creating new migrations using the CLI command\+: \begin{quote}
+php spark make\+:migration \end{quote}
+
+
+NOTE\+: if you set an unsupported format, migration runner will not find your migration files.
+
+Supported formats\+:
+\begin{DoxyItemize}
+\item Ymd\+His\+\_\+
+\item Y-\/m-\/d-\/\+His\+\_\+
+\item Y\+\_\+m\+\_\+d\+\_\+\+His\+\_\+ 
+\end{DoxyItemize}
+
+Definición en la línea \mbox{\hyperlink{_migrations_8php_source_l00049}{49}} del archivo \mbox{\hyperlink{_migrations_8php_source}{Migrations.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Config/Migrations.\+php\end{DoxyCompactItemize}

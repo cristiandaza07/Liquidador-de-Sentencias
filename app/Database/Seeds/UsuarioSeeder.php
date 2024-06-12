@@ -6,6 +6,11 @@ use CodeIgniter\Database\Seeder;
 
 class UsuarioSeeder extends Seeder
 {
+    /**
+     * Genera un usuario de prueba con los parametros estabvlecidos
+     *
+     * @return void
+     */
     public function run()
     {
         $password= password_hash("123", PASSWORD_DEFAULT);

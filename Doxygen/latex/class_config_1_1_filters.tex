@@ -1,0 +1,118 @@
+\doxysection{Referencia de la clase Filters}
+\hypertarget{class_config_1_1_filters}{}\label{class_config_1_1_filters}\index{Filters@{Filters}}
+Diagrama de herencia de Filters\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config_1_1_filters}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+array \mbox{\hyperlink{class_config_1_1_filters_a30c35e4d7f0e56c0bdb6a00e6c5f1beb}{\$aliases}}
+\item 
+array \mbox{\hyperlink{class_config_1_1_filters_a0c5ae541a59a2c4a5703384afcda75ec}{\$globals}}
+\item 
+array \mbox{\hyperlink{class_config_1_1_filters_a5dcd363a405693e0efb69bbd9cd34ab5}{\$methods}} = \mbox{[}$\,$\mbox{]}
+\item 
+array \mbox{\hyperlink{class_config_1_1_filters_a6c634872d325e158b8712822f63ba162}{\$filters}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_filters_8php_source_l00013}{13}} del archivo \mbox{\hyperlink{_filters_8php_source}{Filters.\+php}}.
+
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_config_1_1_filters_a30c35e4d7f0e56c0bdb6a00e6c5f1beb}\index{Filters@{Filters}!\$aliases@{\$aliases}}
+\index{\$aliases@{\$aliases}!Filters@{Filters}}
+\doxysubsubsection{\texorpdfstring{\$aliases}{\$aliases}}
+{\footnotesize\ttfamily \label{class_config_1_1_filters_a30c35e4d7f0e56c0bdb6a00e6c5f1beb} 
+array \$aliases}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'csrf'}\ \ \ \ \ \ \ \ \ \ =>\ CSRF::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'toolbar'}\ \ \ \ \ \ \ =>\ DebugToolbar::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'honeypot'}\ \ \ \ \ \ =>\ Honeypot::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'invalidchars'}\ \ =>\ InvalidChars::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'secureheaders'}\ =>\ SecureHeaders::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Session'}\ =>\ Session::class,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'SessionAdmin'}\ =>\ \(\backslash\)App\(\backslash\)Filters\(\backslash\)SessionAdmin::class}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_filters_8php_source_l00022}{22}} del archivo \mbox{\hyperlink{_filters_8php_source}{Filters.\+php}}.
+
+\Hypertarget{class_config_1_1_filters_a6c634872d325e158b8712822f63ba162}\index{Filters@{Filters}!\$filters@{\$filters}}
+\index{\$filters@{\$filters}!Filters@{Filters}}
+\doxysubsubsection{\texorpdfstring{\$filters}{\$filters}}
+{\footnotesize\ttfamily \label{class_config_1_1_filters_a6c634872d325e158b8712822f63ba162} 
+array \$filters}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Session'}\ =>\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'before'}\ =>\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}liquidaciones/*"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}liquidaciones"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}admin"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}admin/*"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ]}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_filters_8php_source_l00075}{75}} del archivo \mbox{\hyperlink{_filters_8php_source}{Filters.\+php}}.
+
+\Hypertarget{class_config_1_1_filters_a0c5ae541a59a2c4a5703384afcda75ec}\index{Filters@{Filters}!\$globals@{\$globals}}
+\index{\$globals@{\$globals}!Filters@{Filters}}
+\doxysubsubsection{\texorpdfstring{\$globals}{\$globals}}
+{\footnotesize\ttfamily \label{class_config_1_1_filters_a0c5ae541a59a2c4a5703384afcda75ec} 
+array \$globals}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'before'}\ =>\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'after'}\ =>\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'toolbar'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_filters_8php_source_l00038}{38}} del archivo \mbox{\hyperlink{_filters_8php_source}{Filters.\+php}}.
+
+\Hypertarget{class_config_1_1_filters_a5dcd363a405693e0efb69bbd9cd34ab5}\index{Filters@{Filters}!\$methods@{\$methods}}
+\index{\$methods@{\$methods}!Filters@{Filters}}
+\doxysubsubsection{\texorpdfstring{\$methods}{\$methods}}
+{\footnotesize\ttfamily \label{class_config_1_1_filters_a5dcd363a405693e0efb69bbd9cd34ab5} 
+array \$methods = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_filters_8php_source_l00064}{64}} del archivo \mbox{\hyperlink{_filters_8php_source}{Filters.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Config/Filters.\+php\end{DoxyCompactItemize}

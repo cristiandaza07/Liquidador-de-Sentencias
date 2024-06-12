@@ -1,0 +1,417 @@
+\doxysection{error\+\_\+exception.\+php}
+\hypertarget{html_2error__exception_8php_source}{}\label{html_2error__exception_8php_source}\index{C:/xampp/htdocs/liquidador/app/Views/errors/html/error\_exception.php@{C:/xampp/htdocs/liquidador/app/Views/errors/html/error\_exception.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00002}00002\ use\ \mbox{\hyperlink{class_config_1_1_services}{Config\(\backslash\)Services}};}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00003}00003\ use\ CodeIgniter\(\backslash\)CodeIgniter;}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00005}00005\ \$errorId\ =\ uniqid(\textcolor{stringliteral}{'error'},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00006}00006\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00007}00007\ <!doctype\ html>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00008}00008\ <html>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00009}00009\ <head>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00010}00010\ \ \ \ \ <meta\ charset=\textcolor{stringliteral}{"{}UTF-\/8"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00011}00011\ \ \ \ \ <meta\ name=\textcolor{stringliteral}{"{}robots"{}}\ content=\textcolor{stringliteral}{"{}noindex"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00013}00013\ \ \ \ \ <title><?=\ esc(\$title)\ ?></title>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00014}00014\ \ \ \ \ <style>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ <?=\ preg\_replace(\textcolor{stringliteral}{'\#[\(\backslash\)r\(\backslash\)n\(\backslash\)t\ ]+\#'},\ \textcolor{charliteral}{'\ '},\ file\_get\_contents(\_\_DIR\_\_\ .\ DIRECTORY\_SEPARATOR\ .\ \textcolor{stringliteral}{'debug.css'}))\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00016}00016\ \ \ \ \ </style>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00018}00018\ \ \ \ \ <script>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ <?=\ file\_get\_contents(\_\_DIR\_\_\ .\ DIRECTORY\_SEPARATOR\ .\ \textcolor{stringliteral}{'debug.js'})\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00020}00020\ \ \ \ \ </script>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00021}00021\ </head>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00022}00022\ <body\ onload=\textcolor{stringliteral}{"{}init()"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00024}00024\ \ \ \ \ <!-\/-\/\ Header\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00025}00025\ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}header"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}environment"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ Displayed\ at\ <?=\ esc(date(\textcolor{stringliteral}{'H:i:sa'}))\ ?>\ \&mdash;}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ PHP:\ <?=\ esc(PHP\_VERSION)\ ?>\ \ \&mdash;}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ CodeIgniter:\ <?=\ esc(CodeIgniter::CI\_VERSION)\ ?>\ -\/-\/}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ Environment:\ <?=\ ENVIRONMENT\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}container"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ <h1><?=\ esc(\$title),\ esc(\$exception-\/>getCode()\ ?\ \textcolor{stringliteral}{'\ \#'}\ .\ \$exception-\/>getCode()\ :\ \textcolor{stringliteral}{''})\ ?></h1>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ <p>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?=\ nl2br(esc(\$exception-\/>getMessage()))\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}https://www.duckduckgo.com/?q=<?=\ urlencode(\$title\ .\ '\ '\ .\ preg\_replace('\#\(\backslash\)'.*\(\backslash\)'|"{}}.*\textcolor{stringliteral}{"{}\#Us',\ '',\ \$exception-\/>getMessage()))\ ?>"{}}}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rel=\textcolor{stringliteral}{"{}noreferrer"{}}\ target=\textcolor{stringliteral}{"{}\_blank"{}}>search\ \&rarr;</a>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ </p>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00040}00040\ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00042}00042\ \ \ \ \ <!-\/-\/\ Source\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00043}00043\ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}container"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ <p><b><?=\ esc(clean\_path(\$file))\ ?></b>\ at\ line\ <b><?=\ esc(\$line)\ ?></b></p>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (is\_file(\$file))\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}source"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?=\ static::highlightFile(\$file,\ \$line,\ 15);\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00051}00051\ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00053}00053\ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}container"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \$last\ =\ \$exception;}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\$prevException\ =\ \$last-\/>getPrevious())\ \{}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \$last\ =\ \$prevException;}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00061}00061\ \ \ \ \ <pre>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00062}00062\ \ \ \ \ Caused\ by:}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00063}00063\ \ \ \ \ <?=\ esc(get\_class(\$prevException)),\ esc(\$prevException-\/>getCode()\ ?\ \textcolor{stringliteral}{'\ \#'}\ .\ \$prevException-\/>getCode()\ :\ \textcolor{stringliteral}{''})\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00065}00065\ \ \ \ \ <?=\ nl2br(esc(\$prevException-\/>getMessage()))\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00066}00066\ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}https://www.duckduckgo.com/?q=<?=\ urlencode(get\_class(\$prevException)\ .\ '\ '\ .\ preg\_replace('\#\(\backslash\)'.*\(\backslash\)'|"{}}.*\textcolor{stringliteral}{"{}\#Us',\ '',\ \$prevException-\/>getMessage()))\ ?>"{}}}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00067}00067\ \ \ \ \ \ \ \ rel=\textcolor{stringliteral}{"{}noreferrer"{}}\ target=\textcolor{stringliteral}{"{}\_blank"{}}>search\ \&rarr;</a>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00068}00068\ \ \ \ \ <?=\ esc(clean\_path(\$prevException-\/>getFile())\ .\ \textcolor{charliteral}{':'}\ .\ \$prevException-\/>getLine())\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00069}00069\ \ \ \ \ </pre>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00074}00074\ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00076}00076\ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (defined(\textcolor{stringliteral}{'SHOW\_DEBUG\_BACKTRACE'})\ \&\&\ SHOW\_DEBUG\_BACKTRACE)\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00077}00077\ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}container"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ <ul\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}tabs"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}tabs"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ <li><a\ href=\textcolor{stringliteral}{"{}\#backtrace"{}}>Backtrace</a></li>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ <li><a\ href=\textcolor{stringliteral}{"{}\#server"{}}>Server</a></li>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ <li><a\ href=\textcolor{stringliteral}{"{}\#request"{}}>Request</a></li>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ <li><a\ href=\textcolor{stringliteral}{"{}\#response"{}}>Response</a></li>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ <li><a\ href=\textcolor{stringliteral}{"{}\#files"{}}>Files</a></li>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ <li><a\ href=\textcolor{stringliteral}{"{}\#memory"{}}>Memory</a></li>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ </ul>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00088}00088\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}tab-\/content"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Backtrace\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}content"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}backtrace"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <ol\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}trace"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ (\$trace\ as\ \$index\ =>\ \$row)\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <p>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Trace\ info\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (isset(\$row[\textcolor{stringliteral}{'file'}])\ \&\&\ is\_file(\$row[\textcolor{stringliteral}{'file'}]))\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\$row[\textcolor{stringliteral}{'function'}])\ \&\&\ in\_array(\$row[\textcolor{stringliteral}{'function'}],\ [\textcolor{stringliteral}{'include'},\ \textcolor{stringliteral}{'include\_once'},\ \textcolor{stringliteral}{'require'},\ \textcolor{stringliteral}{'require\_once'}],\ \textcolor{keyword}{true}))\ \{}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ esc(\$row[\textcolor{stringliteral}{'function'}]\ .\ \textcolor{charliteral}{'\ '}\ .\ clean\_path(\$row[\textcolor{stringliteral}{'file'}]));}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ esc(clean\_path(\$row[\textcolor{stringliteral}{'file'}])\ .\ \textcolor{stringliteral}{'\ :\ '}\ .\ \$row[\textcolor{stringliteral}{'line'}]);}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{else}:\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{PHP\ \textcolor{keyword}{internal}\ code\}}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Class/Method\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (isset(\$row[\textcolor{stringliteral}{'class'}]))\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&nbsp;\&nbsp;\&mdash;\&nbsp;\&nbsp;<?=\ esc(\$row[\textcolor{stringliteral}{'class'}]\ .\ \$row[\textcolor{stringliteral}{'type'}]\ .\ \$row[\textcolor{stringliteral}{'function'}])\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (!\ empty(\$row[\textcolor{stringliteral}{'args'}]))\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \$argsId\ =\ \$errorId\ .\ \textcolor{stringliteral}{'args'}\ .\ \$index\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\ <a\ href=\textcolor{stringliteral}{"{}\#"{}}\ onclick=\textcolor{stringliteral}{"{}return\ toggle('<?=\ esc(\$argsId,\ 'attr')\ ?>');"{}}>arguments</a>\ )}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}args"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}<?=\ esc(\$argsId,\ 'attr')\ ?>"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table\ cellspacing=\textcolor{stringliteral}{"{}0"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$params\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reflection\ by\ name\ is\ not\ available\ for\ closure\ function}}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (substr(\$row[\textcolor{stringliteral}{'function'}],\ -\/1)\ !==\ \textcolor{charliteral}{'\}'})\ \{}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$mirror\ =\ isset(\$row[\textcolor{stringliteral}{'class'}])\ ?\ \textcolor{keyword}{new}\ ReflectionMethod(\$row[\textcolor{stringliteral}{'class'}],\ \$row[\textcolor{stringliteral}{'function'}])\ :\ new\ ReflectionFunction(\$row[\textcolor{stringliteral}{'function'}]);}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$params\ =\ \$mirror-\/>getParameters();}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$row[\textcolor{stringliteral}{'args'}]\ as\ \$key\ =>\ \$value)\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><code><?=\ esc(isset(\$params[\$key])\ ?\ \textcolor{charliteral}{'\$'}\ .\ \$params[\$key]-\/>name\ :\ \textcolor{stringliteral}{"{}\#\{\$key\}"{}})\ ?></code></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><pre><?=\ esc(print\_r(\$value,\ true))\ ?></pre></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endforeach\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ else\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ()}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (!\ isset(\$row[\textcolor{stringliteral}{'class'}])\ \&\&\ isset(\$row[\textcolor{stringliteral}{'function'}]))\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&nbsp;\&nbsp;\&mdash;\&nbsp;\&nbsp;\ \ \ \ <?=\ esc(\$row[\textcolor{stringliteral}{'function'}])\ ?>()}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </p>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Source?\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (isset(\$row[\textcolor{stringliteral}{'file'}])\ \&\&\ is\_file(\$row[\textcolor{stringliteral}{'file'}])\ \&\&\ isset(\$row[\textcolor{stringliteral}{'class'}]))\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class=\textcolor{stringliteral}{"{}source"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?=\ static::highlightFile(\$row[\textcolor{stringliteral}{'file'}],\ \$row[\textcolor{stringliteral}{'line'}])\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </li>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endforeach;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </ol>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Server\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}content"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}server"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ ([\textcolor{stringliteral}{'\_SERVER'},\ \textcolor{stringliteral}{'\_SESSION'}]\ as\ \$var)\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (empty(\$GLOBALS[\$var])\ ||\ !\ is\_array(\$GLOBALS[\$var]))\ \{}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h3>\$<?=\ esc(\$var)\ ?></h3>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <thead>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Key</th>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Value</th>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </thead>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ (\$GLOBALS[\$var]\ as\ \$key\ =>\ \$value)\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(\$key)\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (is\_string(\$value))\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?=\ esc(\$value)\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{else}:\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <pre><?=\ esc(print\_r(\$value,\ \textcolor{keyword}{true}))\ ?></pre>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endforeach;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endforeach\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Constants\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \$constants\ =\ get\_defined\_constants(\textcolor{keyword}{true});\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (!\ empty(\$constants[\textcolor{stringliteral}{'user'}]))\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h3>Constants</h3>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <thead>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Key</th>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Value</th>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </thead>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ (\$constants[\textcolor{stringliteral}{'user'}]\ as\ \$key\ =>\ \$value)\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(\$key)\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (is\_string(\$value))\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?=\ esc(\$value)\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{else}:\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <pre><?=\ esc(print\_r(\$value,\ \textcolor{keyword}{true}))\ ?></pre>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endforeach;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Request\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}content"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}request"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \$request\ =\ Services::request();\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style=\textcolor{stringliteral}{"{}width:\ 10em"{}}>Path</td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(\$request-\/>getUri())\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>HTTP\ Method</td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(strtoupper(\$request-\/>getMethod()))\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>IP\ Address</td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(\$request-\/>getIPAddress())\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style=\textcolor{stringliteral}{"{}width:\ 10em"{}}>Is\ AJAX\ Request?</td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ \$request-\/>isAJAX()\ ?\ \textcolor{stringliteral}{'yes'}\ :\ \textcolor{stringliteral}{'no'}\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>Is\ CLI\ Request?</td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ \$request-\/>isCLI()\ ?\ \textcolor{stringliteral}{'yes'}\ :\ \textcolor{stringliteral}{'no'}\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>Is\ Secure\ Request?</td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ \$request-\/>isSecure()\ ?\ \textcolor{stringliteral}{'yes'}\ :\ \textcolor{stringliteral}{'no'}\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>User\ Agent</td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(\$request-\/>getUserAgent()-\/>getAgentString())\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00259}00259\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00261}00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00263}00263\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \$empty\ =\ \textcolor{keyword}{true};\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ ([\textcolor{stringliteral}{'\_GET'},\ \textcolor{stringliteral}{'\_POST'},\ \textcolor{stringliteral}{'\_COOKIE'}]\ as\ \$var)\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (empty(\$GLOBALS[\$var])\ ||\ !\ is\_array(\$GLOBALS[\$var]))\ \{}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00269}00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00270}00270\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \$empty\ =\ \textcolor{keyword}{false};\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00272}00272\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h3>\$<?=\ esc(\$var)\ ?></h3>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table\ style=\textcolor{stringliteral}{"{}width:\ 100\%"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <thead>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Key</th>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Value</th>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </thead>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ (\$GLOBALS[\$var]\ as\ \$key\ =>\ \$value)\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(\$key)\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (is\_string(\$value))\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?=\ esc(\$value)\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{else}:\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <pre><?=\ esc(print\_r(\$value,\ \textcolor{keyword}{true}))\ ?></pre>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endforeach;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00297}00297\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endforeach\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (\$empty)\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00301}00301\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}alert"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ No\ \$\_GET,\ \$\_POST,\ or\ \$\_COOKIE\ Information\ to\ show.}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00305}00305\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00307}00307\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \$headers\ =\ \$request-\/>headers();\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (!\ empty(\$headers))\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00310}00310\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h3>Headers</h3>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00312}00312\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <thead>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Header</th>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Value</th>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </thead>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ (\$headers\ as\ \$header)\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(\$header-\/>getName(),\ \textcolor{stringliteral}{'html'})\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(\$header-\/>getValueLine(),\ \textcolor{stringliteral}{'html'})\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endforeach;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00329}00329\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00332}00332\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Response\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ <?php}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$response\ =\ Services::response();}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$response-\/>setStatusCode(http\_response\_code());}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}content"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}response"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style=\textcolor{stringliteral}{"{}width:\ 15em"{}}>Response\ Status</td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(\$response-\/>getStatusCode()\ .\ \textcolor{stringliteral}{'\ -\/\ '}\ .\ \$response-\/>getReasonPhrase())\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00345}00345\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \$headers\ =\ \$response-\/>headers();\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (!\ empty(\$headers))\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ natsort(\$headers)\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00349}00349\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00350}00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h3>Headers</h3>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00351}00351\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00353}00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <thead>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00355}00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Header</th>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00356}00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <th>Value</th>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00357}00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00358}00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </thead>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00359}00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00360}00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ (array\_keys(\$headers)\ as\ \$name)\ :\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00361}00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00362}00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(\$name,\ \textcolor{stringliteral}{'html'})\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00363}00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(\$response-\/>getHeaderLine(\$name),\ \textcolor{stringliteral}{'html'})\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00364}00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00365}00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endforeach;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00366}00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00367}00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00368}00368\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00369}00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00370}00370\ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00371}00371\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00372}00372\ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Files\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00373}00373\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}content"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}files"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00374}00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \$files\ =\ get\_included\_files();\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00375}00375\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00376}00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <ol>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ (\$files\ as\ \$file)\ :?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00378}00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li><?=\ esc(clean\_path(\$file))\ ?></li>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00379}00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ endforeach\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00380}00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </ol>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00381}00381\ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00382}00382\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00383}00383\ \ \ \ \ \ \ \ \ \ \ \ \ <!-\/-\/\ Memory\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00384}00384\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}content"{}}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}memory"{}}>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00385}00385\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00386}00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00387}00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00388}00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00389}00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>Memory\ Usage</td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00390}00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(static::describeMemory(memory\_get\_usage(\textcolor{keyword}{true})))\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00391}00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00392}00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00393}00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td\ style=\textcolor{stringliteral}{"{}width:\ 12em"{}}>Peak\ Memory\ Usage:</td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00394}00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(static::describeMemory(memory\_get\_peak\_usage(\textcolor{keyword}{true})))\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00395}00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00396}00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00397}00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td>Memory\ Limit:</td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00398}00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <td><?=\ esc(ini\_get(\textcolor{stringliteral}{'memory\_limit'}))\ ?></td>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tr>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00400}00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </tbody>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00401}00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </table>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00402}00402\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00403}00403\ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00404}00404\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00405}00405\ \ \ \ \ \ \ \ \ </div>\ \ <!-\/-\/\ /tab-\/content\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00406}00406\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00407}00407\ \ \ \ \ </div>\ <!-\/-\/\ /container\ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00408}00408\ \ \ \ \ <?php\ endif;\ ?>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00409}00409\ }
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00410}00410\ </body>}
+\DoxyCodeLine{\Hypertarget{html_2error__exception_8php_source_l00411}00411\ </html>}
+
+\end{DoxyCode}

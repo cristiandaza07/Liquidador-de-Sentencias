@@ -1,0 +1,25 @@
+\doxysection{Images.\+php}
+\hypertarget{_images_8php_source}{}\label{_images_8php_source}\index{C:/xampp/htdocs/liquidador/app/Config/Images.php@{C:/xampp/htdocs/liquidador/app/Config/Images.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_config}{Config}};}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Config\(\backslash\)BaseConfig;}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00006}00006\ use\ CodeIgniter\(\backslash\)Images\(\backslash\)Handlers\(\backslash\)GDHandler;}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00007}00007\ use\ CodeIgniter\(\backslash\)Images\(\backslash\)Handlers\(\backslash\)ImageMagickHandler;}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00009}\mbox{\hyperlink{class_config_1_1_images}{00009}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_config_1_1_images}{Images}}\ \textcolor{keyword}{extends}\ BaseConfig}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00014}\mbox{\hyperlink{class_config_1_1_images_a3536251c2167ebdadb614150f7773f0a}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$defaultHandler\ =\ \textcolor{stringliteral}{'gd'};}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00020}\mbox{\hyperlink{class_config_1_1_images_a6c4b157a91ea19fdebc448276c37ce77}{00020}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$libraryPath\ =\ \textcolor{stringliteral}{'/usr/local/bin/convert'};}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{public}\ array\ \$handlers\ =\ [}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'gd'}\ \ \ \ \ \ =>\ GDHandler::class,}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'imagick'}\ =>\ ImageMagickHandler::class,}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00030}00030\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{_images_8php_source_l00031}00031\ \}}
+
+\end{DoxyCode}

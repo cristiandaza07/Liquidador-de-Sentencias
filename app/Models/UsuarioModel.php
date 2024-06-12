@@ -16,6 +16,12 @@ class UsuarioModel extends Model{
 
     protected bool $allowEmptyInserts = false;
 
+    /**
+     * Obtiene un usuario en especifico
+     *
+     * @param string $data
+     * @return array Retorna el usuario con el id suministrado
+     */
     public function obtenerUsuario($data){
         $Usuario = $this->db->table('usuarios');
         $Usuario->where($data);

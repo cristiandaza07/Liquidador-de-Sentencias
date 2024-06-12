@@ -29,7 +29,7 @@
                         <label class="input" id="labelFechaHasta" for="fechaHasta">Fecha Hasta</label>
                         <input class="input" name="valorInicial" id="valorInicial" type="text" placeholder="$0" min="0">
                         <input class="input" name="fechaDesde" id="fechaDesde" type="date" min="1984-01-16" max="<?php echo obtenerFechaActual();?>">
-                        <input class="input" name="fechaHasta" id="fechaHasta" type="date" min="1984-01-16">  
+                        <input class="input" name="fechaHasta" id="fechaHasta" type="date" min="1984-01-16" max="<?php echo obtenerFechaActual();?>">  
                     </div>
                     <input class="btn__calcular" type="submit" value="Calcular">
             </form>

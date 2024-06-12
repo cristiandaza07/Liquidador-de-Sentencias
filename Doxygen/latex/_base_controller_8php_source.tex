@@ -1,0 +1,37 @@
+\doxysection{Base\+Controller.\+php}
+\hypertarget{_base_controller_8php_source}{}\label{_base_controller_8php_source}\index{C:/xampp/htdocs/liquidador/app/Controllers/BaseController.php@{C:/xampp/htdocs/liquidador/app/Controllers/BaseController.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }App\(\backslash\)Controllers;}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Controller;}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00006}00006\ use\ CodeIgniter\(\backslash\)HTTP\(\backslash\)CLIRequest;}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00007}00007\ use\ CodeIgniter\(\backslash\)HTTP\(\backslash\)IncomingRequest;}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00008}00008\ use\ CodeIgniter\(\backslash\)HTTP\(\backslash\)RequestInterface;}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00009}00009\ use\ CodeIgniter\(\backslash\)HTTP\(\backslash\)ResponseInterface;}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00010}00010\ use\ Psr\(\backslash\)Log\(\backslash\)LoggerInterface;}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00022}\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller}{00022}}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller}{BaseController}}\ \textcolor{keyword}{extends}\ Controller}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00023}00023\ \{}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{protected}\ \$request;}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00038}00038\ \ \ \ \ \textcolor{keyword}{protected}\ \$helpers\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00044}\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abefb3c26429d514777313e9a63d7cbac}{00044}}\ \ \ \ \ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_abefb3c26429d514777313e9a63d7cbac}{\$session}};}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00049}\mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_aaa4ae087c2582ea613c7255f73d8a623}{00049}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_app_1_1_controllers_1_1_base_controller_aaa4ae087c2582ea613c7255f73d8a623}{initController}}(RequestInterface\ \$request,\ ResponseInterface\ \$response,\ LoggerInterface\ \$logger)}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00050}00050\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Do\ Not\ Edit\ This\ Line}}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ parent::initController(\$request,\ \$response,\ \$logger);}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Preload\ any\ models,\ libraries,\ etc,\ here.}}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ E.g.:\ \$this-\/>session\ =\ \(\backslash\)Config\(\backslash\)Services::session();}}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \$this-\/>session\ =\ \(\backslash\)Config\(\backslash\)Services::session();}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_base_controller_8php_source_l00060}00060\ \}}
+
+\end{DoxyCode}

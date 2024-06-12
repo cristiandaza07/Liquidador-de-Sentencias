@@ -1,0 +1,80 @@
+\doxysection{error\+\_\+exception.\+php}
+\hypertarget{cli_2error__exception_8php_source}{}\label{cli_2error__exception_8php_source}\index{C:/xampp/htdocs/liquidador/app/Views/errors/cli/error\_exception.php@{C:/xampp/htdocs/liquidador/app/Views/errors/cli/error\_exception.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00003}00003\ use\ CodeIgniter\(\backslash\)CLI\(\backslash\)CLI;}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00005}00005\ \textcolor{comment}{//\ The\ main\ Exception}}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00006}00006\ CLI::write(\textcolor{charliteral}{'['}\ .\ get\_class(\$exception)\ .\ \textcolor{charliteral}{']'},\ \textcolor{stringliteral}{'light\_gray'},\ \textcolor{stringliteral}{'red'});}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00007}00007\ CLI::write(\$message);}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00008}00008\ CLI::write(\textcolor{stringliteral}{'at\ '}\ .\ CLI::color(clean\_path(\$exception-\/>getFile())\ .\ \textcolor{charliteral}{':'}\ .\ \$exception-\/>getLine(),\ \textcolor{stringliteral}{'green'}));}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00009}00009\ CLI::newLine();}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00011}00011\ \$last\ =\ \$exception;}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00013}00013\ \textcolor{keywordflow}{while}\ (\$prevException\ =\ \$last-\/>getPrevious())\ \{}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00014}00014\ \ \ \ \ \$last\ =\ \$prevException;}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00016}00016\ \ \ \ \ CLI::write(\textcolor{stringliteral}{'\ \ Caused\ by:'});}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00017}00017\ \ \ \ \ CLI::write(\textcolor{stringliteral}{'\ \ ['}\ .\ get\_class(\$prevException)\ .\ \textcolor{charliteral}{']'},\ \textcolor{stringliteral}{'red'});}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00018}00018\ \ \ \ \ CLI::write(\textcolor{stringliteral}{'\ \ '}\ .\ \$prevException-\/>getMessage());}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00019}00019\ \ \ \ \ CLI::write(\textcolor{stringliteral}{'\ \ at\ '}\ .\ CLI::color(clean\_path(\$prevException-\/>getFile())\ .\ \textcolor{charliteral}{':'}\ .\ \$prevException-\/>getLine(),\ \textcolor{stringliteral}{'green'}));}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00020}00020\ \ \ \ \ CLI::newLine();}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00023}00023\ \textcolor{comment}{//\ The\ backtrace}}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00024}00024\ \textcolor{keywordflow}{if}\ (defined(\textcolor{stringliteral}{'SHOW\_DEBUG\_BACKTRACE'})\ \&\&\ SHOW\_DEBUG\_BACKTRACE)\ \{}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00025}00025\ \ \ \ \ \$backtraces\ =\ \$last-\/>getTrace();}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (\$backtraces)\ \{}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ CLI::write(\textcolor{stringliteral}{'Backtrace:'},\ \textcolor{stringliteral}{'green'});}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$backtraces\ as\ \$i\ =>\ \$error)\ \{}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \$padFile\ \ =\ \textcolor{stringliteral}{'\ \ \ \ '};\ \textcolor{comment}{//\ 4\ spaces}}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \$padClass\ =\ \textcolor{stringliteral}{'\ \ \ \ \ \ \ '};\ \textcolor{comment}{//\ 7\ spaces}}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \$c\ \ \ \ \ \ \ \ =\ str\_pad(\$i\ +\ 1,\ 3,\ \textcolor{charliteral}{'\ '},\ STR\_PAD\_LEFT);}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\$error[\textcolor{stringliteral}{'file'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \$filepath\ =\ clean\_path(\$error[\textcolor{stringliteral}{'file'}])\ .\ \textcolor{charliteral}{':'}\ .\ \$error[\textcolor{stringliteral}{'line'}];}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ CLI::write(\$c\ .\ \$padFile\ .\ CLI::color(\$filepath,\ \textcolor{stringliteral}{'yellow'}));}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ CLI::write(\$c\ .\ \$padFile\ .\ CLI::color(\textcolor{stringliteral}{'[internal\ function]'},\ \textcolor{stringliteral}{'yellow'}));}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \$function\ =\ \textcolor{stringliteral}{''};}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\$error[\textcolor{stringliteral}{'class'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \$type\ =\ (\$error[\textcolor{stringliteral}{'type'}]\ ===\ \textcolor{stringliteral}{'-\/>'})\ ?\ \textcolor{stringliteral}{'()'}\ .\ \$error[\textcolor{stringliteral}{'type'}]\ :\ \$error[\textcolor{stringliteral}{'type'}];}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \$function\ .=\ \$padClass\ .\ \$error[\textcolor{stringliteral}{'class'}]\ .\ \$type\ .\ \$error[\textcolor{stringliteral}{'function'}];}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \}\ elseif\ (!\ isset(\$error[\textcolor{stringliteral}{'class'}])\ \&\&\ isset(\$error[\textcolor{stringliteral}{'function'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \$function\ .=\ \$padClass\ .\ \$error[\textcolor{stringliteral}{'function'}];}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \$args\ =\ implode(\textcolor{stringliteral}{',\ '},\ array\_map(\textcolor{keyword}{static}\ \textcolor{keyword}{function}\ (\$value)\ \{}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ is\_object(\$value):}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ \textcolor{stringliteral}{'Object('}\ .\ get\_class(\$value)\ .\ \textcolor{stringliteral}{')'};}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ is\_array(\$value):}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ count(\$value)\ ?\ \textcolor{stringliteral}{'[...]'}\ :\ \textcolor{stringliteral}{'[]'};}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \$value\ ===\ \textcolor{keyword}{null}:}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'null'};\ \textcolor{comment}{//\ return\ the\ lowercased\ version}}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ var\_export(\$value,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \},\ array\_values(\$error[\textcolor{stringliteral}{'args'}]\ ??\ [])));}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \$function\ .=\ \textcolor{charliteral}{'('}\ .\ \$args\ .\ \textcolor{charliteral}{')'};}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ CLI::write(\$function);}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ CLI::newLine();}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cli_2error__exception_8php_source_l00074}00074\ \}}
+
+\end{DoxyCode}

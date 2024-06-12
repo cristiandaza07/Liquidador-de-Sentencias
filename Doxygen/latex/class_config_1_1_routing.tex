@@ -1,0 +1,161 @@
+\doxysection{Referencia de la clase Routing}
+\hypertarget{class_config_1_1_routing}{}\label{class_config_1_1_routing}\index{Routing@{Routing}}
+Diagrama de herencia de Routing\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_config_1_1_routing}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+array \mbox{\hyperlink{class_config_1_1_routing_a84493f747ce8dd9fa035d6f9459c7f9f}{\$route\+Files}}
+\item 
+string \mbox{\hyperlink{class_config_1_1_routing_aa778e4d12ae6eba8d5583bb09cae40e4}{\$default\+Namespace}} = \textquotesingle{}App\textbackslash{}\+Controllers\textquotesingle{}
+\item 
+string \mbox{\hyperlink{class_config_1_1_routing_aa1e57d5e9d420529a7813350c6b8fb97}{\$default\+Controller}} = \textquotesingle{}Home\textquotesingle{}
+\item 
+string \mbox{\hyperlink{class_config_1_1_routing_a6b84ff721ec9b51a080dbe95e266015a}{\$default\+Method}} = \textquotesingle{}index\textquotesingle{}
+\item 
+bool \mbox{\hyperlink{class_config_1_1_routing_a100e2d76a4196e7085510ea5c4586257}{\$translate\+URIDashes}} = false
+\item 
+string \mbox{\hyperlink{class_config_1_1_routing_a6b87e7cb3c8014d134f62bb29f481532}{\$override404}} = null
+\item 
+bool \mbox{\hyperlink{class_config_1_1_routing_a7bb6367afc2100e36395bc1bc4ce9795}{\$auto\+Route}} = false
+\item 
+bool \mbox{\hyperlink{class_config_1_1_routing_a2521240c4046e7bf5fe38440021b3471}{\$prioritize}} = false
+\item 
+array \mbox{\hyperlink{class_config_1_1_routing_a8ac6cd821eba18decf7077e3d737d7e6}{\$module\+Routes}} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Routing configuration 
+
+Definición en la línea \mbox{\hyperlink{_routing_8php_source_l00019}{19}} del archivo \mbox{\hyperlink{_routing_8php_source}{Routing.\+php}}.
+
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_config_1_1_routing_a7bb6367afc2100e36395bc1bc4ce9795}\index{Routing@{Routing}!\$autoRoute@{\$autoRoute}}
+\index{\$autoRoute@{\$autoRoute}!Routing@{Routing}}
+\doxysubsubsection{\texorpdfstring{\$autoRoute}{\$autoRoute}}
+{\footnotesize\ttfamily \label{class_config_1_1_routing_a7bb6367afc2100e36395bc1bc4ce9795} 
+bool \$auto\+Route = false}
+
+If TRUE, the system will attempt to match the URI against Controllers by matching each segment against folders/files in APPPATH/\+Controllers, when a match wasn\textquotesingle{}t found against defined routes.
+
+If FALSE, will stop searching and do NO automatic routing. 
+
+Definición en la línea \mbox{\hyperlink{_routing_8php_source_l00092}{92}} del archivo \mbox{\hyperlink{_routing_8php_source}{Routing.\+php}}.
+
+\Hypertarget{class_config_1_1_routing_aa1e57d5e9d420529a7813350c6b8fb97}\index{Routing@{Routing}!\$defaultController@{\$defaultController}}
+\index{\$defaultController@{\$defaultController}!Routing@{Routing}}
+\doxysubsubsection{\texorpdfstring{\$defaultController}{\$defaultController}}
+{\footnotesize\ttfamily \label{class_config_1_1_routing_aa1e57d5e9d420529a7813350c6b8fb97} 
+string \$default\+Controller = \textquotesingle{}Home\textquotesingle{}}
+
+The default controller to use when no other controller has been specified.
+
+Default\+: \textquotesingle{}Home\textquotesingle{} 
+
+Definición en la línea \mbox{\hyperlink{_routing_8php_source_l00048}{48}} del archivo \mbox{\hyperlink{_routing_8php_source}{Routing.\+php}}.
+
+\Hypertarget{class_config_1_1_routing_a6b84ff721ec9b51a080dbe95e266015a}\index{Routing@{Routing}!\$defaultMethod@{\$defaultMethod}}
+\index{\$defaultMethod@{\$defaultMethod}!Routing@{Routing}}
+\doxysubsubsection{\texorpdfstring{\$defaultMethod}{\$defaultMethod}}
+{\footnotesize\ttfamily \label{class_config_1_1_routing_a6b84ff721ec9b51a080dbe95e266015a} 
+string \$default\+Method = \textquotesingle{}index\textquotesingle{}}
+
+The default method to call on the controller when no other method has been set in the route.
+
+Default\+: \textquotesingle{}index\textquotesingle{} 
+
+Definición en la línea \mbox{\hyperlink{_routing_8php_source_l00056}{56}} del archivo \mbox{\hyperlink{_routing_8php_source}{Routing.\+php}}.
+
+\Hypertarget{class_config_1_1_routing_aa778e4d12ae6eba8d5583bb09cae40e4}\index{Routing@{Routing}!\$defaultNamespace@{\$defaultNamespace}}
+\index{\$defaultNamespace@{\$defaultNamespace}!Routing@{Routing}}
+\doxysubsubsection{\texorpdfstring{\$defaultNamespace}{\$defaultNamespace}}
+{\footnotesize\ttfamily \label{class_config_1_1_routing_aa778e4d12ae6eba8d5583bb09cae40e4} 
+string \$default\+Namespace = \textquotesingle{}App\textbackslash{}\+Controllers\textquotesingle{}}
+
+The default namespace to use for Controllers when no other namespace has been specified.
+
+Default\+: \textquotesingle{}App\textbackslash{}\+Controllers\textquotesingle{} 
+
+Definición en la línea \mbox{\hyperlink{_routing_8php_source_l00040}{40}} del archivo \mbox{\hyperlink{_routing_8php_source}{Routing.\+php}}.
+
+\Hypertarget{class_config_1_1_routing_a8ac6cd821eba18decf7077e3d737d7e6}\index{Routing@{Routing}!\$moduleRoutes@{\$moduleRoutes}}
+\index{\$moduleRoutes@{\$moduleRoutes}!Routing@{Routing}}
+\doxysubsubsection{\texorpdfstring{\$moduleRoutes}{\$moduleRoutes}}
+{\footnotesize\ttfamily \label{class_config_1_1_routing_a8ac6cd821eba18decf7077e3d737d7e6} 
+array \$module\+Routes = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_routing_8php_source_l00113}{113}} del archivo \mbox{\hyperlink{_routing_8php_source}{Routing.\+php}}.
+
+\Hypertarget{class_config_1_1_routing_a6b87e7cb3c8014d134f62bb29f481532}\index{Routing@{Routing}!\$override404@{\$override404}}
+\index{\$override404@{\$override404}!Routing@{Routing}}
+\doxysubsubsection{\texorpdfstring{\$override404}{\$override404}}
+{\footnotesize\ttfamily \label{class_config_1_1_routing_a6b87e7cb3c8014d134f62bb29f481532} 
+string \$override404 = null}
+
+Sets the class/method that should be called if routing doesn\textquotesingle{}t find a match. It can be the controller/method name like\+: Users\textbackslash{}index
+
+This setting is passed to the Router class and handled there.
+
+If you want to use a closure, you will have to set it in the routes file by calling\+:
+
+\$routes-\/\texorpdfstring{$>$}{>}set404\+Override(function() \{ // Do something here \});
+
+Example\+: public \$override404 = \textquotesingle{}App\textbackslash{}\+Errorsshow404\textquotesingle{}; 
+
+Definición en la línea \mbox{\hyperlink{_routing_8php_source_l00082}{82}} del archivo \mbox{\hyperlink{_routing_8php_source}{Routing.\+php}}.
+
+\Hypertarget{class_config_1_1_routing_a2521240c4046e7bf5fe38440021b3471}\index{Routing@{Routing}!\$prioritize@{\$prioritize}}
+\index{\$prioritize@{\$prioritize}!Routing@{Routing}}
+\doxysubsubsection{\texorpdfstring{\$prioritize}{\$prioritize}}
+{\footnotesize\ttfamily \label{class_config_1_1_routing_a2521240c4046e7bf5fe38440021b3471} 
+bool \$prioritize = false}
+
+If TRUE, will enable the use of the \textquotesingle{}prioritize\textquotesingle{} option when defining routes.
+
+Default\+: false 
+
+Definición en la línea \mbox{\hyperlink{_routing_8php_source_l00100}{100}} del archivo \mbox{\hyperlink{_routing_8php_source}{Routing.\+php}}.
+
+\Hypertarget{class_config_1_1_routing_a84493f747ce8dd9fa035d6f9459c7f9f}\index{Routing@{Routing}!\$routeFiles@{\$routeFiles}}
+\index{\$routeFiles@{\$routeFiles}!Routing@{Routing}}
+\doxysubsubsection{\texorpdfstring{\$routeFiles}{\$routeFiles}}
+{\footnotesize\ttfamily \label{class_config_1_1_routing_a84493f747ce8dd9fa035d6f9459c7f9f} 
+array \$route\+Files}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ APPPATH\ .\ \textcolor{stringliteral}{'Config/Routes.php'},}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_routing_8php_source_l00030}{30}} del archivo \mbox{\hyperlink{_routing_8php_source}{Routing.\+php}}.
+
+\Hypertarget{class_config_1_1_routing_a100e2d76a4196e7085510ea5c4586257}\index{Routing@{Routing}!\$translateURIDashes@{\$translateURIDashes}}
+\index{\$translateURIDashes@{\$translateURIDashes}!Routing@{Routing}}
+\doxysubsubsection{\texorpdfstring{\$translateURIDashes}{\$translateURIDashes}}
+{\footnotesize\ttfamily \label{class_config_1_1_routing_a100e2d76a4196e7085510ea5c4586257} 
+bool \$translate\+URIDashes = false}
+
+Whether to translate dashes in URIs to underscores. Primarily useful when using the auto-\/routing.
+
+Default\+: false 
+
+Definición en la línea \mbox{\hyperlink{_routing_8php_source_l00064}{64}} del archivo \mbox{\hyperlink{_routing_8php_source}{Routing.\+php}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/xampp/htdocs/liquidador/app/\+Config/Routing.\+php\end{DoxyCompactItemize}

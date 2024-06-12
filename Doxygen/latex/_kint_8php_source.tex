@@ -1,0 +1,53 @@
+\doxysection{Kint.\+php}
+\hypertarget{_kint_8php_source}{}\label{_kint_8php_source}\index{C:/xampp/htdocs/liquidador/app/Config/Kint.php@{C:/xampp/htdocs/liquidador/app/Config/Kint.php}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_config}{Config}};}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00005}00005\ use\ CodeIgniter\(\backslash\)Config\(\backslash\)BaseConfig;}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00006}00006\ use\ Kint\(\backslash\)Parser\(\backslash\)ConstructablePluginInterface;}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00007}00007\ use\ Kint\(\backslash\)Renderer\(\backslash\)AbstractRenderer;}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00008}00008\ use\ Kint\(\backslash\)Renderer\(\backslash\)Rich\(\backslash\)TabPluginInterface;}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00009}00009\ use\ Kint\(\backslash\)Renderer\(\backslash\)Rich\(\backslash\)ValuePluginInterface;}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00021}\mbox{\hyperlink{class_config_1_1_kint}{00021}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_config_1_1_kint}{Kint}}\ \textcolor{keyword}{extends}\ BaseConfig}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00022}00022\ \{}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00023}00023\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00024}00024\ \textcolor{comment}{\ \ \ \ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00025}00025\ \textcolor{comment}{\ \ \ \ |\ Global\ Settings}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00026}00026\ \textcolor{comment}{\ \ \ \ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00027}00027\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{public}\ \$plugins;}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \$maxDepth\ \ \ \ \ \ \ \ \ \ \ =\ 6;}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00035}00035\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$displayCalledFrom\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$expanded\ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00038}00038\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00039}00039\ \textcolor{comment}{\ \ \ \ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00040}00040\ \textcolor{comment}{\ \ \ \ |\ RichRenderer\ Settings}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00041}00041\ \textcolor{comment}{\ \ \ \ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00042}00042\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00043}00043\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \$richTheme\ =\ \textcolor{stringliteral}{'aante-\/light.css'};}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00044}00044\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$richFolder\ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00045}00045\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \$richSort\ \ \ \ \ =\ AbstractRenderer::SORT\_FULL;}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{public}\ \$richObjectPlugins;}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{public}\ \$richTabPlugins;}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00057}00057\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00058}00058\ \textcolor{comment}{\ \ \ \ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00059}00059\ \textcolor{comment}{\ \ \ \ |\ CLI\ Settings}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00060}00060\ \textcolor{comment}{\ \ \ \ |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00061}00061\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00062}00062\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$cliColors\ \ \ \ \ \ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00063}00063\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$cliForceUTF8\ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00064}00064\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \$cliDetectWidth\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00065}00065\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \$cliMinWidth\ \ \ \ \ =\ 40;}
+\DoxyCodeLine{\Hypertarget{_kint_8php_source_l00066}00066\ \}}
+
+\end{DoxyCode}
